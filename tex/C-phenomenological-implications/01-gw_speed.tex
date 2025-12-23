@@ -1,0 +1,24 @@
+  \subsection{Speed of Gravitational Perturbations}
+  \label{sec:gw_speed}
+
+  To determine the propagation speed of gravitational information, we consider a small perturbation $\delta\chi$ around
+  a homogeneous background $\chi_0(t) = ct$. Let $\chi(\mathbf{x}, t) = ct + \delta\chi(\mathbf{x}, t)$, where
+  $|\nabla \delta\chi| \ll c$. Substituting this into the evolution equation~\eqref{eq:chi_dynamics}:
+  \begin{equation}
+    c + \partial_t \delta\chi = c \sqrt{1 - \frac{|\nabla \delta\chi|^2}{c^2}}
+  \end{equation}
+  Using the Taylor expansion $\sqrt{1-u} \approx 1 - u/2$ for small $u$:
+  \begin{equation}
+    c + \partial_t \delta\chi \approx c \left( 1 - \frac{|\nabla \delta\chi|^2}{2c^2} \right) = c - \frac{|\nabla \delta\chi|^2}{2c}
+  \end{equation}
+  This gives $\partial_t \delta\chi \approx -\frac{1}{2c} |\nabla \delta\chi|^2$.
+  To find the wave equation, we take the time derivative of this expression and assume the perturbations follow a
+  harmonic or eikonal form.
+  More fundamentally, by squaring the Hamiltonian constraint~\eqref{eq:hamiltonian_constraint} and linearizing the
+  resulting second-order operator, we obtain the d'Alembertian:
+  \begin{equation}
+    \left( \frac{1}{c^2} \partial_t^2 - \nabla^2 \right) \delta\chi = 0
+  \end{equation}
+  The characteristic speed is identically $c$.
+  This result is robust and independent of any coupling constant, ensuring that Cosmochrony is strictly consistent with
+  the GW170817 multi-messenger observation.

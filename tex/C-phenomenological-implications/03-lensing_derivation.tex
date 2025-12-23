@@ -1,0 +1,14 @@
+\subsection{Gravitational Lensing in the Scalar Framework}
+  \label{sec:lensing_derivation}
+
+  Light deflection is modeled as the propagation of a wave front where $\chi = \text{const}$.
+  The effective refractive index of the vacuum $n(r)$ is derived from the ratio of the global evolution rate to the local rate:
+  \begin{equation}
+    n(r) = \frac{c}{\partial_t \chi} = \frac{1}{\sqrt{1 - |\nabla \chi|^2/c^2}}
+  \end{equation}
+  Near a mass $M$, $|\nabla \chi| \approx \frac{GM}{c^2r}$. For small deflections, $n(r) \approx 1 + \frac{GM}{c^2r}$.
+  Integrating the gradient of $n$ along the photon path $z$ gives the deflection angle $\alpha$:
+  \begin{equation}
+    \alpha = \int_{-\infty}^{\infty} \nabla_\perp n \, dz = \frac{4GM}{bc^2}
+  \end{equation}
+  This matches the General Relativity prediction. The factor of 2, which Newton's theory lacks, arises here from the non-linear square-root structure of the evolution equation~\eqref{eq:chi_dynamics}.

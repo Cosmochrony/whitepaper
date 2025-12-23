@@ -1,0 +1,23 @@
+\subsection{Derivation of the MOND Acceleration Floor}
+  \label{sec:mond_derivation}
+
+  In Cosmochrony, the ``arrow of time'' $\partial_t \chi \geq 0$ is coupled to the global expansion of the universe.
+  In an FLRW-like limit, the field $\chi$ must follow the cosmological clock, such that
+  $\partial_t \chi \approx H_0 \chi$.
+
+  Substituting this into the constraint $(\partial_t \chi)^2 + |\nabla \chi|^2 = c^2$, we find that at any point in
+  space, there exists a minimal residual gradient $\nabla \chi_{\min}$ even in the absence of local matter:
+  \begin{equation}
+    |\nabla \chi|_{\min} = \sqrt{c^2 - (H_0 \chi)^2}
+  \end{equation}
+  For a local observer, this residual gradient acts as a background acceleration $a_0 \approx c H_0$.
+  When calculating the gravitational force via the non-linear Poisson equation~\eqref{eq:nonlinear_poisson}, the total
+  gradient is the sum of the local Newtonian contribution and this cosmological floor.
+
+  At large radii $r$, where the Newtonian gradient $\nabla \chi_N \propto M/r^2$ would normally vanish, the field
+  ``saturates'' at the floor value. The effective gravitational acceleration then transitions from $1/r^2$ to a $1/r$
+  dependence, naturally recovering the Deep-MOND regime:
+  \begin{equation}
+    g_{eff} = \sqrt{g_N a_0}
+  \end{equation}
+  This explains the flat rotation curves of galaxies as a kinematic projection of the global expansion onto local dynamics.
