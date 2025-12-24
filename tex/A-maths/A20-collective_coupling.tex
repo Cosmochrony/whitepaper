@@ -1,10 +1,11 @@
 \section{Collective Gravitational Coupling and Operational Geometry}
   \label{sec:collective-coupling}
 
-  \subsection*{A.20.1 Status and Scope of the Construction}
-    This appendix provides the technical construction underlying the collective gravitational coupling introduced in Section~\ref{sec:gravity-emergence}. Its purpose is to demonstrate explicitly how an effective spatial geometry and a Newtonian gravitational interaction emerge from the local relaxation dynamics of the $\chi$ field, without assuming any pre-existing metric structure.
+  \subsection*{Status and Scope of the Construction}
+    This appendix provides the technical construction underlying the collective gravitational coupling introduced in Section~\ref{sec:gravity-emergence}.
+    Its purpose is to demonstrate explicitly how an effective spatial geometry and a Newtonian gravitational interaction emerge from the local relaxation dynamics of the $\chi$ field, without assuming any pre-existing metric structure.
 
-  \subsection*{A.20.2 Minimal Local Ansatz for the Collective Coupling $K_{ij}$}
+  \subsection*{Minimal Local Ansatz for the Collective Coupling $K_{ij}$}
     \label{subsec:Kij-ansatz}
     We adopt a \textbf{constitutive relation} for the connectivity matrix $K_{ij}$ that encodes the local resistance of the $\chi$ field to variations between neighboring nodes $i$ and $j$:
     \begin{equation}
@@ -93,7 +94,8 @@
 
   \subsection*{Quasi-Static Regime and Newtonian Limit}
     \label{subsec:newtonian-limit}
-    For gravitational phenomena on astrophysical scales, characteristic timescales are much longer than the light-crossing time of the system. In this quasi-static regime, $\partial_t^2 \phi$ is negligible compared to spatial gradients, and the field equation reduces to:
+    For gravitational phenomena on astrophysical scales, characteristic timescales are much longer than the light-crossing time of the system.
+    In this quasi-static regime, $\partial_t^2 \phi$ is negligible compared to spatial gradients, and the field equation reduces to:
     \begin{equation}
       \nabla^2 \phi = -\frac{1}{c^2} S[\rho]
     \end{equation}
@@ -101,7 +103,8 @@
     \begin{equation}
       \nabla^2 \phi = 4 \pi G \rho
     \end{equation}
-    which is precisely the Poisson equation for the Newtonian gravitational potential. The physical gravitational potential is identified consistently with the main text as:
+    which is precisely the Poisson equation for the Newtonian gravitational potential.
+    The physical gravitational potential is identified consistently with the main text as:
     \begin{equation}
       \Phi = c^2 \ln \left( \frac{\partial_t \chi}{c} \right) \simeq \frac{c^2}{\bar{\chi}} \phi \quad (|\phi| \ll \bar{\chi})
     \end{equation}
@@ -113,13 +116,21 @@
         G = \frac{c^4}{16 \pi K_0 \chi_c^2}
         \label{eq:G-emergent}
       \end{equation}
-      This relation shows that $G$ is not fundamental but \textbf{derived} from the underlying $\chi$-field dynamics. For example:
+      This relation should be understood as a consistency condition fixing the combination
+      $K_0 \chi_c^2$ once the observed value of $G$ is imposed, rather than as an independent
+      prediction of the theory.
+      This relation illustrates how the observed value of $G$ constrains the microscopic parameters
+      of the theory. For example:
       \begin{itemize}
         \item If $\chi_c \approx \ell_P \approx 1.6 \times 10^{-35} \, \text{m}$, then $K_0 \approx 1.3 \times 10^{93} \, \text{m}^{-2}$ to match the observed $G$.
         \item If $\chi_c \approx c / H_0 \approx 1.4 \times 10^{26} \, \text{m}$, then $K_0 \approx 1.1 \times 10^{-52} \, \text{m}^{-2}$, reflecting a softer network with cosmological-scale effects.
       \end{itemize}
+      These examples are not predictions but illustrate how different physical regimes correspond
+      to different effective network stiffnesses compatible with the same observed gravitational
+      constant.
 
-    \subsubsection*{Equivalence Principle}
+
+  \subsubsection*{Equivalence Principle}
       Within this construction, gravitational mass characterizes the strength with which a soliton acts as a source for $\chi$ perturbations, while inertial mass is determined by the energy stored in the soliton's $\chi$ gradients:
       \begin{equation}
         M_{\text{inertial}} = \frac{1}{c^2} \int |\nabla \chi_{\text{soliton}}|^2 \, d^3 x
@@ -131,4 +142,5 @@
       establishing the equivalence principle as an \textbf{emergent property} rather than an independent postulate.
 
   \subsection*{A.20.8 Summary}
-    This appendix has demonstrated explicitly how a purely local collective coupling of the $\chi$ field gives rise to an operational notion of distance, an effective spatial geometry, and a Newtonian gravitational interaction in the quasi-static regime. The construction supports the interpretation of gravitation presented in Section~\ref{sec:gravity-emergence} as a collective, emergent phenomenon rooted in the relaxation dynamics of the $\chi$ field.
+    This appendix has demonstrated explicitly how a purely local collective coupling of the $\chi$ field gives rise to an operational notion of distance, an effective spatial geometry, and a Newtonian gravitational interaction in the quasi-static regime.
+    The construction supports the interpretation of gravitation presented in Section~\ref{sec:gravity-emergence} as a collective, emergent phenomenon rooted in the relaxation dynamics of the $\chi$ field.

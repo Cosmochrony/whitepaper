@@ -21,7 +21,8 @@
 
   \subsubsection*{Explicit Form of the Connectivity Matrix $K_{ij}$}
     \label{subsec:Kij-definition}
-    The connectivity strength $K_{ij}$ between nodes $i$ and $j$ encodes the \textbf{local correlation} between their respective $\chi$-field values. To ensure consistency with the emergent geometry and the dynamical constraints of the $\chi$ field, we adopt the following \textbf{constitutive relation}:
+    The connectivity strength $K_{ij}$ between nodes $i$ and $j$ encodes the \textbf{local correlation} between their respective $\chi$-field values.
+    To ensure consistency with the emergent geometry and the dynamical constraints of the $\chi$ field, we adopt the following \textbf{constitutive relation}:
     \begin{equation}
       K_{ij} = K_0 \cdot f\left(\frac{|\chi_i - \chi_j|^2}{\chi_c^2}\right)
       \label{eq:Kij-def}
@@ -29,7 +30,9 @@
     where:
     \begin{itemize}
       \item $K_0$ is a \textbf{fundamental coupling scale} (with dimensions of $[\text{length}]^{-2}$), representing the maximal connectivity strength in regions where $\chi$ is uniform.
-      \item $\chi_c$ is a \textbf{characteristic scale} of the $\chi$ field, naturally associated with the Planck length or the cosmological relaxation scale.
+      \item $\chi_c$ denotes a characteristic scale of the $\chi$ field beyond which strong local variations
+      significantly weaken the effective connectivity. Its identification with specific microscopic or
+      cosmological length scales depends on the physical regime considered and is discussed later.
       \item $f(x)$ is a \textbf{dimensionless, monotonically decreasing function} satisfying $f(0) = 1$ and $f(x) \to 0$ as $x \to \infty$.
     \end{itemize}
 
@@ -45,11 +48,13 @@
       \item \textbf{Gradient sensitivity}: $K_{ij}$ decreases as $|\chi_i - \chi_j|$ increases, encoding the \textbf{resistance to relaxation} induced by localized excitations (e.g., particles or curvature).
     \end{enumerate}
 
-    This form of $K_{ij}$ provides a \textbf{microscopic foundation} for the emergent metric $g_{\mu\nu}$, as
-    detailed in Section~\ref{subsec:emergent-metric}.
-    The coupling scale $K_0$ and the characteristic scale $\chi_c$ are expected to be related to fundamental
-    constants (e.g., the Planck length $\ell_P$ or the Hubble scale $H_0^{-1}$), but their precise values are left
-    as phenomenological parameters to be constrained by observations (see Section~\ref{subsec:normalization-of-the-chi-field}).
+    This form of $K_{ij}$ provides a microscopic foundation for the operational notion of distance
+    used in the emergent geometric description developed later in Section~6, rather than assuming
+    a pre-existing metric structure at this stage.
+    The coupling scale $K_0$ and the characteristic scale $\chi_c$ set the strength and the
+    non-linearity threshold of the local connectivity.
+    Their identification with specific microscopic or cosmological scales depends on the physical regime considered and
+    is discussed later.
 
   \subsubsection*{Emergent Geometry from $K_{ij}$}
     \label{subsec:emergent-metric}
@@ -81,10 +86,12 @@
     \begin{equation}
       \mathcal{L}_{\mathrm{CC}} = \mathcal{L}_{\text{Gravity/Time}} + \mathcal{L}_{\chi / \text{Soliton}} + \mathcal{L}_{\text{Forces/Matter}}
     \end{equation}
-    The symbol $\sqrt{-g}$ represents the invariant volume element. In regimes where no spacetime interpretation yet exists (e.g., at the nodes of the fundamental graph), this should be understood as an abstract integration measure $d\mu$ on the configuration space of $\chi$.
+    The symbol $\sqrt{-g}$ represents the invariant volume element.
+    In regimes where no spacetime interpretation yet exists (e.g., at the nodes of the fundamental graph), this should be understood as an abstract integration measure $d\mu$ on the configuration space of $\chi$.
 
   \subsubsection*{Status of $g_{\mu\nu}$ in this formulation.}
-    The metric $g_{\mu\nu}$ is an effective description of the coupling strengths $K_{ij}$ between $\chi$ nodes. It is defined by the requirement that the distance $ds^2$ in the continuum matches the operational distance derived from the network's connectivity:
+    The metric $g_{\mu\nu}$ is an effective description of the coupling strengths $K_{ij}$ between $\chi$ nodes.
+    It is defined by the requirement that the distance $ds^2$ in the continuum matches the operational distance derived from the network's connectivity:
     \begin{equation}
       g_{\mu\nu} dx^\mu dx^\nu \approx \sum_{(u,v) \in \text{path}} \frac{1}{K_{uv}}
     \end{equation}
