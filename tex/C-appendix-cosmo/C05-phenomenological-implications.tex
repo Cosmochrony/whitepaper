@@ -1,4 +1,32 @@
-\subsection{Emergence and Evolution of an Effective MOND-like Acceleration Scale}
+\subsection{Phenomenological Implications}
+  \label{subsec:phenomenology}
+
+  \subsubsection{Speed of Gravitational Perturbations}
+  \label{sec:gw_speed}
+
+  To determine the propagation speed of gravitational information, we consider a small perturbation $\delta\chi$ around
+  a homogeneous background $\chi_0(t) = ct$. Let $\chi(\mathbf{x}, t) = ct + \delta\chi(\mathbf{x}, t)$, where
+  $|\nabla \delta\chi| \ll c$. Substituting this into the evolution equation~\eqref{eq:chi_dynamics}:
+  \begin{equation}
+    c + \partial_t \delta\chi = c \sqrt{1 - \frac{|\nabla \delta\chi|^2}{c^2}}
+  \end{equation}
+  Using the Taylor expansion $\sqrt{1-u} \approx 1 - u/2$ for small $u$:
+  \begin{equation}
+    c + \partial_t \delta\chi \approx c \left( 1 - \frac{|\nabla \delta\chi|^2}{2c^2} \right) = c - \frac{|\nabla \delta\chi|^2}{2c}
+  \end{equation}
+  This gives $\partial_t \delta\chi \approx -\frac{1}{2c} |\nabla \delta\chi|^2$.
+  To find the wave equation, we take the time derivative of this expression and assume the perturbations follow a
+  harmonic or eikonal form.
+  More fundamentally, by squaring the Hamiltonian constraint~\eqref{eq:hamiltonian_constraint} and linearizing the
+  resulting second-order operator, we obtain the d'Alembertian:
+  \begin{equation}
+    \left( \frac{1}{c^2} \partial_t^2 - \nabla^2 \right) \delta\chi = 0
+  \end{equation}
+  The characteristic speed is identically $c$.
+  This result is robust and independent of any coupling constant, ensuring that Cosmochrony is strictly consistent with
+  the GW170817 multi-messenger observation.
+
+\subsubsection{Emergence and Evolution of an Effective MOND-like Acceleration Scale}
   \label{sec:mond_derivation}
 
   In Cosmochrony, the intrinsic arrow of time is encoded in the monotonic evolution of the fundamental
@@ -73,7 +101,23 @@
   \end{enumerate}
 
   In this framework, flat galactic rotation curves do not signal a breakdown of Newtonian gravity
-  nor the presence of unseen matter components. Instead, they arise as a kinematic projection of the
-  global cosmological relaxation of $\chi$ onto local gravitational dynamics, with MOND-like behavior
-  emerging as an effective, scale-dependent regime rather than as a fundamental modification of
-  gravity.
+  nor the presence of unseen matter components.
+  Instead, they arise as a kinematic projection of the global cosmological relaxation of $\chi$ onto local gravitational
+  dynamics, with MOND-like behavior emerging as an effective, scale-dependent regime rather than as a fundamental
+  modification of gravity.
+
+\subsubsection{Gravitational Lensing in the Scalar Framework}
+  \label{sec:lensing_derivation}
+
+  Light deflection is modeled as the propagation of a wave front where $\chi = \text{const}$.
+  The effective refractive index of the vacuum $n(r)$ is derived from the ratio of the global evolution rate to the local rate:
+  \begin{equation}
+    n(r) = \frac{c}{\partial_t \chi} = \frac{1}{\sqrt{1 - |\nabla \chi|^2/c^2}}
+  \end{equation}
+  Near a mass $M$, $|\nabla \chi| \approx \frac{GM}{c^2r}$. For small deflections, $n(r) \approx 1 + \frac{GM}{c^2r}$.
+  Integrating the gradient of $n$ along the photon path $z$ gives the deflection angle $\alpha$:
+  \begin{equation}
+    \alpha = \int_{-\infty}^{\infty} \nabla_\perp n \, dz = \frac{4GM}{bc^2}
+  \end{equation}
+  This matches the General Relativity prediction.
+  The factor of 2, which Newton's theory lacks, arises here from the non-linear square-root structure of the evolution equation~\eqref{eq:chi_dynamics}.

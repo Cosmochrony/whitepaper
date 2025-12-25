@@ -29,9 +29,9 @@
     This yields the effective evolution equation in the continuum:
     \begin{equation}
       \partial_t \chi = c \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}}
-      \label{eq:continuum-dynamics}
+      \label{eq:chi_dynamics}
     \end{equation}
-    where $\nabla$ is now defined with respect to the emergent metric $g_{\mu\nu}$, derived from the network's connectivity (see Section~\ref{sec:geometric-action}).
+    where $\nabla$ is now defined with respect to the emergent metric $g_{\mu\nu}$, derived from the network's connectivity (see Section~\ref{subsec:geometric-action}).
 
   \subsubsection*{Continuum Limit and Newtonian Gravity}
     In the continuum limit, the discrete sum in Equation~\eqref{eq:discrete-dynamics} becomes a spatial integral, and the evolution equation reduces to:
@@ -53,15 +53,20 @@
       \Phi = c^2 \ln \left( \frac{\partial_t \chi}{c} \right)
     \end{equation}
     This derivation shows that \textbf{Newtonian gravity} emerges naturally from the \textbf{collective coupling $K_{ij}$} without postulating a fundamental metric or curvature.
-    The full derivation, including the mapping between $K_0$, $\chi_c$, and $G$, is provided in Appendix~\ref{sec:collective-coupling}.
+    The full derivation, including the mapping between $K_0$, $\chi_c$, and $G$, is provided in Appendix~\ref{subsec:collective-coupling}.
 
   \subsubsection*{Hamiltonian Constraint}
-    While the dynamics of $\chi$ can be viewed as a minimal relaxation principle, it can be more rigorously derived from a Hamiltonian constraint.
-    We postulate that the dynamics of $\chi$ are governed by a Dirac-type kinematic constraint in phase space, analogous to the mass-shell condition for a massless relativistic particle:
+    While the dynamics of $\chi$ can be viewed as a minimal relaxation principle, it can be more rigorously derived from
+    a Hamiltonian constraint.
+    We postulate that the dynamics of $\chi$ are governed by a Dirac-type kinematic constraint in phase space, analogous
+    to the mass-shell condition for a massless relativistic particle:
     \begin{equation}
     (\partial_t \chi)^2 + |\nabla \chi|^2 = c^2
+      \label{eq:hamiltonian_constraint}
     \end{equation}
-    where $c$ is the fundamental velocity scale. Combined with the arrow of time postulate ($\partial_t \chi \geq 0$), which reflects the irreversible relaxation of the Cosmochron, this leads uniquely to the first-order evolution equation:
+    where $c$ is the fundamental velocity scale.
+    Combined with the arrow of time postulate ($\partial_t \chi \geq 0$), which reflects the irreversible relaxation of
+    the Cosmochron, this leads uniquely to the first-order evolution equation:
     \begin{equation}
       \partial_t \chi = c \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}}
     \end{equation}

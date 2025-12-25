@@ -1,5 +1,5 @@
 \subsection{Analytical Solutions of the \(\chi\)-Field Dynamics}
-  \label{subsec:analytical_solutions_chi}
+  \label{subsec:analytical-solutions}
 
   To illustrate the behavior of the \(\chi\)
   field, we derive explicit analytical solutions of the dynamical equation
@@ -10,7 +10,8 @@
   \textbf{spherically symmetric solutions}.
 
   \subsubsection{Homogeneous Solution}
-    In a spatially homogeneous universe, \(\nabla \chi = 0\). The dynamical equation reduces to:
+    In a spatially homogeneous universe, \(\nabla \chi = 0\).
+    The dynamical equation reduces to:
     \[
       \partial_t \chi = c.
     \]
@@ -18,13 +19,14 @@
     \[
       \chi(t) = \chi_0 + c t,
     \]
-    where \(\chi_0\) is the initial value of \(\chi\). This solution describes the
-    \textbf{background cosmological expansion} in Cosmochrony, where \(\chi\)
-    grows linearly with time, directly yielding a Hubble-like law for the scale factor \(a(t) \propto \chi(t)\).
+    where \(\chi_0\) is the initial value of \(\chi\).
+    This solution describes the \textbf{background cosmological expansion} in Cosmochrony, where \(\chi\) grows linearly
+    with time, directly yielding a Hubble-like law for the scale factor \(a(t) \propto \chi(t)\).
 
   \subsubsection{Spherically Symmetric Solution}
     Consider a spherically symmetric configuration, where \(\chi = \chi(r,t)\) and the gradient reduces to
-    \(\nabla \chi = \partial_r \chi \, \hat{r}\). The dynamical equation becomes:
+    \(\nabla \chi = \partial_r \chi \, \hat{r}\).
+    The dynamical equation becomes:
     \[
       \partial_t \chi = c \sqrt{1 - \frac{(\partial_r \chi)^2}{c^2}}.
     \]
@@ -38,18 +40,18 @@
     \[
       \chi(r) = \chi_0 \pm c r,
     \]
-    where \(\chi_0\) is an integration constant. This solution represents a \textbf{conical profile} for \(\chi\)
-    , with a gradient maximal (\(|\nabla \chi| = c\)
-    ). While this solution is not physically realizable globally (as it violates the boundedness of \(\chi\)
-    ), it illustrates the extreme case where the relaxation of \(\chi\)
-    is maximally slowed by spatial gradients.
+    where \(\chi_0\) is an integration constant.
+    This solution represents a \textbf{conical profile} for \(\chi\), with a gradient maximal (\(|\nabla \chi| = c\)).
+    While this solution is not physically realizable globally (as it violates the boundedness of \(\chi\)), it illustrates
+    the extreme case where the relaxation of \(\chi\) is maximally slowed by spatial gradients.
 
-    For a more realistic, time-dependent solution, assume a separable ansatz \(\chi(r,t) = R(r)T(t)\)
-    . Substituting into the dynamical equation and separating variables, we find:
+    For a more realistic, time-dependent solution, assume a separable ansatz \(\chi(r,t) = R(r)T(t)\).
+    Substituting into the dynamical equation and separating variables, we find:
     \[
       \frac{\dot{T}}{c \sqrt{1 - \frac{T^2 (R')^2}{c^2}}} = 1.
     \]
-    This implies \(\dot{T} = c\), so \(T(t) = c t + T_0\). The spatial part \(R(r)\) must then satisfy:
+    This implies \(\dot{T} = c\), so \(T(t) = c t + T_0\).
+    The spatial part \(R(r)\) must then satisfy:
     \[
       (R')^2 = \frac{c^2}{T^2} \left(1 - \frac{1}{c^2}\right).
     \]

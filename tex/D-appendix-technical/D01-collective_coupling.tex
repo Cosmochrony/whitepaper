@@ -1,11 +1,11 @@
-\section{Collective Gravitational Coupling and Operational Geometry}
-  \label{sec:collective-coupling}
+\subsection{Collective Gravitational Coupling and Operational Geometry}
+  \label{subsec:collective-coupling}
 
-  \subsection*{Status and Scope of the Construction}
+  \subsubsection*{Status and Scope of the Construction}
     This appendix provides the technical construction underlying the collective gravitational coupling introduced in Section~\ref{sec:gravity-emergence}.
     Its purpose is to demonstrate explicitly how an effective spatial geometry and a Newtonian gravitational interaction emerge from the local relaxation dynamics of the $\chi$ field, without assuming any pre-existing metric structure.
 
-  \subsection*{Minimal Local Ansatz for the Collective Coupling $K_{ij}$}
+  \subsubsection*{Minimal Local Ansatz for the Collective Coupling $K_{ij}$}
     \label{subsec:Kij-ansatz}
     We adopt a \textbf{constitutive relation} for the connectivity matrix $K_{ij}$ that encodes the local resistance of the $\chi$ field to variations between neighboring nodes $i$ and $j$:
     \begin{equation}
@@ -36,13 +36,13 @@
       \item \textbf{Gradient sensitivity}: $K_{ij}$ decreases as $|\chi_i - \chi_j|$ increases, encoding the \textbf{resistance to relaxation} induced by localized excitations.
     \end{enumerate}
 
-    \subsubsection*{Physical Interpretation}
+    \subsubsubsection*{Physical Interpretation}
       \begin{itemize}
         \item In regions where $\chi$ is uniform ($\chi_i \approx \chi_j$), $K_{ij} \approx K_0$, and the network behaves as a \textbf{flat spacetime} (minimal resistance to relaxation).
         \item Near localized excitations (e.g., particles or black holes), $|\chi_i - \chi_j|$ increases, reducing $K_{ij}$ and thus \textbf{slowing the relaxation of $\chi$}. This manifests as \textbf{gravitational time dilation} and \textbf{spacetime curvature}.
       \end{itemize}
 
-    \subsubsection*{Relation to Fundamental Constants}
+    \subsubsubsection*{Relation to Fundamental Constants}
       The scales $K_0$ and $\chi_c$ are expected to be related to fundamental constants. For example:
       \begin{itemize}
         \item $\chi_c$ may be identified with the \textbf{Planck length} $\ell_P \approx 1.6 \times 10^{-35} \, \text{m}$, setting the scale at which quantum gravitational effects become significant.
@@ -51,7 +51,7 @@
 
       The precise mapping between $(K_0, \chi_c)$ and observable constants (e.g., $G$, $\Lambda$) is derived in Section~\ref{subsec:newtonian-limit}.
 
-  \subsection*{Operational Definition of Distance on the Discrete Network}
+  \subsubsection*{Operational Definition of Distance on the Discrete Network}
     In the absence of a fundamental background geometry, spatial distance is defined operationally through the resistance to $\chi$ propagation across the network. For any discrete path $\gamma = \{i_0, i_1, \ldots, i_n\}$ connecting two sites $i$ and $j$, we define the squared path length:
     \begin{equation}
       d_\gamma^2 = \ell_0^2 \sum_{(i_k, i_{k+1}) \in \gamma} \frac{K_0}{K_{i_k i_{k+1}}}
@@ -62,7 +62,7 @@
     \end{equation}
     This definition is analogous to an electrical resistance network: strongly coupled sites (large $K_{ij}$) are operationally close, while weakly coupled sites are distant. Importantly, this notion of distance is not derived from a pre-existing geometry but emerges from the dynamics of $\chi$ itself.
 
-  \subsection*{Continuum Limit and Effective Spatial Line Element}
+  \subsubsection*{Continuum Limit and Effective Spatial Line Element}
     We now consider the continuum limit in which the lattice spacing $\varepsilon \rightarrow 0$ while the physical domain remains finite. For neighboring sites separated by $\varepsilon$ along direction $\hat{n}$, we expand:
     \begin{equation}
       \chi_j - \chi_i \simeq \varepsilon \partial_{\hat{n}} \chi
@@ -77,7 +77,7 @@
     \end{equation}
     This expression defines an effective spatial geometry to leading order in perturbations. The full spacetime structure, including temporal components, follows from the fundamental kinematic constraint governing the $\chi$ field.
 
-  \subsection*{From the Kinematic Constraint to the Field Equation}
+  \subsubsection*{From the Kinematic Constraint to the Field Equation}
     The $\chi$ field obeys the fundamental kinematic constraint:
     \begin{equation}
     (\partial_t \chi)^2 + |\nabla \chi|^2 = c^2
@@ -92,7 +92,7 @@
     \end{equation}
     where $S[\rho]$ represents the source term associated with localized solitonic matter excitations.
 
-  \subsection*{Quasi-Static Regime and Newtonian Limit}
+  \subsubsection*{Quasi-Static Regime and Newtonian Limit}
     \label{subsec:newtonian-limit}
     For gravitational phenomena on astrophysical scales, characteristic timescales are much longer than the light-crossing time of the system.
     In this quasi-static regime, $\partial_t^2 \phi$ is negligible compared to spatial gradients, and the field equation reduces to:
@@ -109,7 +109,7 @@
       \Phi = c^2 \ln \left( \frac{\partial_t \chi}{c} \right) \simeq \frac{c^2}{\bar{\chi}} \phi \quad (|\phi| \ll \bar{\chi})
     \end{equation}
 
-    \subsubsection*{Emergence of the Gravitational Constant $G$}
+    \subsubsubsection*{Emergence of the Gravitational Constant $G$}
     \label{sec:gravity-emergence}
       The gravitational constant $G$ emerges as an \textbf{effective coupling constant} derived from the microscopic parameters $K_0$ and $\chi_c$:
       \begin{equation}
@@ -130,7 +130,7 @@
       constant.
 
 
-  \subsubsection*{Equivalence Principle}
+  \subsubsubsection*{Equivalence Principle}
       Within this construction, gravitational mass characterizes the strength with which a soliton acts as a source for $\chi$ perturbations, while inertial mass is determined by the energy stored in the soliton's $\chi$ gradients:
       \begin{equation}
         M_{\text{inertial}} = \frac{1}{c^2} \int |\nabla \chi_{\text{soliton}}|^2 \, d^3 x
@@ -141,6 +141,6 @@
       \end{equation}
       establishing the equivalence principle as an \textbf{emergent property} rather than an independent postulate.
 
-  \subsection*{A.20.8 Summary}
+  \subsubsection*{A.20.8 Summary}
     This appendix has demonstrated explicitly how a purely local collective coupling of the $\chi$ field gives rise to an operational notion of distance, an effective spatial geometry, and a Newtonian gravitational interaction in the quasi-static regime.
     The construction supports the interpretation of gravitation presented in Section~\ref{sec:gravity-emergence} as a collective, emergent phenomenon rooted in the relaxation dynamics of the $\chi$ field.
