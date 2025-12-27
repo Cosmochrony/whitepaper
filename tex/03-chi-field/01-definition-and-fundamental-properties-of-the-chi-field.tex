@@ -36,6 +36,33 @@ confused with thermodynamic relaxation processes involving dissipation or entrop
   In the following sections, spacetime coordinates and metric quantities will be introduced as effective tools,
   valid in regimes where $\chi$ admits a stable geometric interpretation.
 
+  \begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[scale=1.1]
+
+% Axes
+      \draw[->] (-0.2,0) -- (6.5,0) node[right]{Space};
+      \draw[->] (0,-0.2) -- (0,3.5) node[above]{Time};
+
+% Wave
+      \draw[thick, blue, domain=0:6, samples=200]
+      plot (\x,{0.6*sin(2*pi*\x/1.5 r) + 0.4*\x/6});
+
+% Particle crest
+      \draw[red, thick] (3.2,1.3) circle (0.15);
+      \node[red, right] at (3.4,1.3) {Topological excitation};
+
+% Annotation
+      \node[blue] at (4.5,2.4) {$\chi(x,t)$ relaxation};
+
+    \end{tikzpicture}
+    \caption{Conceptual representation of Cosmochrony. A single continuous wave field $\chi(x,t)$
+      undergoes irreversible relaxation,
+      characterized by a monotonic increase of its characteristic wavelength. Localized topological excitations
+      correspond to particles.}
+    \label{fig:chi_concept}
+  \end{figure}
+
   \paragraph{On the use of spacetime language.}
     Throughout this work, phrases such as ``spacetime coordinates,'' ``metric tensor,'' and ``four-dimensional manifold'' appear frequently.
     These should be understood as \emph{emergent effective descriptions} valid in regimes where $\chi$ has relaxed into a quasi-stable geometric configuration.
