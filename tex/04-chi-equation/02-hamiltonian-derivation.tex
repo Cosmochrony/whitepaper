@@ -1,72 +1,88 @@
 \subsection{Hamiltonian Derivation of the Evolution Equation}
   \label{subsec:hamiltonian-derivation}
 
-  \subsubsection*{Effective Constraint on Local Relaxation}
+  \subsubsection*{Local Constraint on Relaxation Dynamics}
 
-    Although the fundamental dynamics of $\chi$ is formulated without reference to
-    spacetime or a Hamiltonian structure, its relaxation is subject to universal local
-    constraints.
-    In regimes where $\chi$ configurations admit a stable geometric interpretation,
-    these constraints may be summarized in a compact, Hamiltonian-like form.
+    The fundamental dynamics of the $\chi$ field is formulated without reference to
+    spacetime coordinates or to a Hamiltonian structure.
+    Nevertheless, its relaxation is subject to a universal local constraint reflecting
+    the bounded character of admissible relaxation rates.
 
-    Specifically, the local relaxation rate of $\chi$ is bounded by the invariant
-    constant $c$.
-    When expressed in effective geometric variables, this bound can be written as:
+    In regimes where the relational structure of $\chi$ admits a smooth and stable
+    coarse-grained description, this constraint can be summarized in a compact form
+    resembling a Hamiltonian relation.
+    This formulation is introduced solely as a descriptive parametrization of the
+    admissible local relaxation configurations, and does not define a fundamental
+    phase-space dynamics.
+
+    Specifically, the local relaxation rate of $\chi$ is bounded by the invariant constant
+    $c$.
+    When expressed in effective relational variables, this bound takes the form
     \begin{equation}
-    (\mathcal{D}_{\text{loc}}\chi)^2 + |\nabla \chi|_{\text{eff}}^2 = c^2 ,
+    (\mathcal{D}_{\mathrm{loc}}\chi)^2
+    + \mathcal{V}_{\chi}^2
+    = c^2 ,
     \label{eq:effective_hamiltonian_constraint}
     \end{equation}
-    where $|\nabla \chi|_{\text{eff}}$ denotes the effective magnitude of spatial
-    variations of $\chi$ within the coarse-grained geometric description.
-    This relation does not define a fundamental Hamiltonian, but provides a concise
-    summary of the admissible local relaxation configurations.
+    where $\mathcal{V}_{\chi}$ denotes the effective internal variation rate of $\chi$,
+    capturing how strongly local configurations resist relaxation.
+    No notion of spatial gradient or background geometry is assumed at the fundamental
+    level.
 
-    Selecting the monotonic relaxation branch yields the effective evolution equation:
+    Selecting the monotonic relaxation branch yields the effective evolution equation
     \begin{equation}
-      \mathcal{D}_{\text{loc}}\chi
-      = c \sqrt{1 - \frac{|\nabla \chi|_{\text{eff}}^2}{c^2}} ,
+      \mathcal{D}_{\mathrm{loc}}\chi
+      = c \sqrt{1 - \frac{\mathcal{V}_{\chi}^2}{c^2}} ,
       \label{eq:chi_dynamics}
     \end{equation}
-    which encodes the slowdown of relaxation induced by structural variations of
-    $\chi$.
+    which encodes the universal slowdown of relaxation induced by structural variations
+    of the $\chi$ field.
 
-  \subsubsection*{Emergent Gravitational Interpretation}
+  \subsubsection*{Emergent Gravitational Description}
 
-    Localized excitations of $\chi$ generate regions of enhanced relational structure,
-    which locally reduce the relaxation rate.
-    When interpreted in the effective spacetime description, this manifests as
-    gravitational time dilation.
-    No independent gravitational field is postulated; the effect arises directly from
-    the constrained relaxation dynamics of $\chi$.
+    Localized, relaxation-resistant configurations of $\chi$ generate regions of enhanced
+    internal structure, which locally reduce the admissible relaxation rate.
+    When a spacetime description becomes applicable, this effect is conventionally
+    described as gravitational time dilation.
+    No independent gravitational interaction or field is postulated; the effect arises
+    directly from the constrained relaxation dynamics of $\chi$ itself.
 
-    In the weak-structure regime ($|\nabla \chi|_{\text{eff}} \ll c$), the effective
-    description admits a simplified elliptic relation governing the spatial
+    In the weak-structure regime, where internal variation rates are small compared to
+    $c$, the effective description admits a simplified relation governing the spatial
     distribution of relaxation slowdown:
     \begin{equation}
-      \nabla \cdot \left( \frac{\nabla \chi}
-      {\sqrt{1 - |\nabla \chi|^2 / c^2}} \right)
-      \simeq \frac{4 \pi G_{\text{eff}}}{c^2} \rho ,
+      \nabla \cdot \left(
+                     \frac{\nabla \chi}
+                     {\sqrt{1 - |\nabla \chi|^2 / c^2}}
+      \right)
+      \simeq \frac{4 \pi G_{\mathrm{eff}}}{c^2} \rho ,
       \label{eq:effective_poisson_relation}
     \end{equation}
-    where $\rho$ denotes the density of localized excitations and $G_{\text{eff}}$ is
-    an emergent coupling parameter characterizing the collective influence of such
-    structures on the relaxation flow.
+    where $\rho$ denotes the density of localized configurations and
+    $G_{\mathrm{eff}}$ is an emergent coupling parameter characterizing the collective
+    response of the relaxation flow to such structures.
 
-    In the Newtonian limit, this reduces to an effective Poisson equation for a
-    gravitational potential $\Phi$ defined by:
+    In the Newtonian limit, this relation reduces to an effective Poisson equation for a
+    potential $\Phi$, defined operationally by
     \begin{equation}
-      \Phi \equiv c^2 \ln \left( \frac{\mathcal{D}_{\text{loc}}\chi}{c} \right),
+      \Phi \equiv c^2 \ln \left(
+                            \frac{\mathcal{D}_{\mathrm{loc}}\chi}{c}
+      \right) .
       \label{eq:effective_gravitational_potential}
     \end{equation}
-    recovering standard gravitational phenomenology as a coarse-grained description of
-    $\chi$ dynamics.
+    This potential is not introduced as a fundamental field, but as a convenient summary
+    of how localized variations of $\chi$ modulate relaxation in regimes where classical
+    gravitational phenomenology applies.
 
   \subsubsection*{Interpretational Status}
 
-    The relations above do not constitute a fundamental Hamiltonian or variational
-    theory.
-    They provide an effective, local summary of the constraints governing $\chi$
-    relaxation in regimes where spacetime notions apply.
-    The predictive content of Cosmochrony remains entirely encoded in the intrinsic,
-    pre-geometric relaxation dynamics of $\chi$, while geometric and gravitational
-    structures emerge only as descriptive tools.
+    The relations presented in this section do not constitute a fundamental Hamiltonian
+    or a variational principle.
+    They provide an effective local parametrization of the constraints governing $\chi$
+    relaxation when a geometric description becomes applicable.
+
+    The predictive content of Cosmochrony resides entirely in the intrinsic,
+    pre-geometric relaxation dynamics of the $\chi$ field.
+    Hamiltonian, geometric, and gravitational structures appear only as emergent
+    descriptive tools, valid in restricted regimes and carrying no independent
+    ontological status.
