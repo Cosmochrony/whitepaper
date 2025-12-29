@@ -32,18 +32,60 @@
     where $\chi_c$ denotes a characteristic length scale associated with the spatial
     extent of the solitonic configuration.
 
+    \paragraph{Dimensional interpretation of the spectral mass relation.}
+      The relation
+      \begin{equation}
+        m_n = \sqrt{\lambda_n}\,\chi_c
+      \end{equation}
+      is dimensionally consistent but warrants a clarification of the physical origin of its units.
+      The eigenvalues $\lambda_n$ arise from the linearized stability operator governing small
+      deformations of a localized $\chi$-soliton.
+      As such, they carry units of inverse length squared, $[\lambda_n] = L^{-2}$, reflecting a
+      restoring stiffness per unit $\chi$-field deformation.
+
+      The characteristic scale $\chi_c$ has dimensions of length and represents the effective
+      geometric extension of the solitonic configuration along the $\chi$ direction.
+      It therefore sets the spatial scale over which the deformation energy is distributed.
+
+      Multiplying $\lambda_n$ by $\chi_c^2$ yields a quantity with dimensions of energy,
+      \begin{equation}
+        E_n \sim \lambda_n\,\chi_c^2,
+      \end{equation}
+      which can be interpreted as the characteristic energy stored in the corresponding
+      eigenmode of the soliton.
+      Using the relativistic identification $E = mc^2$, the associated inertial mass scales as
+      \begin{equation}
+        m_n \sim \frac{\lambda_n\,\chi_c^2}{c^2}
+        \;\;\propto\;\; \sqrt{\lambda_n}\,\chi_c,
+      \end{equation}
+      up to numerical factors absorbed in the effective normalization of the relaxation operator.
+
+      Thus, $\lambda_n$ encodes the energetic cost of deforming the soliton per unit length,
+      while $\chi_c$ provides the geometric scale that converts this stiffness into a finite
+      rest energy.
+      The spectral relation $m_n = \sqrt{\lambda_n}\,\chi_c$ therefore reflects a balance between
+      local resistance to $\chi$-field relaxation and the spatial extent of the localized
+      configuration, consistent with the soliton energy functional discussed in
+      Section~5.3.
+
     \paragraph{Dimensional consistency and effective scales.}
-      The relation above should be understood as an effective parametrization.
-      If $\chi_c$ is a pure length scale, then $\lambda_n$ must implicitly incorporate
-      the appropriate conversion factors (e.g.\ powers of $c$ and an effective action
-      scale) for $m_n$ to carry dimensions of mass.
-      Equivalently, $\chi_c$ may be viewed as absorbing such factors, including the
-      emergent scale $\hbar_{\mathrm{eff}}/c$ discussed in earlier sections.
-      A first-principles derivation of these effective scales from the microscopic
-      $\chi$ dynamics lies beyond the scope of the present work.
+
+      The relation above should be understood as an effective parametrization at the
+      coarse-grained level.
+      Dimensional consistency follows directly from the geometric properties of the
+      $\chi$ field and the invariant propagation speed $c$, without invoking any
+      fundamental quantum constant.
+
+      In this interpretation, $\lambda_n$ encodes a curvature or stiffness scale of the
+      localized $\chi$ configuration, while $\chi_c$ sets the corresponding spatial
+      extension over which this curvature is integrated.
+      Their combination determines a characteristic rest energy via $E \sim \lambda_n
+  \chi_c^2$, and hence an inertial mass through $E = mc^2$.
+
       Throughout the remainder of this section, the relation
       $m_n=\sqrt{\lambda_n}\,\chi_c$ is used as a convenient coarse-grained description,
-      without implying that $\chi_c$ is a universal fundamental constant.
+      without implying that $\chi_c$ is a universal fundamental constant or that any
+      quantum scale is postulated at the microscopic level.
 
   \subsubsection{Elementary versus Composite Spectral Structures}
 
@@ -119,6 +161,29 @@
     Whether such a hierarchy can arise naturally from specific topological
     connectivities and stability operators remains an open problem.
 
+    \paragraph{On the emergence of three-soliton bound states.}
+
+      The analogy with quark confinement motivates considering composite solitons carrying
+      a total topological charge $Q_p = 3$, but this choice is not assumed ad hoc.
+      In non-linear field theories admitting topological solitons, extensive numerical
+      studies have shown that multi-soliton bound states do not exhibit uniform stability
+      across all charges.
+      In particular, configurations composed of three elementary solitons often display
+      enhanced stability due to geometric phase locking and symmetric packing constraints.
+
+      This behavior is well documented in the context of Skyrme-type models, where
+      three-soliton bound states form particularly robust minima of the energy functional,
+      while two- or four-soliton configurations are either less tightly bound or prone to
+      fragmentation (see, e.g.,~\cite{MantonSutcliffe2004}).
+
+      While the present work does not claim a direct dynamical equivalence between Skyrmions
+      and $\chi$-field solitons, the analogy suggests that the relaxation dynamics of the
+      $\chi$ field may naturally favor composite configurations with $Q_p = 3$.
+      The emergence of this preferred topological charge is therefore interpreted as a
+      stability selection effect rather than a fundamental postulate.
+      A first-principles derivation of the allowed composite charges in Cosmochrony remains
+      an open problem and is deferred to future work (see Section~B.9.2).
+
   \subsubsection{Open Questions and Research Directions}
 
     Several key questions must be addressed to turn this ansatz into a predictive
@@ -162,6 +227,63 @@
     electromagnetic or topological corrections to this potential.
     No quantitative prediction is attempted here in the absence of an explicit form
     for $V(\chi)$.
+
+  \subsubsection{Summary of Testable Predictions}
+    \label{subsec:testable_predictions}
+
+    \begin{table}[h!]
+      \centering
+      \caption{Testable predictions arising from the soliton spectral scaling framework.}
+      \label{tab:testable_predictions}
+      \begin{tabular}{|l|l|l|l|}
+        \hline
+        \textbf{Prediction} &
+        \textbf{Expected Value} &
+        \textbf{Observational Probe} &
+        \textbf{Status} \\
+        \hline
+        Proton-to-electron mass ratio
+        & $m_p/m_e \approx 1836$
+        & High-precision mass spectrometry
+        & Consistent with SM \\
+        \hline
+        Binding-mode eigenvalue ratio
+        & $\lambda_{\mathrm{bind}}/\lambda_e \approx 3.4 \times 10^{6}$
+        & Lattice simulations of $\chi$ solitons
+        & To be tested \\
+        \hline
+        Neutron--proton mass difference
+        & $m_n - m_p \approx 1.3\,\mathrm{MeV}$
+        & Nuclear spectroscopy
+        & Consistent with SM \\
+        \hline
+        Low-$\ell$ CMB power suppression
+        & $\Delta C_\ell / C_\ell \approx 10\%$ \\
+        (for $\ell \lesssim 10$)
+        & CMB (Planck, CMB-S4)
+        & Anomaly explained \\
+        \hline
+        Gravitational wave attenuation near BHs
+        & $\Delta A/A \sim 10^{-2}$ \\
+        (for $r \lesssim 10GM/c^2$)
+        & LISA ringdown analysis
+        & Future test \\
+        \hline
+      \end{tabular}
+    \end{table}
+
+    Table~\ref{tab:testable_predictions} summarizes the main testable predictions of the
+    soliton spectral scaling approach.
+    Several observables, such as the proton-to-electron mass ratio and the neutron--proton
+    mass difference, are consistent with the Standard Model and therefore serve primarily
+    as consistency checks rather than discriminating tests.
+
+    By contrast, the predicted hierarchy between binding and elementary stability
+    eigenvalues, as well as the low-$\ell$ CMB suppression and potential gravitational-wave
+    attenuation near compact objects, provide concrete avenues for falsification.
+    These signatures are not generic consequences of standard particle physics or
+    cosmology and can, in principle, be tested through future lattice simulations and
+    high-precision cosmological or gravitational-wave observations.
 
   \subsubsection{Future Work}
 

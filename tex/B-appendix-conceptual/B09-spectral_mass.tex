@@ -85,6 +85,57 @@
   Its admissible form is constrained by the requirement that it support stable
     solitonic configurations compatible with the spectral structure.
 
+    To clarify in what sense the potential $V(\chi)$ may influence observable masses
+    without redefining their spectral origin, we briefly illustrate how it can induce
+    small corrections to the stability eigenvalues.
+
+  \paragraph{Example: potential-induced corrections to stability eigenvalues.}
+
+    To make explicit how the effective potential $V(\chi)$ can modify the stability
+    eigenvalues $\lambda_n$ without altering the underlying topological structure,
+    consider a simple illustrative example.
+    Let
+    \begin{equation}
+      V(\chi) = \lambda \left( \chi^2 - \chi_c^2 \right)^2 ,
+    \end{equation}
+    where $\chi_c$ denotes the equilibrium value of the $\chi$ field in the relaxed
+    background.
+
+    Expanding $V(\chi)$ around $\chi = \chi_c$ yields a quadratic contribution for small
+    fluctuations $\delta\chi = \chi - \chi_c$,
+    \begin{equation}
+      V(\chi_c + \delta\chi) \simeq
+      \frac{1}{2}
+      \left.
+        \frac{d^2 V}{d\chi^2}
+      \right|_{\chi=\chi_c}
+      (\delta\chi)^2 + \cdots ,
+    \end{equation}
+    with
+    \begin{equation}
+      \left.
+        \frac{d^2 V}{d\chi^2}
+      \right|_{\chi=\chi_c}
+      \;\propto\;
+      \lambda\,\chi_c^2 .
+    \end{equation}
+
+    This term contributes additively to the linearized stability operator
+    $\mathcal{L}_{\mathrm{sol}}$, effectively shifting the eigenvalues as
+    \begin{equation}
+      \lambda_n \;\longrightarrow\;
+      \lambda_n^{(0)} + \Delta\lambda_n^{(V)} ,
+    \end{equation}
+    where $\lambda_n^{(0)}$ encodes the geometric and topological stiffness of the soliton,
+    and $\Delta\lambda_n^{(V)}$ arises from the local curvature of the potential.
+
+    For composite solitons such as baryons, this potential-induced correction can differ
+    slightly between closely related configurations (e.g.\ neutron versus proton),
+    thereby generating small mass splittings.
+    By contrast, ratios controlled primarily by the number and organization of elementary
+    solitonic constituents (such as $m_p/m_e$) remain dominated by the topological
+    structure and are only weakly affected by $V(\chi)$.
+
   \paragraph{Supporting perspectives.}
     Additional constraints arising from discrete symmetries, information-theoretic
     considerations, or dynamical consistency may further restrict admissible
