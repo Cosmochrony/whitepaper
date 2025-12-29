@@ -1,27 +1,51 @@
 \subsection{Mass as Resistance to $\chi$ Relaxation}
-  \label{subsec:mass-as-resistance-to-chi-relaxation}
+  \label{subsec:mass_as_resistance}
 
-  Within the Cosmochrony framework, mass is not an intrinsic attribute of matter
-  but an emergent measure of the degree to which a localized excitation resists
-  the relaxation of the $\chi$ field.
-  Mass therefore characterizes the persistence of a non-relaxed configuration
-  embedded within an otherwise globally relaxing substrate.
+  In Cosmochrony, mass is not introduced as an intrinsic or fundamental property of matter.
+  Instead, it emerges as a quantitative measure of how strongly a localized configuration of
+  the $\chi$ field resists the global relaxation flow.
 
-  Localized particle-like excitations introduce structural constraints in the
-  configuration of $\chi$, which reduce the effective local rate of relaxation.
-  When described using an effective spacetime parametrization, this reduction
-  appears as a local slowing of the $\chi$ evolution, corresponding to time
-  dilation in geometric terms.
-  At larger scales, the cumulative effect of such localized constraints gives rise
-  to what is interpreted as inertial and gravitational mass.
+  A particle-like excitation is modeled as a stable, localized solitonic configuration
+  $\chi_s$, characterized by sustained internal structure and non-vanishing gradients.
+  Such configurations locally inhibit the relaxation of $\chi$, producing a slowdown
+  relative to the homogeneous background evolution. In an effective geometric description,
+  this slowdown manifests as inertial persistence and gravitational time dilation.
 
-  From an energetic perspective, this resistance to relaxation corresponds to the
-  storage of relaxation potential within the $\chi$ field.
-  Maintaining a stable solitonic configuration requires continuously opposing the
-  global relaxation flow, and the associated cost is what is operationally
-  identified as energy.
-  In this sense, mass quantifies the amount of relaxation potential that remains
-  locally trapped within a persistent excitation.
+  We define the structural energy associated with a solitonic configuration $\chi_s$ as
+  the excess relaxation capacity stored in its internal curvature:
+  \begin{equation}
+    E[\chi_s] \;\equiv\;
+    \int_{\Sigma}
+    \left(
+      \frac{1}{\sqrt{1 - |\nabla \chi_s|^2 / c^2}} - 1
+    \right)
+    \, d\Sigma ,
+    \label{eq:chi_soliton_energy}
+  \end{equation}
+  where $\Sigma$ denotes a hypersurface of constant effective ordering parameter,
+  and $|\nabla \chi_s|$ quantifies the local structural deformation of the $\chi$ field.
+  This expression measures the energetic cost of maintaining a non-relaxed configuration
+  embedded within a globally relaxing substrate.
 
-  The quantitative mapping between solitonic energy and the masses of observed
-  particles is discussed in Sec.~\ref{subsec:soliton_energy_mass}.
+  The inertial mass associated with the soliton is then defined operationally as
+  \begin{equation}
+    m \;\equiv\; \frac{E[\chi_s]}{c^2}.
+    \label{eq:mass_definition}
+  \end{equation}
+
+  This relation is not postulated but follows directly from the role of $E[\chi_s]$ as
+  a measure of resistance to $\chi$ relaxation. The universal constant $c$ appears as
+  the maximal relaxation rate of the field and therefore provides the unique conversion
+  factor between relaxation energy and inertial response.
+
+  Within this framework, the relation $E = mc^2$ is interpreted as a kinematic identity:
+  mass quantifies the amount of relaxation potential locally trapped in a persistent
+  $\chi$ configuration, while energy measures the same quantity expressed in relaxation units.
+
+  In this sense, mass is not an independent attribute of matter, but a derived property
+  encoding how strongly a localized $\chi$ configuration resists the irreversible
+  relaxation that defines physical time.
+
+  The question of how different particle masses arise from distinct solitonic
+  configurations is addressed in Appendix~\ref{app:topological_solitons}, where a spectral characterization
+  of $\chi$-field stability modes is proposed as the geometric origin of mass hierarchies.
