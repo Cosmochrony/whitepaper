@@ -87,6 +87,77 @@
       without implying that $\chi_c$ is a universal fundamental constant or that any
       quantum scale is postulated at the microscopic level.
 
+  \subsubsection{Derivation of the Scaling Factor $(\chi_c / \ell_{\text{spacetime}})^2$}
+    \label{sec:scaling_factor_derivation}
+
+    The fundamental description of the $\chi$ field does not rely on a spacetime action
+    with fixed physical units; instead, it is formulated in terms of relational relaxation
+    rules. In regimes where a continuum approximation applies, an effective action may
+    be introduced as a bookkeeping device for perturbations around stable configurations.
+
+    In this regime, the effective action for perturbations $\delta\chi$ around a soliton
+    may be written schematically as
+    \[
+      S_{\text{eff}}[\delta\chi] = \int d^4x \, \frac{1}{2}
+      \left( \frac{\chi_c}{c} \right)^2
+      \left[ (\partial_t \delta\chi)^2 - c^2 (\nabla \delta\chi)^2 \right].
+    \]
+
+    To express this action in emergent spacetime coordinates
+    $x^\mu_{\text{spacetime}}$, we perform the rescaling
+    \[
+      x^\mu = \left( \frac{\ell_{\text{spacetime}}}{\chi_c} \right) x^\mu_{\chi},
+    \]
+    which introduces a Jacobian factor
+    $(\chi_c / \ell_{\text{spacetime}})^4$ in the integration measure.
+
+    As a consequence, the canonical momentum conjugate to $\delta\chi$ acquires a factor
+    $(\chi_c / \ell_{\text{spacetime}})^2$, leading to the effective identification
+    \[
+      \boxed{
+        \hbar_{\text{eff}} = \hbar_{\chi}
+        \left( \frac{\chi_c}{\ell_{\text{spacetime}}} \right)^2 .
+      }
+    \]
+
+    This quadratic scaling reflects the geometric projection of $\chi$-field
+    configurations onto emergent spacetime observables.
+
+  \subsubsection{Energy Levels from Spectral Stability}
+    \label{sec:energy_levels_spectral}
+
+    The energy levels $E_n$ of solitonic excitations emerge from the spectral stability
+    analysis of $\Delta_G^{(0)}$, without invoking quantum mechanical postulates.
+
+    For a soliton labeled by $n$, the gradient energy takes the form
+    \[
+      E_{\text{grad}}^{(n)} =
+      \frac{c^2}{2} \lambda_n \mathcal{N}_n ,
+    \]
+    where $\mathcal{N}_n$ denotes the norm of the localized configuration.
+
+    In regimes where an effective spacetime description applies, this energy is identified
+    with the rest-mass energy,
+    \[
+      E_n \equiv m_n c^2 .
+    \]
+
+    The discretization of $E_n$ follows from the topological classification of solitons
+    and the discrete spectrum of $\Delta_G^{(0)}$, not from canonical quantization.
+    The role of $\hbar_{\text{eff}}$ arises only when matching this description to
+    effective quantum observables.
+
+    For a composite soliton, the mass ratio therefore scales as
+    \[
+      \frac{m_p}{m_e}
+      \;=\;
+      \frac{\lambda_3 \mathcal{N}_3}{\lambda_1 \mathcal{N}_1}
+      \;\sim\;
+      \sqrt{3} \cdot \frac{\mathcal{N}_3}{\mathcal{N}_1},
+    \]
+    up to an order-of-magnitude factor reflecting the internal normalization of
+    composite solitonic configurations.
+
   \subsubsection{Elementary versus Composite Spectral Structures}
 
     A crucial distinction must be made between elementary and composite excitations
@@ -183,7 +254,12 @@
     Whether such a hierarchy can arise naturally from specific topological
     connectivities and stability operators remains an open problem.
 
-    \paragraph{On the emergence of three-soliton bound states.}
+    Matching the observed proton-to-electron mass ratio
+    $m_p/m_e \simeq 1836$ therefore constrains the allowed range of the
+    normalization ratio $\mathcal{N}_3/\mathcal{N}_1$,
+    rather than providing a first-principles numerical prediction.
+
+  \paragraph{On the emergence of three-soliton bound states.}
 
       The analogy with quark confinement motivates considering composite solitons carrying
       a total topological charge $Q_p = 3$, but this choice is not assumed ad hoc.

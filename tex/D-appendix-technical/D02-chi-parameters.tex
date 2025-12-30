@@ -89,35 +89,53 @@
       Both normalizations are internally consistent at the level of dimensional analysis;
       discriminating between them requires additional observational input.
 
-  \subsubsection{Effective Solitonic Parameters $(\lambda,\eta)$}
+\subsection{Order-of-Magnitude Consistency Checks}
+  \label{sec:consistency_checks}
 
-    Localized particle-like excitations are modeled as stabilized configurations of the
-    $\chi$ field.
-    Their persistence against relaxation is controlled by effective parameters governing
-    nonlinear self-organization and structural amplitude.
+  While precise numerical estimates of \(K_0\) and \(\chi_c\) require full lattice simulations (see Appendix D.3), we perform **order-of-magnitude consistency checks** to ensure that the \(\chi\)-field framework operates in a phenomenologically viable regime. These checks are **not predictions**, but sanity tests for the parameter space.
 
-    In generic solitonic models, the characteristic energy scale satisfies
-    \begin{equation}
-      m_{\text{soliton}} \propto \sqrt{\lambda}\,\eta^3,
-    \end{equation}
-    where $\lambda$ controls the strength of nonlinear stabilization and $\eta$ sets the
-    typical amplitude of the configuration.
-    Within Cosmochrony, these parameters are not universal constants but encode how a given
-    topological configuration resists the global relaxation flow.
+  \begin{enumerate}
+    \item **Electron Mass Constraint**:
+    For an electron-like soliton with \(m_e \approx 0.5\) MeV and \(\lambda_1 \approx (m_e c^2 / \hbar_{\text{eff}})^2\), we require:
+    \[
+      \lambda_1 \approx \left( \frac{0.5 \text{ MeV} \cdot c^2}{\hbar_{\text{eff}}} \right)^2.
+    \]
+    Assuming \(\hbar_{\text{eff}} \approx \hbar\) for microscopic scales, this yields:
+    \[
+      \lambda_1 \approx (5 \times 10^{20} \, \text{s}^{-1})^2 = 2.5 \times 10^{41} \, \text{s}^{-2}.
+    \]
+    For a lattice spacing \(a \approx 10^{-15}\) m, this implies:
+    \[
+      K_0 \approx \frac{\lambda_1}{c^2 / a^2} \approx 2.5 \times 10^{31} \, \text{m}^{-2}.
+    \]
+    This value is **consistent with the stability of solitons** on the lattice, but not uniquely determined.
 
-    Matching the electron mass scale provides an indicative constraint,
-    \begin{equation}
-      \lambda \sim 10^{-116}\,\mathrm{m}^{-2}
-    \end{equation}
-    for $\eta \sim \mathcal{O}(1)$ in naturalized units.
-    Such an extremely small value should not be interpreted as fine-tuning, but as evidence
-    that $\lambda$ is an emergent parameter sensitive to the internal structure and
-    environment of the excitation, in close analogy with effective couplings in
-    condensed-matter systems.
+    \item **Correlation Length \(\chi_c\)**:
+    The scale \(\chi_c\) sets the transition between the **symmetric** (\(\chi < \chi_c\)) and **broken** (\(\chi > \chi_c\)) phases. For the electroweak scale \(v \approx 246\) GeV, we expect:
+    \[
+      \chi_c \lesssim \frac{\hbar c}{v} \approx 10^{-18} \, \text{m},
+    \]
+    where the inequality reflects that \(\chi_c\) is a **pre-geometric scale**. This is **not a prediction**, but a consistency bound ensuring that particle masses emerge at the correct energy scales.
 
-    Mass hierarchies between particle species (e.g.\ $m_p/m_e \simeq 1836$) would then arise
-    from differences in topological class, effective amplitudes, or collective stabilization
-    mechanisms, rather than from a single universal coupling.
+    \item **Avoiding Fine-Tuning**:
+    The parameters \(K_0\) and \(\chi_c\) are **not fine-tuned**, but constrained by:
+    \begin{itemize}
+      \item The **stability of solitons** (requires \(K_0 a^2 \gg 1\)),
+      \item The **emergence of the electroweak scale** (requires \(\chi_c \lesssim 10^{-18}\) m),
+      \item The **absence of UV divergences** (requires \(K_0 \lesssim c^2 / a^2\)).
+    \end{itemize}
+    These bounds define a **viable parameter space**, not a unique solution.
+  \end{enumerate}
+
+  \noindent
+  \textbf{Important Note}:
+  The above estimates are **illustrative only**. Precise values of \(K_0\) and \(\chi_c\) will be determined by:
+  \begin{itemize}
+    \item **Lattice simulations** of \(\chi\)-field dynamics (Appendix D.3),
+    \item **Matching to the particle mass spectrum** (Section B.8.4),
+    \item **Cosmological observations** (e.g., CMB anisotropies, Section 10.7).
+  \end{itemize}
+  No claim is made that these parameters are **predicted** at this stage; they are **constrained** by consistency with known physics.
 
   \subsubsection{Relaxation Speed and Cosmological Constraints}
 
