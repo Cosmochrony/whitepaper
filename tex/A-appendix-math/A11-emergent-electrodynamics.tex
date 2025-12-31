@@ -1,0 +1,69 @@
+\subsection{Emergent Electrodynamics from $\chi$ Dynamics}
+  \label{app:emergent-electrodynamics}
+
+  The dynamics of $\chi$ perturbations are governed by the
+      \textbf{effective wave equation} (Section~\ref{subsec:variational-formulation}):
+  \[
+    \boxed{
+      \nabla \cdot \left( \frac{\nabla \chi}{\sqrt{1 - |\nabla \chi|^2 / c^2}} \right) - \frac{1}{c^2}
+      \frac{\partial^2 \chi}{\partial t^2} = \frac{4 \pi G_{\text{eff}}}{c^2} \rho_{\chi}.
+    }
+  \]
+  In the \textbf{weak-field limit} ($|\nabla \chi| \ll c$), this reduces to:
+  \[
+    \nabla^2 \chi - \frac{1}{c^2} \frac{\partial^2 \chi}{\partial t^2} = 4 \pi G_{\text{eff}} \rho_{\chi}.
+  \]
+
+  \paragraph{Scalar and Vector Potentials}
+    Decompose $\chi$ into \textbf{scalar} and \textbf{vector} components:
+    \[
+      \chi(\mathbf{x}, t) = \chi_0 + \phi(\mathbf{x}, t) + \nabla \cdot \mathbf{A}(\mathbf{x}, t),
+    \]
+    \textbf
+    {should be understood as an effective Helmholtz-like projection induced by the topology of solitonic excitations,
+      rather than as a fundamental field split.} Specifically:
+    \begin{itemize}
+      \item The scalar component $\phi$ encodes \textbf{longitudinal modes} associated with charge density
+      $\rho_{\text{em}} \propto \Delta_G^{(0)} \chi$.
+      \item The vector component $\mathbf{A}$ emerges from \textbf{transverse gradients} of $\chi$ (i.e.,
+      $\nabla \times \nabla \chi \neq 0$), which are inherently divergence-free due to the solitonic topology (Section~
+      \ref{subsec:vortices}).
+    \end{itemize}
+
+    The vector potential $\mathbf{A}$ is not an independent degree of freedom but arises from the
+        \textbf{transverse sector} of $\chi$ gradients\footnote{
+  The transverse nature of $\mathbf{A}$ follows from the solitonic topology: charged solitons (
+  Section~\ref{subsec:vortices}) are characterized by closed loop integrals $\oint \nabla \chi \cdot d\mathbf{l} \neq 0$
+  , which imply $\nabla \times \mathbf{A} \neq 0$ while enforcing $\nabla \cdot \mathbf{A} = 0$
+  via Stokes' theorem. This is analogous to the Helmholtz decomposition in fluid dynamics,
+  where the vector field is derived from the scalar field's gradients.
+}.
+
+  \paragraph{Field Definitions}
+    Define the \textbf{electric} and \textbf{magnetic fields} as:
+    \[
+      \mathbf{E} = -\nabla \phi - \frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}, \quad \mathbf{B} = \nabla \times
+      \mathbf{A}.
+    \]
+    These fields satisfy the \textbf{Maxwell equations}:
+    \[
+      \boxed{
+        \begin{aligned}
+          \nabla \cdot \mathbf{E} &= 4 \pi G_{\text{eff}} \rho_{\text{em}}, \\
+          \nabla \times \mathbf{E} + \frac{1}{c} \frac{\partial \mathbf{B}}{\partial t} &= 0, \\
+          \nabla \cdot \mathbf{B} &= 0, \\
+          \nabla \times \mathbf{B} - \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t} &=
+          \frac{4 \pi G_{\text{eff}}}{c} \mathbf{J}_{\text{em}}.
+        \end{aligned}
+      }
+    \]
+
+  \paragraph{Gauge Invariance}
+    The decomposition $\chi = \chi_0 + \phi + \nabla \cdot \mathbf{A}$ is \textbf{not unique}. A
+        \textbf{gauge transformation}:
+    \[
+      \phi \to \phi - \frac{1}{c} \frac{\partial \Lambda}{\partial t}, \quad \mathbf{A} \to \mathbf{A} + \nabla \Lambda,
+    \]
+    leaves the fields $\mathbf{E}$ and $\mathbf{B}$ invariant. This \textbf{U(1) gauge symmetry} is
+        \textbf{derived from the relational nature of $\chi$}, where only \textbf{gradient differences}
+        are observable (Section~\ref{subsec:relational-foundation}).
