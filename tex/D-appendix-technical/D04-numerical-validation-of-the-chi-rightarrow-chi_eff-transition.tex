@@ -105,11 +105,16 @@
   \paragraph{Representative results and temporal diagnostics.}
     For $N=32$, $\ell_0=4$ lattice units, $\Delta t=0.03$ and dimensionless normalization
     $c=1$ (with parameters chosen for numerical stability on modest lattice sizes), we find
-    a final residual of order $10^{-2}$.
+    a final normalized residual of order $10^{-2}$ in projectable regimes.
     In a representative smooth run, the final values are
     $\varepsilon_{L^2}\approx 9.3\times 10^{-3}$ and $\varepsilon_{L^\infty}\approx 1.4\times 10^{-2}$;
     in a representative rough run, $\varepsilon_{L^2}\approx 1.45\times 10^{-2}$ and
     $\varepsilon_{L^\infty}\approx 1.63\times 10^{-2}$.
+
+    Importantly, the same order of magnitude is observed when increasing the micro-lattice
+    resolution (e.g.\ $N=48$ at fixed $\ell_0=4$), indicating that the small-residual regime
+    is not a resolution-dependent artifact but reflects a genuine coarse-grained consistency.
+
     The temporal evolution $\varepsilon(t)$ is shown in Fig.~\ref{fig:D4-epsilon-time},
     and the distribution of pointwise residuals for the smooth run is shown in
     Fig.~\ref{fig:D4-residual-hist}.
@@ -125,6 +130,17 @@ coarse-grained dynamics}.
       representative smooth run and a rough run, illustrating convergence toward a
       small-error regime of order $10^{-2}$ over the simulated time window.}
       \label{fig:D4-epsilon-time}
+    \end{figure}
+
+    \begin{figure}[t]
+      \centering
+      \includegraphics[width=0.78\linewidth]{D-appendix-technical/fig_D4_saturation_fraction_compare}
+      \caption{\textbf{Saturation fraction versus time.}
+      Fraction of lattice sites satisfying $S>1$ for smooth, rough, and nonprojectable runs.
+      The nonprojectable configuration rapidly reaches $f_{\mathrm{sat}}\simeq 1$,
+        indicating a fully saturated and effectively frozen regime, while smooth and rough
+        cases remain partially saturated and dynamically active.}
+      \label{fig:D4-satfrac-compare}
     \end{figure}
 
     \begin{figure}[t]
@@ -170,26 +186,40 @@ coarse-grained dynamics}.
   \paragraph{Interpretation and limitations.}
     This toy model demonstrates constructively that the operational coarse-graining
     procedure defining $\chi_{\mathrm{eff}}$ yields an effective description compatible with
-    the coarse-grained micro-dynamics in a projectable regime.
-    The present runs do not yet exhibit a sharp \emph{failure mode} (non-projectable regime)
-    in which $\varepsilon(t)$ remains $\mathcal{O}(1)$; such regimes can be obtained by
-    increasing initial roughness/amplitude, reducing smoothing, or forcing persistent
-    saturation ($S_i>1$) through parameter choices, and are left to extended numerical
-    sweeps.
+    the coarse-grained micro-dynamics in projectable regimes, as indicated by a small
+    normalized residual $\varepsilon=\mathcal{O}(10^{-2})$ for both smooth and rough runs
+    across multiple lattice resolutions.
+
+    However, the residual $\varepsilon$ is not by itself a sufficient criterion for
+    projectability.
+    In fully saturated configurations, where $S_i>1$ on (nearly) all lattice sites,
+    the bounded relaxation term vanishes ($R_i=0$) and the dynamics becomes effectively
+    frozen.
+    In this case, $\partial_t\chi_{\mathrm{eff}}\approx 0$ and the residual
+    $\varepsilon$ becomes trivially small, even though no meaningful effective geometric
+    description exists.
+    Such saturated regimes therefore constitute explicit non-projectable failure modes,
+    which must be identified using an independent indicator.
 
   \paragraph{Reproducibility.}
     All figures and numerical values reported in this subsection are reproducible using an
     independent Python implementation provided as supplementary material in a separate
-    repository. The implementation follows Eqs.~\eqref{eq:D4_Si_Kij}--\eqref{eq:D4_epsilon_def}
+    repository.
+    The implementation follows Eqs.~\eqref{eq:D4_Si_Kij}--\eqref{eq:D4_epsilon_def}
     exactly, including the pre-smoothing protocol and the residual diagnostics.
 
-  \paragraph{Resolution and coarse-graining dependence (planned sweeps).}
-    To assess robustness rather than a single-case agreement, the validation program is
-    designed to include parameter sweeps in (i) lattice resolution $N$, and (ii) coarse-graining
-    scale $\ell_0$, while keeping $\ell_0/N$ within a fixed projectable range.
-    The convergence criterion is
-    \[
-      \varepsilon(N,\ell_0) \rightarrow 0
-      \quad\text{as}\quad N\rightarrow\infty
-      \ \text{with}\ \ell_0/N \ \text{fixed}.
-    \]
+  \paragraph{Resolution and coarse-graining dependence.}
+    To assess robustness beyond a single configuration, the validation program includes
+    parameter sweeps in lattice resolution $N$ and coarse-graining scale $\ell_0$.
+    Preliminary resolution sweeps at fixed $\ell_0=4$ (e.g.\ $N=32$ and $N=48$) show that the
+    normalized residual remains of order $10^{-2}$ in projectable regimes, while fully
+    saturated configurations remain clearly identifiable by an independent saturation
+    indicator.
+
+    More extensive sweeps in $(N,\ell_0)$ space are left for future work; however, the
+    present results already demonstrate that the observed agreement is not a numerical
+    coincidence tied to a single lattice size.
+
+  Taken together, these results transform the $\chi\rightarrow\chi_{\mathrm{eff}}$
+    transition from a purely programmatic statement into an explicit and numerically
+    demonstrated construction within a controlled toy model.
