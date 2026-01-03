@@ -1,94 +1,136 @@
 \subsection{Evolution of the Hubble Parameter and the Hubble Tension}
   \label{app:hubble_tension}
 
-  In Cosmochrony, the cosmological expansion is governed by the relaxation dynamics
-  of the scalar field $\chi$, rather than by a balance between matter, radiation,
-  and a dark energy component.
-  The Hubble parameter therefore reflects the instantaneous relaxation rate of
-  $\chi$ relative to its global value.
+  In the Cosmochrony framework, cosmological expansion is not governed by the
+  competition between matter, radiation, and a dark energy component.
+  Instead, it reflects the relaxation dynamics of the scalar field \(\chi\), from
+  which spacetime geometry and its associated expansion rate emerge as effective
+  descriptions.
+
+  The Hubble parameter therefore encodes the instantaneous relaxation rate of
+  \(\chi\) relative to its global configuration, rather than the response of a
+  metric to an energy--momentum content.
 
   \paragraph{Global expansion rate.}
-    At the background level, the scale factor is proportional to $\chi$,
-    \[
+    At the homogeneous background level, the effective scale factor is proportional
+    to the global value of the projected field,
+    \begin{equation}
       a(t) \propto \chi(t),
-    \]
-    so that the Hubble parameter is given by
-    \[
+    \end{equation}
+    so that the Hubble parameter may be written as
+    \begin{equation}
       H(t) = \frac{\dot{\chi}}{\chi}.
-    \]
-    In a perfectly homogeneous configuration, $\nabla \chi = 0$ and the relaxation
-    equation reduces to $\dot{\chi} = c$, yielding
-    \[
-      H(t) = \frac{c}{\chi(t)}.
-    \]
+    \end{equation}
+
+    In the idealized homogeneous limit, spatial gradients vanish
+    (\(\nabla \chi = 0\)) and the relaxation dynamics reduce to a uniform evolution
+    with maximal relaxation speed,
+    \begin{equation}
+      \dot{\chi} = c .
+    \end{equation}
+    In this limit, the global expansion rate becomes
+    \begin{equation}
+      H(t) = \frac{c}{\chi(t)} .
+    \end{equation}
+
     This relation defines the \emph{global} expansion rate in Cosmochrony.
-    Its precise redshift dependence beyond the homogeneous limit depends on how
-    inhomogeneities and relaxation gradients contribute to the average dynamics,
-    and is not assumed here to follow an exact power law at all epochs.
+    Its detailed redshift dependence away from perfect homogeneity is not assumed to
+    follow a fixed power law and depends on how relaxation gradients contribute to
+    the averaged dynamics.
 
   \paragraph{Relaxation budget and effective expansion.}
-    To quantify the influence of inhomogeneities, we introduce the dimensionless
-    \emph{relaxation budget parameter}
+    In a realistic universe, part of the relaxation capacity of \(\chi\) is stored
+    in spatial gradients associated with inhomogeneities.
+    To quantify this effect, we introduce a dimensionless \emph{relaxation budget}
+    parameter,
     \begin{equation}
       \Omega_\chi \equiv \langle \beta^2 \rangle,
-      \qquad \beta \equiv \frac{|\nabla \chi|}{c},
+      \qquad
+      \beta \equiv \frac{|\nabla \chi|}{c},
       \label{eq:chi-relaxation}
     \end{equation}
-    which measures the fraction of the relaxation capacity stored in spatial
-    gradients of $\chi$.
-    In the late universe, these gradients are dominated by localized solitonic
-    excitations and therefore track the matter distribution.
+    which measures the fraction of the total relaxation capacity diverted into
+    spatial structure rather than global evolution.
 
-    The effective global expansion rate is then reduced according to
-    \[
-      \bar{H} = \frac{c}{\chi}\sqrt{1 - \Omega_\chi}.
-    \]
-    Empirically, $\Omega_\chi$ is constrained to be close to the observed matter
-    fraction, $\Omega_\chi \simeq \Omega_m \approx 0.3$, providing a natural
-    suppression of the expansion rate without invoking dark energy.
-
-  \paragraph{Local expansion and the Hubble tension.}
-    In an inhomogeneous universe, the relaxation budget varies locally.
-    In a region with density contrast
-    \[
-      \delta = \frac{\rho - \bar{\rho}}{\bar{\rho}},
-    \]
-    we adopt the minimal closure relation
-    \[
-      \beta_{\text{loc}}^2 = \Omega_\chi (1+\delta),
-    \]
-    corresponding to a mean-field scaling between matter density and $\chi$-gradient
-    energy.
-
-    The local Hubble parameter then becomes
+    At late times, these gradients are dominated by localized solitonic
+    configurations and therefore track the large-scale matter distribution.
+    The effective global expansion rate is then reduced to
     \begin{equation}
-      H_{\text{loc}}
-      = \bar{H}
-      \sqrt{\frac{1 - \Omega_\chi (1+\delta)}{1 - \Omega_\chi}}.
+      \bar{H}
+      =
+      \frac{c}{\chi}
+      \sqrt{1 - \Omega_\chi}.
     \end{equation}
-    In underdense regions ($\delta < 0$), the available relaxation capacity is higher,
-    leading to $H_{\text{loc}} > \bar{H}$.
 
-  \paragraph{Numerical consistency.}
-    For $\Omega_\chi \approx 0.31$ and a local underdensity consistent with the KBC
-    void ($\delta \approx -0.4$ on scales of $\sim 300$~Mpc), we obtain
-    \[
-      \frac{H_{\text{loc}}}{\bar{H}} \approx 1.08,
-    \]
-    corresponding to an $8\%$ enhancement of the locally inferred Hubble constant.
-    This magnitude is sufficient to account for the observed Hubble tension between
-    local distance-ladder measurements and global CMB-based inferences.
+    Empirically, consistency with large-scale observations suggests
+    \(\Omega_\chi\) is of order the observed matter fraction,
+    \(\Omega_\chi \sim 0.3\).
+    In Cosmochrony, this suppression of the global expansion rate arises naturally
+    from relaxation dynamics and does not require a dark energy component.
+
+  \paragraph{Local expansion and environmental dependence.}
+    In an inhomogeneous universe, the relaxation budget is not spatially uniform.
+    Regions with different matter densities redistribute relaxation capacity
+    differently between global evolution and local gradients.
+
+    For a region characterized by a density contrast
+    \begin{equation}
+      \delta = \frac{\rho - \bar{\rho}}{\bar{\rho}},
+    \end{equation}
+    we adopt a minimal mean-field closure relation,
+    \begin{equation}
+      \beta_{\mathrm{loc}}^{2}
+      =
+      \Omega_\chi (1 + \delta),
+    \end{equation}
+    which encodes the intuitive scaling between matter density and
+    \(\chi\)-gradient energy.
+
+    The locally inferred Hubble parameter then takes the form
+    \begin{equation}
+      H_{\mathrm{loc}}
+      =
+      \bar{H}
+      \sqrt{
+        \frac{1 - \Omega_\chi (1+\delta)}
+        {1 - \Omega_\chi}
+      } .
+    \end{equation}
+
+    In underdense regions (\(\delta < 0\)), a larger fraction of the relaxation
+    capacity is available for global evolution, leading to
+    \(H_{\mathrm{loc}} > \bar{H}\).
+
+  \paragraph{Numerical consistency and the Hubble tension.}
+    For representative values
+    \(\Omega_\chi \approx 0.3\) and a local underdensity consistent with the
+    KBC void (\(\delta \approx -0.4\) on scales of a few hundred megaparsecs), one
+    finds
+    \begin{equation}
+      \frac{H_{\mathrm{loc}}}{\bar{H}} \approx 1.08 ,
+    \end{equation}
+    corresponding to an enhancement of order \(8\%\) in the locally inferred Hubble
+    constant.
+
+    This magnitude is comparable to the observed discrepancy between local
+    distance-ladder measurements and global CMB-based inferences.
+    In Cosmochrony, this discrepancy arises naturally as an environmental effect,
+    without invoking new energy components or modifications of early-universe
+    physics.
 
   \paragraph{Interpretation and status.}
-    In Cosmochrony, the Hubble tension does not signal missing energy components or
-    inconsistencies in early-universe physics.
-    Instead, it arises as a non-linear environmental effect associated with the
-    redistribution of the $\chi$-field relaxation budget in an inhomogeneous universe.
+    Within Cosmochrony, the Hubble tension does not signal a breakdown of cosmological
+    consistency.
+    It reflects the fact that cosmological expansion is an emergent relaxation
+    phenomenon whose effective rate depends on the local redistribution of
+    \(\chi\)-field gradients.
 
-    While the framework naturally predicts a separation between local and global
-    expansion rates, a fully quantitative determination of $H(z)$ across all
-    redshifts requires numerical simulations of $\chi$ dynamics and is left for
-    future work.
-    The resolution of the Hubble tension, however, follows directly from the
-    relaxation-based interpretation of cosmological expansion and constitutes a
-    distinctive and testable signature of the theory.
+    While the framework robustly predicts a separation between local and global
+    expansion rates, a fully quantitative determination of \(H(z)\) across all
+    redshifts requires dedicated numerical simulations of the \(\chi\) relaxation
+    dynamics.
+    Such simulations lie beyond the scope of the present work.
+
+    Nevertheless, the qualitative resolution of the Hubble tension follows directly
+    from the relaxation-based interpretation of cosmological expansion and
+    constitutes a distinctive and testable signature of the Cosmochrony framework.

@@ -1,82 +1,109 @@
 \subsection{Stability Analysis of the $\chi$-Field Dynamics}
   \label{subsec:stability-analysis}
 
-  The stability of the $\chi$-field dynamics, governed by
-  \begin{equation}
-    \partial_t \chi = c \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}},
-  \end{equation}
-  is a central requirement for Cosmochrony to define a physically consistent framework.
-  Since $\chi$ is interpreted as a fundamental geometric substrate, its evolution must
-  remain well-behaved under perturbations, without runaway growth or singular behavior.
+  The stability of the $\chi$-field dynamics is a central requirement for Cosmochrony
+  to define a physically consistent framework.
+  Since $\chi$ is interpreted as a fundamental pre-geometric substrate, its evolution
+  must remain well-behaved under perturbations, without runaway growth or singular
+  behavior.
 
-  Below we analyze the response of the system to small deviations around homogeneous
+  In regimes where a smooth geometric description is applicable, the effective
+  relaxation dynamics of $\chi$ may be written as
+  \begin{equation}
+    \partial_t \chi
+    =
+    c \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}},
+  \end{equation}
+  where $\partial_t$ denotes an effective ordering parameter associated with the
+  relaxation process, not a fundamental time variable.
+  This representationity is introduced solely for analytical convenience in the
+  hydrodynamic regime.
+
+  Below we analyze the response of this dynamics to small deviations around homogeneous
   relaxation states.
 
   \subsubsection{Perturbative Structure and Marginal Linear Stability}
 
     Consider a spatially homogeneous background solution
     \[
-      \chi_0(t) = c t + \chi_{0,0},
+      \chi_0(t) = c\,t + \chi_{0,0},
     \]
-    which satisfies $\nabla \chi_0 = 0$ and $\partial_t \chi_0 = c$.
+    satisfying $\nabla \chi_0 = 0$ and $\partial_t \chi_0 = c$.
     We introduce a small perturbation
     \[
       \chi(x,t) = \chi_0(t) + \delta \chi(x,t),
-      \qquad |\nabla \delta \chi| \ll c .
+      \qquad
+      |\nabla \delta \chi| \ll c .
     \]
 
     Substituting into the evolution equation and expanding the square root yields
     \begin{equation}
       \partial_t \delta \chi
       =
-      - \frac{1}{2c} |\nabla \delta \chi|^2
+      - \frac{1}{2c}\,|\nabla \delta \chi|^2
       + \mathcal{O}\!\left(|\nabla \delta \chi|^4\right).
     \end{equation}
 
     Importantly, no term linear in $\delta \chi$ appears.
-    The homogeneous solution is therefore \emph{marginally stable at linear order}:
-    infinitesimal perturbations neither grow nor propagate dynamically at first order.
-    This absence of linear instabilities reflects the purely relaxational
-    character of the $\chi$ dynamics.
+    The homogeneous relaxation solution is therefore \emph{marginally stable at linear
+order}: infinitesimal perturbations neither grow nor propagate dynamically at first
+    order.
+    This reflects the purely relaxational character of the $\chi$ dynamics and the
+    absence of fundamental propagating modes at the linearized level.
 
   \subsubsection{Nonlinear Stability and Dissipative Behavior}
 
     Although linear perturbations are marginal, the leading nonlinear correction is
     strictly negative.
-    This implies that any spatial inhomogeneity in $\chi$ reduces the local relaxation
-    rate and is therefore dynamically damped.
+    Any spatial inhomogeneity in $\chi$ therefore reduces the local relaxation rate and
+    is dynamically suppressed.
 
     To make this explicit, consider the functional
     \begin{equation}
-      E[\delta \chi] = \frac{1}{2} \int |\nabla \delta \chi|^2 \, d^3x ,
+      E[\delta \chi]
+      =
+      \frac{1}{2}
+      \int |\nabla \delta \chi|^2 \, d^3x ,
     \end{equation}
-    which measures the total geometric tension stored in the perturbation.
-    Using the evolution equation, one finds that $E[\delta \chi]$ is a
-    non-increasing function of time.
-    Spatial gradients are therefore progressively smoothed, and perturbations remain
-    bounded for all times.
+    which measures the geometric tension associated with spatial variations of the
+    perturbation.
+    Using the evolution equation, one finds that $E[\delta \chi]$ is a non-increasing
+    function of the ordering parameter.
+    This follows from the fact that the relaxation flow is negative-definite in the
+    presence of spatial gradients, acting systematically to reduce
+    $|\nabla \delta \chi|^2$.
 
-    This establishes \emph{nonlinear stability} of the relaxation dynamics:
-    the system is dissipative and contractive in configuration space, with no mechanism
-    for amplification of perturbations.
+    Spatial gradients are therefore progressively smoothed, and perturbations remain
+    bounded for all values of the ordering parameter.
+    The dynamics is dissipative and contractive in configuration space, with no
+    mechanism for amplification of perturbations.
+
+    This establishes \emph{nonlinear stability} of the $\chi$ relaxation dynamics.
 
   \subsubsection{Special Configurations}
 
-    For simple perturbative profiles, the qualitative behavior is transparent:
+    For simple classes of perturbations, the qualitative behavior is transparent:
     \begin{itemize}
-      \item \textbf{Planar perturbations:} Spatial oscillations do not propagate as waves,
-      but are progressively flattened due to the reduction of the local relaxation rate.
-      \item \textbf{Spherically symmetric perturbations:} Radial inhomogeneities decay
-      monotonically, corresponding to a diffusive relaxation of geometric tension.
+      \item \textbf{Planar perturbations:}
+      Spatial oscillations do not propagate as waves, but are progressively flattened
+      as the local relaxation rate decreases in regions of nonzero gradient.
+
+      \item \textbf{Spherically symmetric perturbations:}
+      Radial inhomogeneities decay monotonically, corresponding to a
+      diffusion-like relaxation of geometric tension.
     \end{itemize}
 
-    In all cases, the dynamics suppresses sharp gradients and prevents the formation of
-    singular structures.
+    In all cases, the dynamics suppresses sharp gradients and prevents the formation
+    of singular structures within the effective description.
 
   \subsubsection{Conclusion}
 
     The $\chi$-field dynamics are marginally stable at linear order and strictly stable
     once nonlinear effects are taken into account.
     This guarantees that the irreversible relaxation of $\chi$ defines a robust and
-    physically consistent substrate for the emergence of spacetime geometry, gravitation,
-    and quantum phenomena within the Cosmochrony framework.
+    physically consistent substrate for the emergence of spacetime geometry,
+    gravitation, and quantum phenomena within the Cosmochrony framework.
+
+    Notably, this stability property is inseparable from the monotonic character of the
+    relaxation process: the same mechanism that defines the arrow of time also
+    precludes dynamical instabilities.

@@ -1,74 +1,102 @@
 \subsection{Example: \(4\pi\)-Periodic Soliton and Spinorial Behavior}
   \label{subsec:4pi_soliton}
 
-  This section provides an \emph{illustrative geometric construction} showing how
-  spin-$\tfrac{1}{2}$--like behavior may emerge from a scalar $\chi$ configuration,
-  without introducing a fundamental spinor field.
+  This subsection presents an \emph{illustrative geometric construction} showing how
+  spin-\(\tfrac{1}{2}\)--like transformation behavior may emerge from a localized
+  configuration of the \(\chi\) field, without introducing a fundamental spinor
+  degree of freedom.
 
-  The construction should be understood as an effective and topological model,
-  intended to demonstrate plausibility rather than to constitute a complete
-  microscopic derivation of fermionic degrees of freedom.
+  The construction is intentionally minimal and purely effective.
+  It is not intended as a microscopic derivation of fermions, but as a demonstration
+  of \emph{topological plausibility}: namely, that spinorial behavior can arise from
+  nontrivial structure in the configuration space of scalar excitations once a
+  projectable regime is reached.
 
-  \subsubsection{Phase-Twisted Solitonic Configuration}
+  All geometric notions used below refer exclusively to the effective projected field
+  \(\chi_{\mathrm{eff}}\).
+  The fundamental \(\chi\) field itself does not admit spatial localization,
+  complex structure, or phase.
 
-    For convenience, the scalar field $\chi$ is represented in a complex form,
+  \subsubsection{Phase-Twisted Effective Solitonic Configuration}
+
+    In the projectable regime, certain localized excitations of \(\chi\) admit an
+    effective internal organization that can be parametrized by an angular variable.
+    For illustrative purposes only, such configurations may be represented using a
+    complex-valued proxy field,
     \begin{equation}
-      \chi(x) = \eta \tanh(\kappa x)\, e^{i \theta(x)},
+      \chi_{\mathrm{eff}}(x)
+      =
+      \eta \tanh(\kappa x)\, e^{i\theta(x)} ,
     \end{equation}
-    where the complex phase does \emph{not} represent an independent internal degree
-    of freedom but serves as a parametrization of the internal oscillatory structure
-    of a localized $\chi$ excitation.
-    The underlying physical field remains real.
+    where:
+    \begin{itemize}
+      \item the underlying physical field remains real,
+      \item the complex phase does \emph{not} represent an independent internal degree
+      of freedom,
+      \item the phase \(\theta\) parametrizes the internal cyclic structure of the
+      effective solitonic configuration.
+    \end{itemize}
+
+    This representation should be understood purely as a convenient encoding of the
+    internal organization of the excitation in effective space.
 
     Choosing
     \begin{equation}
-      \theta(x) = \frac{x}{2},
+      \theta(x) = \frac{x}{2}
     \end{equation}
-    implies that the configuration returns to its original state only after a
-    $4\pi$ variation of the phase,
+    implies that the configuration returns to an equivalent internal state only after
+    a \(4\pi\) variation of the effective rotation parameter,
     \begin{equation}
-      \theta(x+4\pi)=\theta(x)+2\pi,
+      \theta(x + 4\pi) = \theta(x) + 2\pi ,
     \end{equation}
-    while a $2\pi$ variation produces a sign inversion.
+    whereas a \(2\pi\) variation produces a configuration that is locally identical in
+    effective space but globally inequivalent in internal structure.
 
   \subsubsection{Topological Interpretation}
 
-    This $4\pi$ periodicity reflects a topological obstruction analogous to that
-    encountered in spinorial representations.
-    Although the spatial configuration may appear unchanged after a $2\pi$ rotation,
-    the internal state of the excitation is not.
-    Only a $4\pi$ rotation restores full equivalence.
+    The \(4\pi\)-periodicity does not originate from the introduction of a complex
+    field or an intrinsic phase.
+    It reflects a nontrivial topology of the configuration space of the soliton.
+
+    Although the spatial projection of the excitation may appear unchanged after a
+    \(2\pi\) rotation, the internal organization of the configuration is not.
+    Only a \(4\pi\) rotation restores full equivalence in the space of effective
+    configurations.
 
     This behavior mirrors the double-cover structure
-    $\mathrm{SU}(2)\!\to\!\mathrm{SO}(3)$
-    characteristic of spin-$\tfrac{1}{2}$ systems, without postulating a fundamental
-    spinor field.
-    Instead, the spinorial behavior arises from the topology of the solitonic
-    configuration itself.
+    \(\mathrm{SU}(2)\!\to\!\mathrm{SO}(3)\)
+    characteristic of spinorial representations.
+    In the present framework, however, this structure arises from the topology of
+    solitonic configurations of \(\chi_{\mathrm{eff}}\), rather than from a fundamental
+    spinor ontology.
 
-  \subsubsection{Relation to Fermionic Statistics}
+  \subsubsection{Relation to Fermionic Transformation Properties}
 
-    At the effective level, such $4\pi$-periodic excitations naturally acquire a
-    minus sign under $2\pi$ rotations.
-    In multi-excitation configurations, this topological property suggests an
-    antisymmetric exchange behavior, providing a geometric basis for fermion-like
-    statistics.
+    At the effective level, \(4\pi\)-periodic excitations naturally acquire a sign
+    change under \(2\pi\) rotations.
+    In multi-excitation configurations, this topological property implies that the
+    exchange of two identical excitations cannot be continuously deformed into the
+    identity without crossing a topologically nontrivial sector.
 
-    This result does not constitute a proof of the spin--statistics theorem.
-    Rather, it demonstrates that fermionic transformation properties and exclusion
-    behavior can consistently emerge from topologically constrained scalar-field
-    excitations.
+    This provides a geometric basis for fermion-like transformation behavior and
+    antisymmetric exchange properties.
+    The construction does not constitute a proof of the spin--statistics theorem;
+    rather, it demonstrates that fermionic characteristics can emerge consistently
+    from topologically constrained scalar-field excitations.
 
-  \subsubsection{Conceptual Scope}
+  \subsubsection{Conceptual Scope and Limitations}
 
-    The present construction is intentionally minimal.
-    It aims to show that:
+    The purpose of this example is conceptual.
+    It illustrates that:
     \begin{itemize}
-      \item spinorial behavior does not require a fundamental spinor ontology,
-      \item fermion-like properties may arise from topological constraints,
-      \item scalar-field dynamics can support nontrivial exchange behavior.
+      \item spinorial behavior does not require a fundamental spinor field,
+      \item \(4\pi\)-periodicity can arise from topological obstructions,
+      \item fermion-like exchange behavior may emerge from scalar excitations with
+      nontrivial configuration space.
     \end{itemize}
 
-    A fully relational formulation of these topological properties, independent of
-    any embedding geometry, is discussed in
+    No claim is made that this construction reproduces the full dynamics, interactions,
+    or statistics of Standard Model fermions.
+    A fully relational formulation of these topological properties, independent of any
+    embedding geometry or auxiliary representation, is discussed in
     Appendix~\ref{app:relational_formulation}.

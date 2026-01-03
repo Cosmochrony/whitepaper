@@ -2,118 +2,172 @@
   \label{subsec:geometric-action}
 
   \subsubsection{Effective Observables from $\chi$ Correlations}
-    In Cosmochrony, quantities conventionally described in geometric terms---such as time
-    intervals, spatial separation, and causal ordering---are not taken as primitive.
-    They arise as descriptive summaries of relational patterns within the $\chi$ field,
-    constructed directly from its internal variation structure.
+
+    In Cosmochrony, quantities conventionally described in geometric terms—such as time
+    intervals, spatial separation, and causal ordering—are not taken as primitive.
+    They arise as effective descriptive summaries of relational patterns within the
+    $\chi$ substrate, accessed only through projected, coarse-grained representations.
     No background spacetime, coordinate system, or discrete substrate is assumed at any
     stage of the fundamental description.
 
-  The configurations $\sigma$ represent internal states of the $\chi$ field and are
-    defined without reference to external spacetime coordinates or background geometry.
-    They label relational degrees of freedom of the field, specifying patterns of
+    The configurations $\sigma$ represent internal states of the $\chi$ relational substrate
+    and are defined without reference to external spacetime coordinates or background
+    geometry.
+    They label relational degrees of freedom of the substrate, specifying patterns of
     internal organization rather than positions in a pre-existing space.
 
-    Correlations between configurations $\sigma$ encode the emergent geometric and
-    causal structure at the effective level, once a stable spacetime description becomes
+    Correlations between configurations $\sigma$ encode the emergent geometric and causal
+    structure at the effective level, once a stable spacetime description becomes
     applicable.
     The measure $d\mu(\sigma)$ denotes an invariant integration over this space of
-    configurations, defined intrinsically from the correlation structure of $\chi$.
-    It ensures that physical observables are independent of the particular
-    parametrization chosen to label configurations, and carries no interpretation as a
-    volume element in an underlying spacetime.
+    configurations, defined intrinsically from the correlation structure associated with
+    $\chi$.
+    It ensures that physical observables are independent of the particular parametrization
+    chosen to label configurations, and carries no interpretation as a volume element in an
+    underlying spacetime.
 
-    Operational time intervals are defined by the accumulated relaxation of $\chi$ along a path
-    in configuration space:
-    \begin{equation}
-      \tau_{AB} \propto \int_{\gamma_{AB}} \mathcal{D}_{\lambda} \chi \, d\lambda,
-    \end{equation}
-    where $\gamma_{AB}$ is a path connecting configurations $A$ and $B$, and
-    $\mathcal{D}_{\lambda}\chi$ is the relaxation rate of $\chi$.
+    \paragraph{Effective scalar descriptor.}
+      In regimes where projected $\chi$ configurations admit a stable geometric
+      interpretation, it is convenient to introduce an \emph{effective scalar descriptor},
+      denoted $\chi_{\mathrm{eff}}$.
+      This quantity is a coarse-grained, projected representation of relational features of
+      the $\chi$ substrate, defined only within the emergent spacetime description.
+      It does not correspond to the fundamental $\chi$ substrate itself, which remains
+      non-indexable and devoid of intrinsic values.
+      Although $\chi_{\mathrm{eff}}$ is represented as a scalar function in effective
+      descriptions, it should not be interpreted as a fundamental field propagating in
+      spacetime.
 
-    Operational spatial separation is quantified by the decay of $\chi$ correlations between two
-    configurations:
-    \begin{equation}
-      d(x,y) \propto -\log\left(\frac{\langle \chi(x)\chi(y)\rangle}{\langle \chi^2\rangle}\right),
-    \end{equation}
-    where $\langle \chi(x)\chi(y)\rangle$ measures the correlation between configurations labeled
-    by $x$ and $y$.
-    These definitions are purely relational and make no reference to a pre-existing metric or
-    discrete structure.
-    They are applicable whenever $\chi$ configurations exhibit stable patterns.
+      Operational time intervals are defined from the accumulated ordering of projected
+      $\chi$ configurations along paths in configuration space.
+      This ordering is quantified using the effective descriptor $\chi_{\mathrm{eff}}$, not
+      the fundamental $\chi$ substrate:
+      \begin{equation}
+        \tau_{AB} \;\propto\;
+        \int_{\gamma_{AB}} \mathcal{D}_{\lambda} \chi_{\mathrm{eff}} \, d\lambda,
+      \end{equation}
+      where $\mathcal{D}_{\lambda} \chi_{\mathrm{eff}}$ is an effective relaxation functional
+      characterizing the ordering of projected $\chi$ configurations along the path
+      $\gamma_{AB}$.
+      The parameter $\lambda$ is an ordering parameter, not a fundamental time coordinate.
+
+      Geometric observables are constructed from correlations between effective scalar
+      descriptors $\chi_{\mathrm{eff}}$, associated with projected $\chi$ configurations.
+      These correlations encode relational information about causal connectivity and
+      separation once a geometric regime is established.
+
+      Operational spatial separation is quantified by the decay of correlations between
+      effective scalar descriptors $\chi_{\mathrm{eff}}$ associated with projected $\chi$
+      configurations:
+      \begin{equation}
+        d(x,y) \;\propto\;
+        - \log\left(
+                \frac{\langle \chi_{\mathrm{eff}}(x)\,\chi_{\mathrm{eff}}(y)\rangle}
+                {\langle \chi_{\mathrm{eff}}^{\,2}\rangle}
+        \right),
+      \end{equation}
+      where $\langle \chi_{\mathrm{eff}}(x)\chi_{\mathrm{eff}}(y)\rangle$ measures the
+      correlation between effective descriptors associated with configurations labeled by
+      $x$ and $y$.
+      Here $x$ and $y$ label effective spacetime events in the emergent description.
+      The correlation function involves $\chi_{\mathrm{eff}}$ only and does not imply any
+      localization or value assignment at the level of the fundamental $\chi$ substrate.
+
+      These definitions are purely relational and make no reference to a pre-existing metric
+      or discrete structure.
+      They are applicable whenever projected $\chi$ configurations exhibit stable
+      correlation patterns.
+
+      Throughout this section, all indexed, correlated, or integrated quantities refer
+      exclusively to the effective descriptor $\chi_{\mathrm{eff}}$, not to the fundamental
+      $\chi$ substrate itself.
 
   \subsubsection{Effective Metric as a Descriptive Tool}
-    In regimes where the $\chi$ field exhibits smooth and stable correlation patterns,
-    the relational observables defined above may be compactly summarized by an operational
-    tensor $g_{\mu\nu}[\chi]$.
+
+    In regimes where projected $\chi$ configurations exhibit smooth and stable correlation
+    patterns, the relational observables defined above may be compactly summarized by an
+    operational tensor $g_{\mu\nu}[\chi_{\mathrm{eff}}]$.
+    The notation $g_{\mu\nu}[\chi_{\mathrm{eff}}]$ emphasizes that the metric summarizes
+    correlations of effective descriptors, not properties of the fundamental $\chi$
+    substrate.
     This object is not introduced as a fundamental geometric structure, nor as an
     independent degree of freedom.
-    Rather, it provides a convenient parametrization of how variations in $\chi$
-    modulate causal connectivity and effective relational intervals, and is meaningful
-    only insofar as such a coarse-grained description remains valid.
-    This metric is not a fundamental object, but a compact representation of how $\chi$
-    correlations modulate causal connectivity and proper intervals.
+    Rather, it provides a convenient parametrization of how variations in
+    $\chi_{\mathrm{eff}}$ modulate causal connectivity and effective relational intervals,
+    and is meaningful only insofar as such a coarse-grained description remains valid.
 
-    The metric is introduced as a descriptive summary of $\chi$ correlations, not postulated as
-    an independent degree of freedom.
+    The metric is introduced as a descriptive summary of $\chi_{\mathrm{eff}}$
+    correlations, not postulated as an independent degree of freedom.
     For example:
     \begin{itemize}
-      \item The conformal (lightcone) structure is constrained by the maximal relaxation speed
-      $c$ of $\chi$.
-      \item Proper time between effective events is proportional to the accumulated $\chi$
-      relaxation along paths connecting the corresponding configurations.
-      \item Spatial distance reflects the decay rate of $\chi$ correlations.
+      \item The conformal (lightcone) structure is constrained by the maximal effective
+      relaxation speed $c$ associated with $\chi_{\mathrm{eff}}$.
+      \item Proper time between effective events is proportional to the accumulated
+      $\chi_{\mathrm{eff}}$ relaxation along paths connecting the corresponding
+      configurations.
+      \item Spatial distance reflects the decay rate of $\chi_{\mathrm{eff}}$
+      correlations.
     \end{itemize}
 
     No discrete-to-continuum limit is invoked.
-    The theory is continuous at all scales; apparent granularity (e.g., Planck-scale phenomena)
-    is attributed to non-linear $\chi$ dynamics rather than to an underlying discretization.
+    The theory is continuous at all scales; apparent granularity (e.g., Planck-scale
+    phenomena) is attributed to non-linear $\chi$ dynamics rather than to an underlying
+    discretization.
 
     No background $\eta_{\mu\nu}$ is assumed.
     Minkowski space appears only as a convenient approximation in suitable limits (e.g.,
     weak-gradient regimes), without ontological status in the fundamental description.
 
   \subsubsection{Consistency with General Relativity}
-    The effective metric $g_{\mu\nu}[\chi]$ constructed as a summary of $\chi$ correlations
-    reproduces the phenomenology of general relativity in the following sense:
+
+    The effective metric $g_{\mu\nu}[\chi_{\mathrm{eff}}]$, constructed as a summary of
+    $\chi_{\mathrm{eff}}$ correlations, reproduces the phenomenology of general relativity
+    in the following sense:
     \begin{itemize}
-      \item \textbf{Weak-field limit:} when $\chi$ gradients are small, the effective metric
-      approaches a form compatible with Einstein-like dynamics for a fluid-like
-      stress-energy description associated with $\chi$ excitations.
-      \item \textbf{Strong-field regimes:} near localized $\chi$ excitations (e.g., solitons), the
-      metric encodes time dilation and spatial curvature as emergent effects of slowed $\chi$
-      relaxation, without requiring a fundamental gravitational field.
-      \item \textbf{Cosmological expansion:} homogeneous relaxation of $\chi$ yields an effective
-      Hubble-like expansion law for the emergent scale factor.
+      \item \textbf{Weak-field limit:} when $\chi_{\mathrm{eff}}$ gradients are small, the
+      effective metric approaches a form compatible with Einstein-like dynamics for a
+      fluid-like stress-energy description associated with $\chi$ excitations.
+      \item \textbf{Strong-field regimes:} near localized $\chi$ excitations (e.g.,
+      solitons), the metric encodes time dilation and spatial curvature as emergent
+      effects of slowed $\chi_{\mathrm{eff}}$ relaxation, without requiring a
+      fundamental gravitational field.
+      \item \textbf{Cosmological expansion:} homogeneous relaxation of $\chi$ yields an
+      effective Hubble-like expansion law for the emergent scale factor.
     \end{itemize}
 
     Crucially, this is not a bootstrap procedure.
-    The metric is not iteratively reconstructed from $\chi$; it is a post-hoc descriptive tool
-    summarizing geometric regularities of $\chi$ configurations.
-    The theory's predictive content resides in the dynamics of $\chi$, not in the metric itself.
+    The metric is not iteratively reconstructed from $\chi$; it is a post-hoc descriptive
+    tool summarizing geometric regularities of projected $\chi$ configurations.
+    The theory's predictive content resides in the dynamics of $\chi$, not in the metric
+    itself.
 
   \subsubsection{Ontological Status of the Metric}
+
     To avoid confusion, we emphasize:
     \begin{itemize}
-      \item $\chi$ is the only fundamental field.
-      Spacetime, metric structure, and matter are emergent descriptions of $\chi$
-      configurations.
-      \item No ``double ontology'' is assumed: there is no underlying discrete graph or lattice.
-      Geometric language is introduced only as an effective tool.
-      \item The metric $g_{\mu\nu}[\chi]$ is an effective construct, analogous to how temperature
-      emerges in thermodynamics.
+      \item $\chi$ is the only fundamental entity.
+      Spacetime, metric structure, and matter are emergent descriptions of projected
+      $\chi$ configurations.
+      \item No ``double ontology'' is assumed: there is no underlying discrete graph or
+      lattice.
+      Geometric language is introduced only as an effective descriptive tool.
+      \item The metric $g_{\mu\nu}[\chi_{\mathrm{eff}}]$ is an effective construct, analogous
+      to how temperature emerges in thermodynamics.
       It is useful for coarse-grained description but plays no role in the fundamental
       dynamics.
     \end{itemize}
 
   \subsubsection{Summary: A Fully Continuous Framework}
+
     \begin{itemize}
-      \item \textbf{Fundamental level:} only the continuous $\chi$ field exists, evolving through
-      a monotonic relaxation dynamics.
-      \item \textbf{Effective level:} geometric observables (time, distance, metric) emerge from
-      $\chi$ correlations in suitable regimes.
-      \item \textbf{No bootstrap:} the metric is never iteratively constructed or assumed; it is a
-      derived description summarizing the relational structure of $\chi$ configurations.
-      \item \textbf{No discretization:} apparent ``Planck-scale'' effects arise from non-linear
-      $\chi$ dynamics, not from an underlying discrete substrate.
+      \item \textbf{Fundamental level:} only the continuous $\chi$ relational substrate
+      exists, characterized by an intrinsic ordering structure.
+      \item \textbf{Effective level:} geometric observables (time, distance, metric) emerge
+      from correlations between effective descriptors $\chi_{\mathrm{eff}}$
+      associated with projected $\chi$ configurations.
+      \item \textbf{No bootstrap:} the metric is never iteratively constructed or assumed; it
+      is a derived description summarizing the relational structure of projected
+      $\chi$ configurations.
+      \item \textbf{No discretization:} apparent ``Planck-scale'' effects arise from
+      non-linear $\chi$ dynamics, not from an underlying discrete substrate.
     \end{itemize}

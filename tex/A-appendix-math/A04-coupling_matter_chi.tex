@@ -1,63 +1,109 @@
 \subsection{Coupling with Matter: Effective Source Term $S[\chi,\rho]$}
   \label{subsec:coupling_matter_chi}
 
-  In regimes where the $\chi$ field admits a smooth geometric interpretation, its
-  dynamics may be expressed using effective differential operators familiar from
-  field theory.
-  Within this \emph{emergent} description, the influence of localized excitations
-  (matter or energy density $\rho$) on the relaxation of $\chi$ can be summarized
-  by an effective source term $S[\chi,\rho]$:
+  In regimes where the $\chi$ field admits a smooth and slowly varying geometric
+  description, its collective relaxation dynamics can be represented using
+  effective differential operators familiar from continuum field theory.
+  Within this \emph{emergent} spacetime description, the influence of localized
+  excitations (identified with matter through an effective density $\rho$) on the
+  relaxation of $\chi$ may be summarized by an effective source term:
   \begin{equation}
-    \square_{\text{eff}} \chi = S[\chi,\rho].
+    \square_{\mathrm{eff}} \chi = S[\chi,\rho].
+    \label{eq:chi_effective_source}
   \end{equation}
-  This equation should not be interpreted as fundamental.
-  Both the operator $\square_{\text{eff}}$ and the source term $S$ arise only after
-  a spacetime description has emerged from the underlying relaxation dynamics of
-  $\chi$.
 
-  \subsubsection{Physical Meaning of $S[\chi,\rho]$}
+  This equation is not fundamental.
+  Both the operator $\square_{\mathrm{eff}}$ and the source term $S[\chi,\rho]$
+  arise only after coarse-graining the underlying relational relaxation dynamics
+  of $\chi$.
+  They provide a macroscopic parametrization valid exclusively in regimes where
+  spacetime notions are operationally meaningful.
 
-    The term $S[\chi,\rho]$ does not represent an external force acting on $\chi$.
-    Rather, it encodes the \emph{effective resistance} of localized excitations to
-    the global relaxation of the field.
-    Regions containing matter correspond to structured configurations of $\chi$
-    (solitons) that locally reduce the relaxation rate, inducing spatial gradients
-    and differential proper-time flow.
+  \subsubsection{Physical Interpretation of the Source Term}
 
-    Within this interpretation, $S[\chi,\rho]$ provides a compact phenomenological
-    description of several emergent effects:
+    The term $S[\chi,\rho]$ must not be interpreted as an external force acting on
+    $\chi$, nor as an independent dynamical input.
+    Instead, it encodes the \emph{effective resistance} of localized excitations to
+    the global relaxation flow of the field.
+
+    Matter corresponds, in Cosmochrony, to structured and long-lived configurations
+    of $\chi$ (solitonic or topologically constrained excitations).
+    Such configurations locally inhibit relaxation, inducing spatial gradients and
+    differential ordering rates when described in an effective geometric language.
+
+    Within this interpretation, the source term $S[\chi,\rho]$ provides a compact
+    phenomenological summary of several emergent effects:
     \begin{itemize}
-      \item gravitational time dilation as a consequence of slowed $\chi$ relaxation,
-      \item inertial mass as persistent resistance to relaxation,
-      \item effective spacetime curvature as a coarse-grained description of spatial
-      variations in $\chi$.
+      \item gravitational time dilation as a manifestation of locally slowed
+      $\chi$ relaxation,
+      \item inertial mass as persistent resistance to the global relaxation flow,
+      \item effective spacetime curvature as a coarse-grained representation of
+      spatial variations in relaxation efficiency.
     \end{itemize}
 
-  \subsubsection{Effective Form and Weak-Field Limit}
+    Importantly, $\rho$ does not represent a fundamental energy density.
+    It is an effective descriptor of the density of relaxation-resistant
+    configurations within an emergent spacetime regime.
 
-    In weak-field regimes, where matter-induced gradients are small, the effective
-    source term may be approximated as linear in the excitation density:
+  \subsubsection{Weak-Field Regime and Linear Approximation}
+
+    In weak-field regimes, where matter-induced gradients remain small and
+    relaxation is only mildly perturbed, the source term may be approximated as
+    linear in the effective excitation density:
     \begin{equation}
-      S[\chi,\rho] \simeq -\alpha \rho ,
+      S[\chi,\rho] \;\simeq\; -\,\alpha\,\rho ,
+      \label{eq:linear_source}
     \end{equation}
-    with $\alpha$ an effective coupling constant.
-    Matching with the Newtonian limit identifies $\alpha \sim G/c^2$, where $G$
-    emerges as the macroscopic coupling between matter density and relaxation
-    slowdown.
+    where $\alpha$ is an effective coupling parameter.
 
-    This linear approximation is sufficient to recover the Poisson equation for the
-    effective gravitational potential and the Schwarzschild solution at leading
-    order.
+    Matching this description with the Newtonian limit of the emergent geometric
+    regime identifies
+    \[
+      \alpha \sim \frac{G}{c^2},
+    \]
+    where the gravitational constant $G$ appears as a macroscopic coupling
+    quantifying how strongly localized excitations impede the relaxation of $\chi$.
+
+    Within this approximation, Equation~\eqref{eq:chi_effective_source} reproduces
+    the Poisson equation for the effective gravitational potential and yields the
+    Schwarzschild solution at leading order.
+    No independent gravitational interaction is introduced; gravity arises entirely
+    from relaxation resistance.
 
   \subsubsection{Strong-Field Regimes and Nonlinear Corrections}
 
-    In regimes of high excitation density, such as near compact objects or in the
-    early universe, nonlinear corrections to $S[\chi,\rho]$ are expected.
-    These corrections reflect saturation effects in the relaxation dynamics and
-    prevent unphysical halting of the field evolution:
+    In regimes of high excitation density—such as near compact objects or during
+    early cosmological epochs—the linear approximation breaks down.
+    Strong structural constraints lead to saturation effects in the relaxation
+    dynamics, requiring nonlinear corrections to the effective source term.
+
+    A generic parametrization of these effects takes the form
     \begin{equation}
-      S[\chi,\rho] = -\alpha \rho \, F\!\left(\frac{\rho}{\rho_c}, \chi\right),
+      S[\chi,\rho]
+      =
+      -\,\alpha\,\rho\;
+      F\!\left(\frac{\rho}{\rho_c},\,\chi\right),
+      \label{eq:nonlinear_source}
     \end{equation}
-    where $F$ is a bounded function and $\rho_c$ is a characteristic density scale.
-    Such nonlinearities encode departures from classical gravity without modifying
-    the underlying ontological structure.
+    where $F$ is a bounded function and $\rho_c$ denotes a characteristic density
+    scale beyond which relaxation resistance saturates.
+
+    These nonlinearities prevent unphysical halting of the relaxation flow and
+    encode departures from classical gravity in strong-field regimes, while leaving
+    the underlying ontological structure unchanged.
+    Apparent singular behavior in effective geometric descriptions therefore signals
+    the breakdown of the hydrodynamic approximation, not a failure of the
+    fundamental $\chi$ dynamics.
+
+  \subsubsection{Status of the Effective Description}
+
+    The source term $S[\chi,\rho]$ does not define an additional physical field or
+    interaction.
+    It is a bookkeeping device summarizing how localized, structured configurations
+    of $\chi$ modify the collective relaxation flow once spacetime notions have
+    emerged.
+
+    At the fundamental level, only the relational relaxation dynamics of $\chi$
+    exists.
+    Matter, sources, and curvature appear jointly and only as emergent,
+    regime-dependent descriptions of this single underlying process.

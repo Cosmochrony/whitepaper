@@ -1,69 +1,123 @@
 \subsection{Emergent Electrodynamics from $\chi$ Dynamics}
   \label{app:emergent-electrodynamics}
 
-  The dynamics of $\chi$ perturbations are governed by the
-      \textbf{effective wave equation} (Section~\ref{subsec:variational-formulation}):
-  \[
-    \boxed{
-      \nabla \cdot \left( \frac{\nabla \chi}{\sqrt{1 - |\nabla \chi|^2 / c^2}} \right) - \frac{1}{c^2}
-      \frac{\partial^2 \chi}{\partial t^2} = \frac{4 \pi G_{\text{eff}}}{c^2} \rho_{\chi}.
-    }
-  \]
-  In the \textbf{weak-field limit} ($|\nabla \chi| \ll c$), this reduces to:
-  \[
-    \nabla^2 \chi - \frac{1}{c^2} \frac{\partial^2 \chi}{\partial t^2} = 4 \pi G_{\text{eff}} \rho_{\chi}.
-  \]
+  In regimes where the $\chi$ field admits a smooth geometric and weak-gradient
+  description, small perturbations around a slowly varying background obey an
+  effective wave equation derived from the variational formulation
+  (Section~\ref{subsec:variational-formulation}):
+  \begin{equation}
+    \nabla \cdot
+    \left(
+      \frac{\nabla \chi}{\sqrt{1 - |\nabla \chi|^2 / c^2}}
+    \right)
+    - \frac{1}{c^2} \frac{\partial^2 \chi}{\partial t^2}
+    =
+    \frac{4 \pi G_{\mathrm{eff}}}{c^2} \rho_\chi .
+  \end{equation}
 
-  \paragraph{Scalar and Vector Potentials}
-    Decompose $\chi$ into \textbf{scalar} and \textbf{vector} components:
-    \[
-      \chi(\mathbf{x}, t) = \chi_0 + \phi(\mathbf{x}, t) + \nabla \cdot \mathbf{A}(\mathbf{x}, t),
-    \]
-    \textbf
-    {should be understood as an effective Helmholtz-like projection induced by the topology of solitonic excitations,
-      rather than as a fundamental field split.} Specifically:
-    \begin{itemize}
-      \item The scalar component $\phi$ encodes \textbf{longitudinal modes} associated with charge density
-      $\rho_{\text{em}} \propto \Delta_G^{(0)} \chi$.
-      \item The vector component $\mathbf{A}$ emerges from \textbf{transverse gradients} of $\chi$ (i.e.,
-      $\nabla \times \nabla \chi \neq 0$), which are inherently divergence-free due to the solitonic topology
-      (Section~\ref{subsec:vortices}).
-    \end{itemize}
+  In the weak-field limit, $|\nabla \chi| \ll c$, this equation linearizes to
+  \begin{equation}
+    \nabla^2 \chi
+    - \frac{1}{c^2} \frac{\partial^2 \chi}{\partial t^2}
+    =
+    4 \pi G_{\mathrm{eff}} \rho_\chi ,
+  \end{equation}
+  which admits propagating solutions interpreted as radiative disturbances of the
+  $\chi$ field.
 
-    The vector potential $\mathbf{A}$ is not an independent degree of freedom but arises from the
-        \textbf{transverse sector} of $\chi$ gradients\footnote{
-  The transverse nature of $\mathbf{A}$ follows from the solitonic topology: charged solitons (
-  Section~\ref{subsec:vortices}) are characterized by closed loop integrals $\oint \nabla \chi \cdot d\mathbf{l} \neq 0$
-  , which imply $\nabla \times \mathbf{A} \neq 0$ while enforcing $\nabla \cdot \mathbf{A} = 0$
-  via Stokes' theorem. This is analogous to the Helmholtz decomposition in fluid dynamics,
-  where the vector field is derived from the scalar field's gradients.
-}.
+  \subsubsection*{Emergent Scalar and Vector Potentials}
 
-  \paragraph{Field Definitions}
-    Define the \textbf{electric} and \textbf{magnetic fields} as:
-    \[
-      \mathbf{E} = -\nabla \phi - \frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}, \quad \mathbf{B} = \nabla \times
-      \mathbf{A}.
-    \]
-    These fields satisfy the \textbf{Maxwell equations}:
-    \[
-      \boxed{
-        \begin{aligned}
-          \nabla \cdot \mathbf{E} &= 4 \pi G_{\text{eff}} \rho_{\text{em}}, \\
-          \nabla \times \mathbf{E} + \frac{1}{c} \frac{\partial \mathbf{B}}{\partial t} &= 0, \\
-          \nabla \cdot \mathbf{B} &= 0, \\
-          \nabla \times \mathbf{B} - \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t} &=
-          \frac{4 \pi G_{\text{eff}}}{c} \mathbf{J}_{\text{em}}.
-        \end{aligned}
-      }
-    \]
+    Electromagnetic-like degrees of freedom arise from the \emph{geometric structure}
+    of $\chi$ perturbations rather than from independent fundamental fields.
+    In regions containing charged solitonic excitations, the spatial gradients of
+    $\chi$ acquire both longitudinal and transverse components.
 
-  \paragraph{Gauge Invariance}
-    The decomposition $\chi = \chi_0 + \phi + \nabla \cdot \mathbf{A}$ is \textbf{not unique}. A
-        \textbf{gauge transformation}:
-    \[
-      \phi \to \phi - \frac{1}{c} \frac{\partial \Lambda}{\partial t}, \quad \mathbf{A} \to \mathbf{A} + \nabla \Lambda,
-    \]
-    leaves the fields $\mathbf{E}$ and $\mathbf{B}$ invariant. This \textbf{U(1) gauge symmetry} is
-        \textbf{derived from the relational nature of $\chi$}, where only \textbf{gradient differences}
-        are observable (Section~\ref{subsec:relational-foundation-pointer}).
+    Accordingly, the spatial gradient of $\chi$ may be decomposed (at the effective
+    level) into longitudinal and transverse parts:
+    \begin{equation}
+      \nabla \chi = - \nabla \phi + \mathbf{A}_{\mathrm{T}},
+    \end{equation}
+    where $\phi$ is an effective scalar potential and $\mathbf{A}_{\mathrm{T}}$ is a
+    divergence-free vector field,
+    \begin{equation}
+      \nabla \cdot \mathbf{A}_{\mathrm{T}} = 0 .
+    \end{equation}
+
+    This decomposition should be understood as an effective Helmholtz projection
+    induced by the topology of localized $\chi$ excitations, rather than as a
+    fundamental split of degrees of freedom.
+    The scalar component encodes longitudinal relaxation gradients associated with
+    effective charge density, while the transverse component arises from solitonic
+    configurations with non-trivial circulation.
+
+  \subsubsection*{Topological Origin of the Vector Potential}
+
+    The transverse component $\mathbf{A}_{\mathrm{T}}$ originates from solitonic
+    configurations of $\chi$ characterized by non-vanishing loop integrals
+    \begin{equation}
+      \oint \nabla \chi \cdot d\mathbf{l} \neq 0 ,
+    \end{equation}
+    as discussed in Section~\ref{subsec:vortices}.
+    Such configurations imply the existence of an effective vector potential whose
+    curl is non-zero, while its divergence vanishes identically.
+
+    The vector potential is therefore not an independent dynamical field.
+    It is a derived quantity encoding the transverse sector of $\chi$ gradients,
+    analogous to vorticity-induced vector fields in fluid dynamics.
+
+  \subsubsection*{Emergent Electromagnetic Fields}
+
+    Within this effective description, the electric and magnetic fields are defined as
+    \begin{equation}
+      \mathbf{E}
+      =
+      - \nabla \phi
+      - \frac{1}{c} \frac{\partial \mathbf{A}_{\mathrm{T}}}{\partial t},
+      \qquad
+      \mathbf{B}
+      =
+      \nabla \times \mathbf{A}_{\mathrm{T}} .
+    \end{equation}
+
+    These fields satisfy the Maxwell equations:
+    \begin{align}
+      \nabla \cdot \mathbf{E}
+      &= 4 \pi G_{\mathrm{eff}} \rho_{\mathrm{em}}, \\
+      \nabla \times \mathbf{E}
+      + \frac{1}{c} \frac{\partial \mathbf{B}}{\partial t}
+      &= 0, \\
+      \nabla \cdot \mathbf{B}
+      &= 0, \\
+      \nabla \times \mathbf{B}
+      - \frac{1}{c} \frac{\partial \mathbf{E}}{\partial t}
+      &=
+      \frac{4 \pi G_{\mathrm{eff}}}{c} \mathbf{J}_{\mathrm{em}},
+    \end{align}
+    where $\rho_{\mathrm{em}}$ and $\mathbf{J}_{\mathrm{em}}$ denote the effective charge
+    and current densities associated with solitonic $\chi$ excitations.
+
+  \subsubsection*{Gauge Invariance}
+
+    The decomposition of $\nabla \chi$ into scalar and transverse components is not
+    unique.
+    A transformation of the form
+    \begin{equation}
+      \phi \rightarrow \phi - \frac{1}{c} \frac{\partial \Lambda}{\partial t},
+      \qquad
+      \mathbf{A}_{\mathrm{T}} \rightarrow \mathbf{A}_{\mathrm{T}} + \nabla \Lambda ,
+    \end{equation}
+    leaves the observable fields $\mathbf{E}$ and $\mathbf{B}$ invariant.
+
+    This emergent $U(1)$ gauge symmetry reflects the relational nature of $\chi$:
+    only differences of gradients have operational meaning, while the absolute
+    potential is unobservable
+    (Section~\ref{subsec:relational-foundation-pointer}).
+
+  \subsubsection*{Interpretational Status}
+
+    The Maxwell-like structure derived here is not fundamental.
+    It arises as a universal effective description of transverse $\chi$ perturbations
+    in regimes where solitonic topology and weak gradients coexist.
+    Electromagnetism therefore appears as a geometric manifestation of the relational
+    and topological structure of the $\chi$ field, rather than as an independent
+    interaction mediated by elementary gauge fields.

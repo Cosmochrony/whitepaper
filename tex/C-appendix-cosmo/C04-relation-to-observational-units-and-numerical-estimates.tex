@@ -1,122 +1,154 @@
 \subsection{Relation to Observational Units and Numerical Estimates}
   \label{subsec:observational-estimates}
 
-  This subsection provides order-of-magnitude estimates that connect the $\chi$ framework
-  to observed cosmological quantities.
-  The purpose is not to perform parameter fitting or derive precise numerical predictions,
-  but to assess the internal consistency of Cosmochrony and its compatibility with
-  empirical scales.
+  This subsection establishes order-of-magnitude relations linking the Cosmochrony
+  framework to observed cosmological quantities.
+  Its purpose is not to perform parameter fitting or to derive precision
+  predictions, but to assess the internal consistency of the theory and to verify
+  that its fundamental relaxation-based interpretation naturally reproduces the
+  correct empirical scales.
 
-  \subsubsection{Normalization of the $\chi$ Field}
+  All numerical relations presented here should be understood as effective
+  normalizations arising in the projectable regime of the \(\chi\) dynamics.
+  They do not define fundamental constants and do not fix the microscopic structure
+  of the theory.
+
+  \subsubsection{Normalization of the \texorpdfstring{$\chi$}{χ} Field}
     \label{subsec:normalization-of-the-chi-field}
 
-    To relate $\chi$ to observable quantities, a normalization must be specified.
-    We identify the present-day value $\chi(t_0)$ with the characteristic cosmological
-    length scale governing large-scale expansion.
-    Operationally, $\chi(t_0)$ may be interpreted as the cumulative geometric scale
-    associated with the global relaxation of $\chi$ up to the present epoch.
+    To relate the projected field \(\chi_{\mathrm{eff}}\) to observable quantities, a
+    reference normalization must be specified.
+    At the effective cosmological level, the scale factor is defined up to a global
+    multiplicative constant.
+    In Cosmochrony, this freedom is fixed by identifying the present-day value
+    \(\chi(t_0)\) with the characteristic geometric scale governing large-scale
+    expansion.
 
-    This identification does not assume a unique physical origin for $\chi(t_0)$,
-    but provides a minimal normalization consistent with the interpretation
-    $a(t) \propto \chi(t)$.
+    Operationally, \(\chi(t_0)\) represents the cumulative geometric scale associated
+    with the global relaxation of the \(\chi\) field up to the present epoch.
+    This identification does not assume a unique microscopic origin for
+    \(\chi(t_0)\); it provides a minimal and observationally anchored normalization
+    consistent with the effective relation \(a(t) \propto \chi(t)\).
 
   \subsubsection{Emergent Gravitational Coupling}
     \label{subsec:K0-chic-constraints}
 
-    In the effective description, the gravitational constant $G$ emerges from the
-    constitutive relation governing the coupling between neighboring $\chi$
-    configurations.
-    While the microscopic parameters $K_0$ and $\chi_c$ are not fixed individually,
-    their product is constrained by matching the observed value of $G$:
+    In the effective geometric description, the Newtonian gravitational constant
+    \(G\) emerges from the constitutive relation governing the coupling between
+    neighboring configurations of the projected \(\chi\) field.
+    This coupling is controlled by two parameters of the relaxation dynamics: the
+    maximal stiffness scale \(K_0\) and the characteristic correlation length
+    \(\chi_c\).
+
+    Although \(K_0\) and \(\chi_c\) are not individually fixed at the present stage,
+    their combination is constrained by matching the observed gravitational coupling:
     \begin{equation}
       K_0 \chi_c^2 \sim \frac{c^4}{16 \pi G}.
     \end{equation}
 
-    This relation fixes the overall stiffness scale of the effective $\chi$ network,
-    while leaving open whether the characteristic scale $\chi_c$ is associated with
-    microscopic (e.g.\ Planckian) or macroscopic (cosmological) physics.
-    The present framework does not require committing to a specific choice at this stage.
+    This relation fixes the overall stiffness scale of the effective \(\chi\)
+    network.
+    It does not require committing to a specific microscopic interpretation of
+    \(\chi_c\), which may correspond to a fundamental correlation scale or to an
+    emergent coarse-graining length.
+    At this level, only the product \(K_0 \chi_c^2\) is observationally relevant.
 
   \subsubsection{Hubble Constant}
     \label{subsec:hubble-constant}
 
-    At the homogeneous level, the Hubble parameter is given by
+    In the homogeneous limit, the effective Hubble parameter is defined by the
+    relative relaxation rate of the projected field,
     \begin{equation}
       H(t) = \frac{\dot{\chi}}{\chi}.
     \end{equation}
-    Assuming that the present universe is close to the maximal relaxation regime,
-    $\dot{\chi}(t_0) \simeq c$, the present Hubble constant follows as
+
+    Assuming that the present universe lies close to the maximal relaxation regime,
+    \(\dot{\chi}(t_0) \simeq c\), the present-day Hubble constant follows as
     \begin{equation}
       H_0 \simeq \frac{c}{\chi(t_0)}.
     \end{equation}
 
-    Using the observed value $H_0 \approx 70~\mathrm{km\,s^{-1}\,Mpc^{-1}}$ yields
+    Using the observed value
+    \(H_0 \approx 70~\mathrm{km\,s^{-1}\,Mpc^{-1}}\) yields
     \begin{equation}
       \chi(t_0) \sim 4 \times 10^{26}~\mathrm{m},
     \end{equation}
-    consistent with the observed Hubble radius.
-    This correspondence arises without introducing additional cosmological parameters.
+    which is of the order of the observed Hubble radius.
+    This correspondence arises directly from the relaxation-based interpretation of
+    cosmic expansion and does not require the introduction of additional cosmological
+    parameters.
 
   \subsubsection{Age of the Universe}
     \label{subsec:age-of-the-universe}
 
-    Integrating the homogeneous relaxation relation $\dot{\chi} \simeq c$ gives
+    In the homogeneous relaxation regime, the evolution of \(\chi\) may be
+    approximated as
+    \begin{equation}
+      \dot{\chi} \simeq c ,
+    \end{equation}
+    leading to
     \begin{equation}
       \chi(t) \simeq c t + \chi_{\mathrm{init}},
     \end{equation}
-    where $\chi_{\mathrm{init}}$ denotes the effective value of $\chi$ at the onset
+    where \(\chi_{\mathrm{init}}\) denotes the effective value of \(\chi\) at the onset
     of the relaxation regime relevant for cosmological observations.
 
-    Neglecting $\chi_{\mathrm{init}}$ relative to present values leads to
+    Neglecting \(\chi_{\mathrm{init}}\) compared to present values yields
     \begin{equation}
       t_0 \simeq \frac{\chi(t_0)}{c} \sim 4 \times 10^{17}~\mathrm{s},
     \end{equation}
-    corresponding to approximately $13.8$ billion years, in agreement with
-    standard cosmological estimates.
+    corresponding to approximately \(13.8\) billion years.
+    This estimate is consistent with standard cosmological age determinations and
+    follows directly from the bounded relaxation dynamics.
 
   \subsubsection{Redshift Interpretation}
     \label{subsec:redshift-interpretation}
 
-    In Cosmochrony, cosmological redshift arises from the relative change of the
-    $\chi$ field between emission and observation:
+    In Cosmochrony, cosmological redshift is interpreted as a consequence of the
+    relative change in the projected \(\chi\) field between emission and observation,
     \begin{equation}
       1 + z = \frac{\chi(t_{\mathrm{obs}})}{\chi(t_{\mathrm{emit}})}.
     \end{equation}
 
-    This relation reproduces standard redshift phenomenology while attributing it
-    to geometric scaling induced by $\chi$ relaxation rather than to recessional
-    motion within a pre-existing spacetime.
+    This relation reproduces standard redshift phenomenology while attributing it to
+    geometric scaling induced by \(\chi\) relaxation, rather than to recessional
+    motion within a pre-existing spacetime background.
 
   \subsubsection{Cosmic Microwave Background Scale}
     \label{subsec:cosmic-microwave-background-scale}
 
-    At recombination ($z_{\mathrm{rec}} \simeq 1100$), the characteristic value of
-    $\chi$ was correspondingly smaller:
+    At recombination, characterized observationally by
+    \(z_{\mathrm{rec}} \simeq 1100\), the effective value of the projected field was
+    smaller by the corresponding scaling factor,
     \begin{equation}
       \chi(t_{\mathrm{rec}}) \simeq \frac{\chi(t_0)}{1 + z_{\mathrm{rec}}}.
     \end{equation}
 
-    Fluctuations imprinted at that epoch are subsequently stretched by the
-    monotonic growth of $\chi$, providing a natural geometric interpretation of
-    the observed angular scales in the cosmic microwave background.
+    Fluctuations imprinted at that epoch are subsequently stretched by the monotonic
+    growth of \(\chi\), providing a natural geometric interpretation of the angular
+    scales observed in the cosmic microwave background without invoking an inflationary
+    stretching phase.
 
   \subsubsection{Orders of Magnitude and Robustness}
     \label{subsec:orders-of-magnitude-and-robustness}
 
     All numerical estimates presented in this subsection rely solely on observed
-    cosmological quantities and the bounded relaxation dynamics of $\chi$.
-    No fine-tuning of parameters or detailed model fitting is assumed.
+    cosmological quantities and on the bounded relaxation dynamics of the \(\chi\)
+    field.
+    No fine-tuning of parameters, no detailed cosmological fitting, and no additional
+    degrees of freedom are assumed.
 
-    While a fully quantitative cosmological model remains to be developed,
-    these estimates demonstrate that Cosmochrony naturally reproduces the
-    correct orders of magnitude for key observables, including the Hubble
-    constant, cosmic age, redshift scaling, and CMB characteristic scales.
+    While a fully predictive cosmological model requires explicit numerical
+    simulations of the \(\chi\) dynamics, these order-of-magnitude relations
+    demonstrate that Cosmochrony naturally reproduces the correct scales for the
+    Hubble constant, the age of the universe, redshift evolution, and characteristic
+    CMB features.
 
   \subsubsection{Summary}
     \label{subsec:summary}
 
-    The $\chi$ framework admits a consistent normalization in observational units
-    and yields cosmologically relevant scales without introducing additional
-    fundamental parameters.
-    These order-of-magnitude relations support the internal consistency of
-    Cosmochrony and motivate further quantitative investigation.
+    The Cosmochrony framework admits a consistent normalization in observational
+    units and reproduces key cosmological scales without introducing new fundamental
+    parameters.
+    These order-of-magnitude relations support the internal coherence of the theory
+    and motivate further quantitative investigation of its cosmological dynamics.

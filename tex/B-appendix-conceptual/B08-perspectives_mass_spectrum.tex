@@ -2,238 +2,185 @@
   \label{subsec:perspectives_mass_spectrum}
 
   The proton-to-electron mass ratio is one of the most precisely measured
-  dimensionless constants in physics.
-  Within the Cosmochrony framework, the aim of this section is not to derive this
-  value from first principles, but to clarify how such a ratio could emerge from
-  the spectral and topological structure of localized $\chi$-solitons.
-  The discussion below should therefore be understood as a minimal spectral
-  ansatz, intended to identify the relevant mechanisms and constraints rather than
-  to provide a complete microscopic calculation.
+  dimensionless quantities in physics.
+  Within the Cosmochrony framework, the purpose of this section is not to derive this
+  value from first principles, but to clarify how such a ratio could emerge
+  \emph{structurally} from the spectral and topological organization of localized
+  solitonic excitations of the projected field \(\chi_{\mathrm{eff}}\).
+
+  The discussion should therefore be understood as a minimal and exploratory
+  spectral ansatz.
+  Its aim is to identify the relevant mechanisms, constraints, and scaling relations
+  that any successful derivation would have to satisfy, rather than to provide a
+  complete microscopic calculation.
 
   \subsubsection{Spectral Stability Hypothesis}
 
-    Let $\chi_{\mathrm{sol}}$ denote a stationary localized configuration of the
-    $\chi$ field.
-    Small perturbations $\delta\chi$ around this background are governed, at the
-    coarse-grained level, by a linear stability operator $\mathcal{L}_{\mathrm{sol}}$,
-    defined as the second variation of an effective localization functional.
+    Let \(\chi_{\mathrm{sol}}\) denote a stationary localized configuration arising in
+    the projectable regime of the \(\chi\) dynamics.
+    Small perturbations \(\delta\chi_{\mathrm{eff}}\) around this background are
+    governed, at the coarse-grained level, by a linear stability operator
+    \(\mathcal{L}_{\mathrm{sol}}\), defined as the second variation of an effective
+    localization functional.
+
     Normal modes satisfy the eigenvalue problem
     \begin{equation}
       \mathcal{L}_{\mathrm{sol}} \psi_n = \lambda_n \psi_n .
     \end{equation}
 
-    In regimes where an effective wave description applies, these modes exhibit
-    oscillation frequencies $\omega_n = c\sqrt{\lambda_n}$.
-    Identifying the lowest characteristic frequency with the rest energy of the
-    excitation leads to the effective relation
+    The eigenvalues \(\lambda_n\) characterize the resistance of the soliton to
+    localized deformations.
+    They encode intrinsic stiffness scales associated with the internal organization
+    of the solitonic configuration.
+
+    \paragraph{Spectral mass scaling.}
+      In regimes where an effective wave description applies, the normal modes exhibit
+      characteristic oscillation frequencies
+      \begin{equation}
+        \omega_n = c \sqrt{\lambda_n} .
+      \end{equation}
+
+      Identifying the lowest nontrivial frequency with the rest energy of the excitation
+      leads to the effective scaling relation
+      \begin{equation}
+        m_n \;\propto\; \sqrt{\lambda_n}\,\chi_c ,
+      \end{equation}
+      where \(\chi_c\) denotes a characteristic geometric scale associated with the
+      spatial extension of the solitonic configuration in the projected regime.
+
+      This relation does not define a fundamental mass formula.
+      It provides a coarse-grained link between spectral stability and inertial mass,
+      consistent with the interpretation of mass as integrated resistance to relaxation.
+
+    \paragraph{Dimensional interpretation.}
+      The eigenvalues \(\lambda_n\) carry dimensions of inverse length squared,
+      reflecting the restoring stiffness of the soliton per unit deformation.
+      The scale \(\chi_c\) has dimensions of length and sets the geometric extension over
+      which this stiffness is distributed.
+
+      The combination \(\lambda_n \chi_c^2\) therefore defines a characteristic energy
+      scale,
+      \begin{equation}
+        E_n \sim \lambda_n \chi_c^2 ,
+      \end{equation}
+      which is identified with a rest energy through the effective relativistic matching
+      \(E = mc^2\) once a spacetime description becomes applicable.
+
+      This identification does not invoke a fundamental quantum constant and remains
+      valid independently of the emergence of \(\hbar_{\mathrm{eff}}\).
+
+  \subsubsection{Projection Scale and Effective Normalization}
+
+    The fundamental description of the \(\chi\) field is formulated in terms of
+    relational relaxation rules rather than a spacetime action with fixed physical
+    units.
+    When a continuum approximation applies, an effective action for perturbations
+    around a stable soliton may be introduced as a bookkeeping device.
+
+    In this regime, the effective action for perturbations
+    \(\delta\chi_{\mathrm{eff}}\) may be written schematically as
     \begin{equation}
-      m_n = \sqrt{\lambda_n}\,\chi_c ,
-    \end{equation}
-    where $\chi_c$ denotes a characteristic length scale associated with the spatial
-    extent of the solitonic configuration.
-
-    \paragraph{Dimensional interpretation of the spectral mass relation.}
-      The relation
-      \begin{equation}
-        m_n = \sqrt{\lambda_n}\,\chi_c
-      \end{equation}
-      is dimensionally consistent but warrants a clarification of the physical origin of its units.
-      The eigenvalues $\lambda_n$ arise from the linearized stability operator governing small
-      deformations of a localized $\chi$-soliton.
-      As such, they carry units of inverse length squared, $[\lambda_n] = L^{-2}$, reflecting a
-      restoring stiffness per unit $\chi$-field deformation.
-
-      The characteristic scale $\chi_c$ has dimensions of length and represents the effective
-      geometric extension of the solitonic configuration along the $\chi$ direction.
-      It therefore sets the spatial scale over which the deformation energy is distributed.
-
-      Multiplying $\lambda_n$ by $\chi_c^2$ yields a quantity with dimensions of energy,
-      \begin{equation}
-        E_n \sim \lambda_n\,\chi_c^2,
-      \end{equation}
-      which can be interpreted as the characteristic energy stored in the corresponding
-      eigenmode of the soliton.
-      Using the relativistic identification $E = mc^2$, the associated inertial mass scales as
-      \begin{equation}
-        m_n \sim \frac{\lambda_n\,\chi_c^2}{c^2}
-        \;\;\propto\;\; \sqrt{\lambda_n}\,\chi_c,
-      \end{equation}
-      up to numerical factors absorbed in the effective normalization of the relaxation operator.
-      After canonical normalization of the localized mode,
-      the effective eigenvalue entering the rest energy scales as
-      $\tilde{\lambda}_n \sim \lambda_n \mathcal{N}_n / \chi_c^2$,
-      so that $m_n \propto \sqrt{\lambda_n}\,\chi_c$ remains the relevant
-      coarse-grained scaling.
-
-      Thus, $\lambda_n$ encodes the energetic cost of deforming the soliton per unit length,
-      while $\chi_c$ provides the geometric scale that converts this stiffness into a finite
-      rest energy.
-      The spectral relation $m_n = \sqrt{\lambda_n}\,\chi_c$ therefore reflects a balance between
-      local resistance to $\chi$-field relaxation and the spatial extent of the localized
-      configuration, consistent with the soliton energy functional discussed in
-      Section~5.3.
-
-    \paragraph{Dimensional consistency and effective scales.}
-
-      The relation above should be understood as an effective parametrization at the
-      coarse-grained level.
-      Dimensional consistency follows directly from the geometric properties of the
-      $\chi$ field and the invariant propagation speed $c$, without invoking any
-      fundamental quantum constant.
-
-      In this interpretation, $\lambda_n$ encodes a curvature or stiffness scale of the
-      localized $\chi$ configuration, while $\chi_c$ sets the corresponding spatial
-      extension over which this curvature is integrated.
-      Their combination determines a characteristic rest energy via
-      $E \sim \lambda_n \chi_c^2$, and hence an inertial mass through $E = mc^2$.
-
-      Throughout the remainder of this section, the relation
-      $m_n=\sqrt{\lambda_n}\,\chi_c$ is used as a convenient coarse-grained description,
-      without implying that $\chi_c$ is a universal fundamental constant or that any
-      quantum scale is postulated at the microscopic level.
-
-      The identification $E = mc^2$ should be understood as an effective
-      relativistic matching valid in the regime where a spacetime-based
-      description applies, independently of the emergence of $\hbar_{\text{eff}}$.
-
-  \subsubsection{Derivation of the Scaling Factor $(\chi_c / \ell_{\text{spacetime}})^2$}
-    \label{sec:scaling_factor_derivation}
-
-    The fundamental description of the $\chi$ field does not rely on a spacetime action
-    with fixed physical units; instead, it is formulated in terms of relational relaxation
-    rules. In regimes where a continuum approximation applies, an effective action may
-    be introduced as a bookkeeping device for perturbations around stable configurations.
-
-    In this regime, the effective action for perturbations $\delta\chi$ around a soliton
-    may be written schematically as
-    \[
-      S_{\text{eff}}[\delta\chi] = \int d^4x \, \frac{1}{2}
+      S_{\mathrm{eff}}[\delta\chi]
+      =
+      \int d^4x \,
+      \frac{1}{2}
       \left( \frac{\chi_c}{c} \right)^2
-      \left[ (\partial_t \delta\chi)^2 - c^2 (\nabla \delta\chi)^2 \right].
-    \]
+      \left[
+        (\partial_t \delta\chi)^2
+      -
+      c^2 (\nabla \delta\chi)^2
+      \right] .
+    \end{equation}
 
-    To express this action in emergent spacetime coordinates
-    $x^\mu_{\text{spacetime}}$, we perform the rescaling
-    \[
-      x^\mu = \left( \frac{\ell_{\text{spacetime}}}{\chi_c} \right) x^\mu_{\chi},
-    \]
-    which introduces a Jacobian factor
-    $(\chi_c / \ell_{\text{spacetime}})^4$ in the integration measure.
+    Expressing this action in emergent spacetime coordinates introduces a geometric
+    rescaling factor linking \(\chi\)-space and spacetime lengths.
+    As a result, the canonical normalization of localized modes involves a quadratic
+    scaling factor of the form
+    \begin{equation}
+      \left( \frac{\chi_c}{\ell_{\mathrm{spacetime}}} \right)^2 ,
+    \end{equation}
+    which controls the effective normalization of spectral quantities.
 
-    As a consequence, the canonical momentum conjugate to $\delta\chi$ acquires a factor
-    $(\chi_c / \ell_{\text{spacetime}})^2$, leading to the effective identification
-    \[
-      \boxed{
-        \hbar_{\text{eff}} = \hbar_{\chi}
-        \left( \frac{\chi_c}{\ell_{\text{spacetime}}} \right)^2 .
-      }
-    \]
-
-    This quadratic scaling reflects the geometric projection of $\chi$-field
-    configurations onto emergent spacetime observables.
+    This factor reflects the geometric projection from the relational \(\chi\)
+    structure to emergent spacetime observables.
+    It does not represent a fundamental coupling constant.
 
   \subsubsection{Energy Levels from Spectral Stability}
-    \label{sec:energy_levels_spectral}
 
-    The energy levels $E_n$ of solitonic excitations emerge from the spectral stability
-    analysis of $\Delta_G^{(0)}$, without invoking quantum mechanical postulates.
+    The discrete energy levels associated with solitonic excitations follow from the
+    spectral properties of the stability operator \(\mathcal{L}_{\mathrm{sol}}\), not
+    from canonical quantization.
 
-    For a soliton labeled by $n$, the gradient energy takes the form
-    \[
-      E_{\text{grad}}^{(n)} =
-      \frac{c^2}{2} \lambda_n \mathcal{N}_n ,
-    \]
-    where $\mathcal{N}_n$ denotes the norm of the localized configuration.
+    For a soliton labeled by \(n\), the gradient contribution to the effective energy
+    scales as
+    \begin{equation}
+      E_{\mathrm{grad}}^{(n)}
+      \sim
+      c^2 \lambda_n \mathcal{N}_n ,
+    \end{equation}
+    where \(\mathcal{N}_n\) denotes a normalization factor determined by the spatial
+    profile of the mode.
 
-    In regimes where an effective spacetime description applies, this energy is identified
-    with the rest-mass energy,
-    \[
+    In the spacetime-based description, this energy is identified with the rest-mass
+    energy,
+    \begin{equation}
       E_n \equiv m_n c^2 .
-    \]
+    \end{equation}
 
-    The discretization of $E_n$ follows from the topological classification of solitons
-    and the discrete spectrum of $\Delta_G^{(0)}$, not from canonical quantization.
-    The role of $\hbar_{\text{eff}}$ arises only when matching this description to
-    effective quantum observables.
-
-    For a composite soliton, the mass ratio therefore scales as
-    \[
-      \frac{m_p}{m_e}
-      \;=\;
-      \frac{\lambda_3 \mathcal{N}_3}{\lambda_1 \mathcal{N}_1}
-      \;\sim\;
-      \sqrt{3} \cdot \frac{\mathcal{N}_3}{\mathcal{N}_1},
-    \]
-    up to an order-of-magnitude factor reflecting the internal normalization of
-    composite solitonic configurations.
-
-    No numerical prediction of the proton-to-electron mass ratio is claimed in this
-    work; the observed value is used solely as an empirical benchmark constraining
-    the relative spectral organization of elementary and composite solitonic sectors.
+    The discretization of \(E_n\) arises from topological classification and spectral
+    stability, not from postulated quantum operators.
+    The role of \(\hbar_{\mathrm{eff}}\) appears only when matching this description to
+    quantum observables.
 
   \subsubsection{Elementary versus Composite Spectral Structures}
 
-    A crucial distinction must be made between elementary and composite excitations
-    within the spectral stability framework.
-    Elementary particles, such as leptons, are expected to correspond to
-    topologically elementary solitonic configurations whose inertial mass is
-    dominated by a single lowest stability eigenvalue.
-    By contrast, baryonic excitations are composite objects, whose mass reflects the
-    combined contribution of several coupled stability modes associated with a bound
-    configuration.
+    A key distinction must be drawn between elementary and composite solitonic
+    excitations.
+    Elementary particles, such as leptons, are expected to correspond to topologically
+    elementary solitons whose inertial mass is dominated by a single lowest stability
+    eigenvalue.
 
-    In this view, mass ratios between elementary and composite particles cannot, in
-    general, be expressed as the ratio of two single eigenvalues of the same operator.
-    Rather, they take the schematic form
+    By contrast, baryonic excitations are composite configurations.
+    Their mass reflects the combined contribution of several coupled stability modes
+    associated with a bound structure.
+    Mass ratios therefore take the schematic form
     \begin{equation}
       \frac{m_{\mathrm{comp}}}{m_{\mathrm{elem}}}
       \;\sim\;
       \frac{\sum_k \sqrt{\lambda^{(\mathrm{comp})}_k}}
-      {\sqrt{\lambda^{(\mathrm{elem})}_0}},
-      \label{eq:mass_ratio_schematic}
+      {\sqrt{\lambda^{(\mathrm{elem})}_0}} ,
     \end{equation}
-    where $\lambda^{(\mathrm{elem})}_0$ denotes the fundamental stability mode of an
-    elementary soliton, and $\{\lambda^{(\mathrm{comp})}_k\}$ label the low-lying modes
-    contributing to a composite bound structure.
+    rather than the ratio of two isolated eigenvalues.
 
   \subsubsection{Ansatz for the Proton as a Composite Soliton}
 
-    As an exploratory working hypothesis, inspired by but not equivalent to Skyrme-type
-    models, we consider the proton as a composite solitonic excitation.
-    Specifically, we assume:
+    As an exploratory working hypothesis, the proton is modeled as a composite solitonic
+    excitation.
+    Specifically:
     \begin{itemize}
-      \item The electron corresponds to a fundamental soliton with topological charge
-      $Q_e = 1$ and eigenvalue $\lambda_e$.
-      \item The proton corresponds to a bound state of three such elementary solitons,
-      with total topological charge $Q_p = 3$, supplemented by an additional
-      collective binding mode with eigenvalue $\lambda_{\mathrm{bind}}$.
+      \item the electron corresponds to a topologically elementary soliton with a
+      fundamental stability eigenvalue \(\lambda_e\),
+      \item the proton corresponds to a bound configuration involving three such
+      elementary solitons, supplemented by an additional collective binding mode with
+      eigenvalue \(\lambda_{\mathrm{bind}}\).
     \end{itemize}
 
-    The choice $Q_p=3$ is motivated by the observed threefold constituent structure
-    of baryons, but is not derived here from a classification of solitonic topological
-    sectors.
-    It is the smallest integer consistent with both fermionic statistics (requiring odd topological charge)
-    and baryon-like composite structure (analogous to the 3-quark composition in QCD).
-    Some numerical studies of skyrmion solutions in non-linear field theories~\cite{BattyeSutcliffe2022} also
-    showed that bound states of 3 skyrmions exhibit enhanced stability due to geometric phase locking.
+    The choice of a three-soliton composite is motivated by stability considerations
+    observed in a wide class of nonlinear field theories admitting topological solitons,
+    where three-body bound states often exhibit enhanced stability due to geometric
+    phase locking.
+    This choice is not derived here from a classification of \(\chi\)-soliton sectors
+    and is not postulated as fundamental.
 
-    While $\chi$ is a scalar field and does not possess an internal $SU(2)$ gauge symmetry as in QCD, the relevance of skyrmions here is not tied to the specific gauge structure of the underlying theory.
-    Rather, skyrmions provide a paradigmatic example of \emph{topologically stabilized solitons} in nonlinear field theories, whose stability arises from global geometric constraints on the configuration space.
-
-    In particular, the existence of conserved topological charges associated with non-contractible mappings between physical space and the field’s target space leads generically to bound states whose stability is enhanced for composite configurations.
-    This mechanism—often described in terms of geometric phase locking or topological obstruction—is universal and
-    does not depend on the presence of a non-Abelian gauge group~\cite{MantonSutcliffe2004}.
-
-    In this sense, QCD skyrmions serve as an instructive analogy rather than a direct dynamical model.
-    Bound states of $N$ elementary solitons carrying total topological charge $Q = N$ are known to exhibit increased stability and distinct spectral hierarchies, a feature that follows from topological and geometric considerations alone.
-    We therefore expect $\chi$-field solitons to admit similar composite bound states—such as a stable $Q=3$ configuration—independently of the specific symmetry group underlying the $\chi$ dynamics.
-
-    Other composite configurations are not excluded by the present framework.
+    Skyrmion models in QCD provide an instructive analogy, but no dynamical equivalence
+    is assumed.
+    The relevance of this analogy lies in the universality of topological stabilization
+    mechanisms, which do not depend on the presence of a non-Abelian gauge symmetry.
 
   \subsubsection{Mass Ratio from Spectral Scaling}
 
-    Under the above assumptions, the effective eigenvalue associated with the proton
-    may be written schematically as
+    Under these assumptions, the effective eigenvalue associated with the proton may be
+    written schematically as
     \begin{equation}
       \lambda_p \;\approx\; \lambda_{\mathrm{bind}} + 3\lambda_e ,
     \end{equation}
@@ -244,185 +191,45 @@
       \sqrt{\frac{\lambda_{\mathrm{bind}} + 3\lambda_e}{\lambda_e}} .
     \end{equation}
 
-    In the binding-dominated regime $\lambda_{\mathrm{bind}} \gg \lambda_e$, this
-    expression reduces to
+    In the binding-dominated regime \(\lambda_{\mathrm{bind}} \gg \lambda_e\), this
+    reduces to
     \begin{equation}
-      \frac{m_p}{m_e} \;\approx\; \sqrt{\frac{\lambda_{\mathrm{bind}}}{\lambda_e}} .
+      \frac{m_p}{m_e}
+      \;\approx\;
+      \sqrt{\frac{\lambda_{\mathrm{bind}}}{\lambda_e}} .
     \end{equation}
-    Matching the observed proton-to-electron mass ratio therefore imposes the spectral
+
+    Matching the observed ratio \(m_p/m_e \simeq 1836\) therefore imposes the spectral
     constraint
     \begin{equation}
       \frac{\lambda_{\mathrm{bind}}}{\lambda_e}
       \;\sim\; 3.4 \times 10^{6}.
     \end{equation}
 
-    This ratio is compatible with the observed proton-to-electron mass ratio
-    \(
-    m_p/m_e \approx 1836
-    \),
-    once binding-energy contributions from the composite soliton structure are included
-    (see Table~\ref{tab:testable_predictions}).
-    This relation is not derived here but identified as a target condition on the
-    relative spectral scales of elementary and composite solitonic sectors.
-    Whether such a hierarchy can arise naturally from specific topological
-    connectivities and stability operators remains an open problem.
+    This relation is not derived here.
+    It is identified as a consistency condition constraining the relative spectral
+    organization of elementary and composite solitonic sectors.
 
-    Matching the observed proton-to-electron mass ratio
-    $m_p/m_e \simeq 1836$ therefore constrains the allowed range of the
-    normalization ratio $\mathcal{N}_3/\mathcal{N}_1$,
-    rather than providing a first-principles numerical prediction.
+  \subsubsection{Role of \(V(\chi)\) and Fine Structure}
 
-  \paragraph{On the emergence of three-soliton bound states.}
+    The effective potential \(V(\chi)\) is expected to play a secondary role in mass
+    generation.
+    Its primary effect is to control fine splittings within a given solitonic sector
+    rather than to set the overall mass scale.
 
-      The analogy with quark confinement motivates considering composite solitons carrying
-      a total topological charge $Q_p = 3$, but this choice is not assumed ad hoc.
-      In non-linear field theories admitting topological solitons, extensive numerical
-      studies have shown that multi-soliton bound states do not exhibit uniform stability
-      across all charges.
-      In particular, configurations composed of three elementary solitons often display
-      enhanced stability due to geometric phase locking and symmetric packing constraints.
+    Small differences, such as the neutron--proton mass splitting, may arise from
+    subleading corrections to the effective potential or from topological asymmetries.
+    No quantitative prediction is attempted in the absence of an explicit form for
+    \(V(\chi)\).
 
-      This behavior is well documented in the context of Skyrme-type models, where
-      three-soliton bound states form particularly robust minima of the energy functional,
-      while two- or four-soliton configurations are either less tightly bound or prone to
-      fragmentation (see, e.g.,~\cite{MantonSutcliffe2004}).
-
-      While the present work does not claim a direct dynamical equivalence between Skyrmions
-      and $\chi$-field solitons, the analogy suggests that the relaxation dynamics of the
-      $\chi$ field may naturally favor composite configurations with $Q_p = 3$.
-      The emergence of this preferred topological charge is therefore interpreted as a
-      stability selection effect rather than a fundamental postulate.
-      A first-principles derivation of the allowed composite charges in Cosmochrony remains
-      an open problem and is deferred to future work (see Section~B.9.2).
-
-  \subsubsection{Open Questions and Research Directions}
-
-    Several key questions must be addressed to turn this ansatz into a predictive
-    framework:
-    \begin{itemize}
-      \item What topological features of composite solitons determine the magnitude
-      of $\lambda_{\mathrm{bind}}$?
-      \item Does a universal scaling law $\lambda_{\mathrm{bind}} =
-      f(Q_p,Q_e,\chi_c)$ exist?
-      \item Is the ratio $m_p/m_e$ stable under perturbations of the effective
-      potential $V(\chi)$?
-      \item Can the choice $Q_p=3$ be derived from a systematic classification of
-      solitonic topological sectors?
-    \end{itemize}
-
-  \subsubsection{Summary}
+  \subsubsection{Summary and Outlook}
 
     Within the Cosmochrony framework, the proton-to-electron mass ratio is interpreted
-    not as a fundamental input, but as an emergent constraint on the relative spectral
-    organization of elementary and composite solitonic excitations.
-    The present analysis provides a consistent toy model that identifies the
-    conditions such a framework must satisfy, while leaving their explicit
-    realization to future analytical and numerical work.
+    as an emergent constraint on the spectral and topological organization of solitonic
+    excitations, not as a fundamental input parameter.
 
-\subsection{Role of $V(\chi)$ and Outlook}
-  \label{subsec:role_vchi_mass}
-
-  The effective potential $V(\chi)$ is expected to play a secondary role in mass
-  generation, primarily by controlling fine splittings within a given solitonic
-  sector rather than by setting the overall mass scale.
-
-  \subsubsection{Eigenvalue Splittings and Fine Structure}
-
-    In general, one may write
-    \begin{equation}
-      V(\chi) = \sum_n \lambda_n (\chi - \chi_c)^n ,
-    \end{equation}
-    where the coefficients $\lambda_n$ encode nonlinear interactions between
-    solitonic modes.
-    Differences such as the neutron--proton mass splitting could arise from small
-    electromagnetic or topological corrections to this potential.
-    No quantitative prediction is attempted here in the absence of an explicit form
-    for $V(\chi)$.
-
-  \subsubsection{Summary of Testable Predictions}
-    \label{subsec:testable_predictions}
-
-    \begin{table}[h!]
-      \centering
-      \caption{Testable predictions arising from the soliton spectral scaling framework.}
-      \label{tab:testable_predictions}
-      \begin{tabular}{|l|l|l|l|l|}
-        \hline
-        \textbf{Prediction} &
-        \textbf{Expected Value} &
-        \textbf{Uncertainty} &
-        \textbf{Observational Probe} &
-        \textbf{Status} \\
-        \hline
-        Proton-to-electron mass ratio
-        & measured value
-        & $\pm 0.1\%$ (model-dependent)
-        & High-precision mass spectrometry
-        & Consistency check \\
-        \hline
-        Binding-mode eigenvalue ratio
-        & $\lambda_{\mathrm{bind}}/\lambda_e \approx 3.4 \times 10^{6}$
-        & $\mathcal{O}(10\%)$ (theoretical)
-        & Lattice simulations of $\chi$ solitons
-        & To be tested \\
-        \hline
-        Neutron--proton mass difference
-        & $m_n - m_p \approx 1.3\,\mathrm{MeV}$
-        & $\sim 10^{-2}\,\mathrm{MeV}$
-        & Nuclear spectroscopy
-        & Consistent with SM \\
-        \hline
-        Low-$\ell$ CMB power suppression
-        & $\Delta C_\ell / C_\ell \approx 10\%$ \\
-        (for $\ell \lesssim 10$)
-        & $\sim 5\%$ (cosmic variance limited)
-        & CMB (Planck, CMB-S4)
-        & Anomaly explained \\
-        \hline
-        Gravitational wave attenuation near BHs
-        & $\Delta A/A \sim 10^{-2}$ \\
-        (for $r \lesssim 10GM/c^2$)
-        & Order-of-magnitude
-        & LISA ringdown analysis
-        & Future test \\
-        \hline
-      \end{tabular}
-    \end{table}
-
-    Table~\ref{tab:testable_predictions} summarizes the main testable predictions of the
-    soliton spectral scaling approach.
-    Several observables, such as the proton-to-electron mass ratio and the neutron--proton
-    mass difference, are consistent with the Standard Model and therefore serve primarily
-    as consistency checks rather than discriminating tests.
-
-    By contrast, the predicted hierarchy between binding and elementary stability
-    eigenvalues, as well as the low-$\ell$ CMB suppression and potential gravitational-wave
-    attenuation near compact objects, provide concrete avenues for falsification.
-    These signatures are not generic consequences of standard particle physics or
-    cosmology and can, in principle, be tested through future lattice simulations and
-    high-precision cosmological or gravitational-wave observations.
-
-  \subsubsection{Future Work}
-
-    Key directions for future investigation include:
-    \begin{itemize}
-      \item Deriving the effective potential $V(\chi)$ from the underlying relaxation
-      dynamics of the $\chi$ field.
-      \item Constructing and classifying composite solitonic configurations and their
-      associated stability operators.
-      \item Performing numerical simulations to test whether large spectral
-      hierarchies can arise without fine tuning.
-      \item Investigating the stability of three-soliton bound states and whether the
-      spectral scaling law
-      \(
-      \lambda_{\mathrm{bind}} / \lambda_e \approx 3.4 \times 10^{6}
-      \)
-      can emerge from first-principles simulations of $\chi$-field solitons, using
-      lattice-based methods analogous to lattice QCD
-      (e.g.,~\cite{BattyeSutcliffe2022}).
-    \end{itemize}
-
-  In this sense, topology constrains the structure of the stability spectrum, while
-    $V(\chi)$ controls fine splittings.
-    The emergence of observed mass hierarchies is thus framed as a concrete but open
-    spectral-geometric problem within the Cosmochrony framework.
+    The analysis presented here provides a coherent toy model identifying the
+    conditions under which such a ratio could arise.
+    Whether the required spectral hierarchy can be generated dynamically from the
+    \(\chi\) relaxation dynamics remains an open problem, to be addressed through
+    future analytical and numerical investigations.

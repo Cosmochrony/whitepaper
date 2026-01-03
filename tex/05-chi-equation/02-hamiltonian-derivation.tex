@@ -1,88 +1,93 @@
 \subsection{Hamiltonian Derivation of the Evolution Equation}
   \label{subsec:hamiltonian-derivation}
 
-  \subsubsection*{Local Constraint on Relaxation Dynamics}
+  \subsubsection*{Local Constraint on Effective Relaxation Dynamics}
 
-    The fundamental dynamics of the $\chi$ field is formulated without reference to
-    spacetime coordinates or to a Hamiltonian structure.
-    Nevertheless, its relaxation is subject to a universal local constraint reflecting
-    the bounded character of admissible relaxation rates.
+    At the fundamental level, the $\chi$ substrate does not evolve in time, admits no
+    phase-space structure, and is not governed by a Hamiltonian dynamics.
+    No spacetime coordinates, canonical variables, or variational principles are assumed
+    in its definition.
 
-    In regimes where the relational structure of $\chi$ admits a smooth and stable
-    coarse-grained description, this constraint can be summarized in a compact form
-    resembling a Hamiltonian relation.
-    This formulation is introduced solely as a descriptive parametrization of the
-    admissible local relaxation configurations, and does not define a fundamental
-    phase-space dynamics.
+    Nevertheless, when projected $\chi$ configurations admit a smooth and stable
+    coarse-grained description, the admissible ordering of these configurations is subject
+    to universal local constraints.
+    These constraints may be summarized, within effective descriptions only, in a compact
+    form resembling a Hamiltonian relation.
+    This formulation is introduced solely as a descriptive parametrization of admissible
+    local relaxation patterns and does not define a fundamental dynamics.
 
-    Specifically, the local relaxation rate of $\chi$ is bounded by the invariant constant
-    $c$.
-    When expressed in effective relational variables, this bound takes the form
+    Specifically, the effective local relaxation ordering associated with projected
+    $\chi$ configurations is bounded by the invariant constant $c$.
+    When expressed in effective relational variables, this constraint takes the form
     \begin{equation}
-    (\mathcal{D}_{\mathrm{loc}}\chi)^2
-    + \mathcal{V}_{\chi}^2
-    = c^2 ,
-    \label{eq:effective_hamiltonian_constraint}
+      \left(\mathcal{D}_{\mathrm{loc}} \chi_{\mathrm{eff}}\right)^2
+      + \mathcal{V}_{\chi_{\mathrm{eff}}}^2
+      = c^2 ,
+      \label{eq:effective_hamiltonian_constraint}
     \end{equation}
-    where $\mathcal{V}_{\chi}$ denotes the effective internal variation rate of $\chi$,
-    capturing how strongly local configurations resist relaxation.
-    No notion of spatial gradient or background geometry is assumed at the fundamental
-    level.
+    where $\mathcal{V}_{\chi_{\mathrm{eff}}}$ denotes an effective internal variation
+    functional characterizing the resistance of projected configurations to further
+    relaxation.
+    No notion of spatial gradient, background geometry, or fundamental field variation is
+    assumed at this level.
 
-    Selecting the monotonic relaxation branch yields the effective evolution equation
+    Restricting to the monotonic ordering branch yields the effective evolution relation
     \begin{equation}
-      \mathcal{D}_{\mathrm{loc}}\chi
-      = c \sqrt{1 - \frac{\mathcal{V}_{\chi}^2}{c^2}} ,
+      \mathcal{D}_{\mathrm{loc}} \chi_{\mathrm{eff}}
+      = c \sqrt{1 - \frac{\mathcal{V}_{\chi_{\mathrm{eff}}}^2}{c^2}} ,
       \label{eq:chi_dynamics}
     \end{equation}
-    which encodes the universal slowdown of relaxation induced by structural variations
-    of the $\chi$ field.
+    which encodes the universal slowdown of effective relaxation induced by localized
+    structural constraints.
+    This relation constrains admissible projected descriptions but does not represent an
+    equation of motion for the fundamental $\chi$ substrate.
 
   \subsubsection*{Emergent Gravitational Description}
 
-    Localized, relaxation-resistant configurations of $\chi$ generate regions of enhanced
-    internal structure, which locally reduce the admissible relaxation rate.
-    When a spacetime description becomes applicable, this effect is conventionally
-    described as gravitational time dilation.
-    No independent gravitational interaction or field is postulated; the effect arises
-    directly from the constrained relaxation dynamics of $\chi$ itself.
+    Projected $\chi$ configurations exhibiting strong resistance to relaxation correspond,
+    in effective descriptions, to localized regions of enhanced structural complexity.
+    These regions locally reduce the admissible effective relaxation rate.
 
-    In the weak-structure regime, where internal variation rates are small compared to
-    $c$, the effective description admits a simplified relation governing the spatial
-    distribution of relaxation slowdown:
+    When a spacetime interpretation becomes applicable, this reduction is conventionally
+    described as gravitational time dilation.
+    No independent gravitational field or interaction is postulated; the phenomenon arises
+    as a direct consequence of the constrained ordering of projected $\chi$ configurations.
+
+    In the weak-structure regime, where effective internal variation rates are small
+    compared to $c$, the effective description admits a simplified relation governing the
+    spatial distribution of relaxation slowdown:
     \begin{equation}
       \nabla \cdot \left(
-                     \frac{\nabla \chi}
-                     {\sqrt{1 - |\nabla \chi|^2 / c^2}}
+                     \frac{\nabla \chi_{\mathrm{eff}}}
+                     {\sqrt{1 - |\nabla \chi_{\mathrm{eff}}|^2 / c^2}}
       \right)
       \simeq \frac{4 \pi G_{\mathrm{eff}}}{c^2} \rho ,
       \label{eq:effective_poisson_relation}
     \end{equation}
-    where $\rho$ denotes the density of localized configurations and
-    $G_{\mathrm{eff}}$ is an emergent coupling parameter characterizing the collective
-    response of the relaxation flow to such structures.
+    where $\rho$ denotes the effective density of localized relaxation-resistant
+    configurations and $G_{\mathrm{eff}}$ is an emergent coupling parameter characterizing
+    the collective response of the relaxation ordering to such structures.
 
     In the Newtonian limit, this relation reduces to an effective Poisson equation for a
     potential $\Phi$, defined operationally by
     \begin{equation}
       \Phi \equiv c^2 \ln \left(
-                            \frac{\mathcal{D}_{\mathrm{loc}}\chi}{c}
+                            \frac{\mathcal{D}_{\mathrm{loc}} \chi_{\mathrm{eff}}}{c}
       \right) .
       \label{eq:effective_gravitational_potential}
     \end{equation}
-    This potential is not introduced as a fundamental field, but as a convenient summary
-    of how localized variations of $\chi$ modulate relaxation in regimes where classical
-    gravitational phenomenology applies.
+    This potential is not introduced as a fundamental field, but as a compact summary of
+    how localized variations in effective relaxation ordering modulate physical clocks
+    and rulers in regimes where classical gravitational phenomenology applies.
 
   \subsubsection*{Interpretational Status}
 
-    The relations presented in this section do not constitute a fundamental Hamiltonian
-    or a variational principle.
-    They provide an effective local parametrization of the constraints governing $\chi$
-    relaxation when a geometric description becomes applicable.
+    The relations presented in this section do not define a fundamental Hamiltonian,
+    action, or variational principle.
+    They provide an effective local parametrization of the constraints governing admissible
+    projected descriptions once a geometric interpretation becomes meaningful.
 
-    The predictive content of Cosmochrony resides entirely in the intrinsic,
-    pre-geometric relaxation dynamics of the $\chi$ field.
-    Hamiltonian, geometric, and gravitational structures appear only as emergent
-    descriptive tools, valid in restricted regimes and carrying no independent
-    ontological status.
+    The predictive content of Cosmochrony resides entirely in the structural properties of
+    the pre-geometric $\chi$ substrate.
+    Hamiltonian, geometric, and gravitational formalisms appear only as emergent descriptive
+    tools, valid in restricted regimes and carrying no independent ontological status.
