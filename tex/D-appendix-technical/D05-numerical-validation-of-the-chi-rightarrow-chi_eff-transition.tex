@@ -8,6 +8,27 @@
   whose evolution is consistent with the coarse-grained micro-dynamics in projectable
   regimes.
 
+  \paragraph{Distinction Between Numerical Stability and Projectability.}
+    The numerical validation presented in this subsection evaluates two distinct but often
+    conflated properties:
+
+    \begin{itemize}
+      \item \textbf{Numerical stability}, measured by the normalized residual $\epsilon$,
+      ensures that the effective field $\chi_{\text{eff}}$ converges to a quasi-stationary
+      solution under iterative relaxation.
+      \item This is a \emph{local} and algorithm-dependent property.
+
+      \item \textbf{Projectability} is a \emph{geometric} property of the projection
+      $\Pi : \chi \rightarrow \chi_{\text{eff}}$, requiring that relational configurations
+      admit a faithful and locally injective effective description.
+    \end{itemize}
+
+    A configuration may therefore be numerically stable ($\epsilon \ll 1$) yet
+    non-projectable if multiple distinct $\chi$ configurations map to the same
+    $\chi_{\text{eff}}$, as occurs in strong-structure or deprojection regimes.
+    The numerical diagnostics introduced below are explicitly designed to separate these
+    two notions.
+
   \paragraph{Discrete model and operators.}
     We consider a three-dimensional cubic lattice graph with periodic boundary conditions,
     containing $N^3$ nodes and nearest-neighbor adjacency $\mathcal{N}(i)$.
@@ -88,6 +109,18 @@
       \label{eq:D4_epsilon_def}
     \end{equation}
     where $\|\cdot\|$ denotes an $L^2$ norm over the effective lattice.
+
+  \paragraph{Scope of the residual diagnostic.}
+    The normalized residual $\epsilon$ provides a quantitative measure of the
+    \emph{algorithmic consistency} between the time evolution of the coarse-grained field
+    $\chi_{\text{eff}}$ and the coarse-grained micro-dynamics. As such, it is a diagnostic of
+    numerical convergence and internal consistency of the relaxation scheme. However,
+    $\epsilon$ does not encode geometric information about the projection
+    $\Pi : \chi \rightarrow \chi_{\text{eff}}$. In particular, a small residual
+    $\epsilon \ll 1$ does not imply that the projection is locally injective or that the
+    corresponding effective description is geometrically faithful. Distinguishing
+    numerically stable configurations from genuinely projectable ones therefore requires
+    additional, independent criteria beyond the residual metric alone.
 
   \paragraph{Initial conditions.}
     Unless stated otherwise, simulations start from an i.i.d. Gaussian field
@@ -185,21 +218,25 @@ coarse-grained dynamics}.
 
   \paragraph{Interpretation and limitations.}
     This toy model demonstrates constructively that the operational coarse-graining
-    procedure defining $\chi_{\mathrm{eff}}$ yields an effective description compatible with
-    the coarse-grained micro-dynamics in projectable regimes, as indicated by a small
-    normalized residual $\varepsilon=\mathcal{O}(10^{-2})$ for both smooth and rough runs
+    procedure defining $\chi_{\text{eff}}$ yields an effective description compatible with
+    the coarse-grained micro-dynamics in \emph{projectable} regimes, as indicated by a
+    small normalized residual $\epsilon = O(10^{-2})$ for smooth and rough configurations
     across multiple lattice resolutions.
 
-    However, the residual $\varepsilon$ is not by itself a sufficient criterion for
-    projectability.
-    In fully saturated configurations, where $S_i>1$ on (nearly) all lattice sites,
-    the bounded relaxation term vanishes ($R_i=0$) and the dynamics becomes effectively
-    frozen.
-    In this case, $\partial_t\chi_{\mathrm{eff}}\approx 0$ and the residual
-    $\varepsilon$ becomes trivially small, even though no meaningful effective geometric
-    description exists.
-    Such saturated regimes therefore constitute explicit non-projectable failure modes,
-    which must be identified using an independent indicator.
+    However, numerical stability alone is not a sufficient criterion for projectability.
+    In fully saturated configurations, where $S_i > 1$ on (nearly) all lattice sites, the
+    bounded relaxation term vanishes ($R_i = 0$) and the effective dynamics becomes
+    quasi-static. In this regime, $\partial_t \chi_{\text{eff}} \approx 0$ and the residual
+    $\epsilon$ becomes trivially small, even though no faithful geometric interpretation
+    exists.
+
+    Such configurations correspond to \emph{stable but non-projectable} regimes, in which
+    multiple distinct $\chi$ configurations map to the same effective field
+    $\chi_{\text{eff}}$. This loss of local injectivity reflects the emergence of
+    \emph{rank-deficient projection fibers}, rather than any physical singularity or
+    pathology of the underlying $\chi$ dynamics. These regimes mark the limits of
+    applicability of the continuum geometric description and must be identified using
+    criteria independent of the residual $\epsilon$.
 
   \paragraph{Reproducibility.}
     All figures and numerical values reported in this subsection are reproducible using an
