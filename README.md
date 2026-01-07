@@ -15,7 +15,7 @@ Cosmochrony is based on the following central statements:
    Spacetime geometry arises as an effective, continuum encoding of microscopic relational connectivity, reconstructed through spectral methods in appropriate limits.
 
 3. **Observables are projected quantities**  
-   Physical observables belong to an effective spacetime-level descriptor χ_eff, obtained through a generally **non-injective projection** from χ. As a result, effective descriptions can underdetermine the underlying configuration.
+   Physical observables belong to an effective spacetime-level descriptor $χ_eff$, obtained through a generally **non-injective projection** from χ. As a result, effective descriptions can underdetermine the underlying configuration.
 
 4. **Dynamics are derived, not postulated**  
    The dynamical law governing χ and the effective Born–Infeld-like action are obtained *ab initio* from structural constraints on relaxation and causal saturation of fluxes.
