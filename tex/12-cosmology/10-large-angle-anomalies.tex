@@ -34,39 +34,53 @@
   observables, and are therefore expected to appear primarily at the largest scales.
 
   \subsubsection*{Structural Admissibility and Low-$\ell$ Suppression}
-  \label{subsec:low-l-admissibility}
+    \label{subsec:low-l-admissibility}
 
-  In the Cosmochrony framework, the primordial power spectrum is not assumed to be a
-  pure scale-invariant law from the outset.
-  Instead, it reflects the set of configurations that are \emph{projectively
+    In the Cosmochrony framework, the primordial power spectrum is not assumed to be a
+    pure scale-invariant law from the outset.
+    Instead, it reflects the set of configurations that are \emph{projectively
 admissible} given the relaxation state of the pre-geometric substrate $\chi$.
 
-  At early cosmic times, the relaxation of $\chi$ is strongly constrained by global
-  saturation effects, severely limiting the admissibility of complex or highly
-  oscillatory configurations.
-  As a consequence, the effective primordial spectrum is expected to be modulated by
-  a structural constraint reflecting this restricted configuration space.
+    At early cosmic times, the relaxation of $\chi$ is strongly constrained by global
+    saturation effects, severely limiting the admissibility of complex or highly
+    oscillatory configurations.
+    As a consequence, the effective primordial spectrum is expected to be modulated by
+    a structural constraint reflecting this restricted configuration space.
 
-  We formalize this effect by introducing an \emph{Admissibility Filter}
-  $\mathcal{A}(k,t)$ acting on the primordial spectrum:
-  \begin{equation}
-    P_{\mathrm{obs}}(k,t) = \mathcal{A}^2(k,t)\, P_0(k),
-  \end{equation}
-  where $P_0(k)$ denotes the unconstrained primordial spectrum.
+    We formalize this effect by introducing an \emph{Admissibility Filter}
+    $\mathcal{A}(k,t)$ acting on the primordial spectrum:
+    \begin{equation}
+      P_{\mathrm{obs}}(k,t) = \mathcal{A}^2(k,t)\, P_0(k),
+    \end{equation}
+    where $P_0(k)$ denotes the unconstrained primordial spectrum.
 
-  A natural phenomenological form for this filter, capturing a structural infrared
-  cutoff, is
-  \begin{equation}
-    \mathcal{A}(k,t) = \exp\!\left[-\left(\frac{k_c(t)}{k}\right)^p\right],
-  \end{equation}
-  where $k_c(t)$ defines a \emph{coherence scale} associated with the maximal size of
-  projectively admissible configurations at time $t$, and $p$ controls the sharpness
-  of the transition.
+    A natural phenomenological form for this filter, capturing a structural infrared
+    cutoff, is
+    \begin{equation}
+      \mathcal{A}(k,t) = \exp\!\left[-\left(\frac{k_c(t)}{k}\right)^p\right],
+    \end{equation}
+    where $k_c(t)$ defines a \emph{coherence scale} associated with the maximal size of
+    projectively admissible configurations at time $t$, and $p$ controls the sharpness
+    of the transition.
 
-  For modes with $k \ll k_c(t)$, corresponding to the largest angular scales
-  (low-$\ell$), power suppression arises not from inflationary dilution or statistical
-  variance, but from the structural impossibility of supporting such global modes
-  within the available relational complexity of the $\chi$ substrate.
+    For modes with $k \ll k_c(t)$, corresponding to the largest angular scales
+    (low-$\ell$), power suppression arises not from inflationary dilution or statistical
+    variance, but from the structural impossibility of supporting such global modes
+    within the available relational complexity of the $\chi$ substrate.
+
+    \paragraph{Graph-Theoretic Interpretation of the Admissibility Scale}
+
+      The admissibility scale $k_c(t)$ admits a natural graph-theoretic interpretation.
+      At any effective cosmological time $t$, the relational substrate $\chi$ defines an
+      effective connectivity graph $G(t)$ whose weighted Laplacian $L_G(t)$ encodes the
+      set of admissible collective modes.
+
+      The spectral gap $\lambda_2(t)$ of $L_G(t)$ characterizes the global connectivity
+      of this relational structure and sets a minimal admissible wavelength.
+      Modes with $k \lesssim \sqrt{\lambda_2(t)}$ are therefore structurally inadmissible.
+      As relaxation proceeds, the effective graph becomes increasingly connected,
+      lowering $\lambda_2(t)$ and progressively allowing larger-scale coherent modes to
+      emerge.
 
   \subsubsection*{Testable Predictions}
 
@@ -114,3 +128,46 @@ admissible} given the relaxation state of the pre-geometric substrate $\chi$.
     hierarchical, localized, and complex structures.
     In this sense, cosmological time is simultaneously the arrow of entropy and the
     arrow of increasing descriptive richness.
+
+    \paragraph{Graph-Theoretic Origin of the Admissibility Filter}
+
+      In Cosmochrony, the admissibility filter $\mathcal{A}(k,t)$ admits a natural
+      graph-theoretic interpretation.
+      At any effective cosmological time $t$, the relational substrate $\chi$ defines
+      a connectivity graph $G(t)$ whose weighted Laplacian $L_G(t)$ encodes the
+      admissible collective modes.
+
+      The spectrum of $L_G(t)$,
+      \[
+        L_G(t)\,\psi_n = \lambda_n(t)\,\psi_n,
+      \]
+      sets a minimal nonzero eigenvalue $\lambda_2(t)$ that characterizes the global
+      connectivity of the relational structure.
+      Modes with wavelengths exceeding the corresponding scale
+      $k_c(t) \sim \sqrt{\lambda_2(t)}$ are structurally inadmissible.
+
+      The primordial power spectrum is therefore modulated by a structural
+      admissibility filter,
+      \[
+        \mathcal{A}(k,t)
+        =
+        \exp\!\left[
+                -\left(
+                   \frac{\lambda_2(t)}{k^2}
+          \right)^{p/2}
+        \right],
+      \]
+      reflecting the inability of an insufficiently connected relational graph to
+      support large-scale coherent modes.
+
+      It is important to stress that the initial ontological poverty of the $\chi$
+      substrate implies that the complexity observed today was not encoded or
+      prefigured in advance.
+      Early configurations were not merely simpler realizations of a fixed blueprint,
+      but belonged to a drastically restricted admissible space, incapable of
+      supporting the relational richness that emerged only through subsequent
+      relaxation.
+
+      In this sense, Cosmochrony is fundamentally non-teleological:
+      the universe does not unfold a prewritten complexity, but acquires descriptive
+      richness only as the space of admissible configurations itself expands.
