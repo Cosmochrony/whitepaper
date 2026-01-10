@@ -8,6 +8,13 @@
 \usepackage{amstext}
 \usepackage{microtype}
 \usepackage{xparse}
+% Boxes
+\usepackage[most]{tcolorbox}
+% Plots (pgfplots provides axis/addplot)
+\usepackage{pgfplots}
+\usetikzlibrary{intersections}
+\usepgfplotslibrary{fillbetween}
+\pgfplotsset{compat=1.18}
 \NewDocumentCommand{\subsubsubsection}{s m}{%
   \IfBooleanTF{#1}{\paragraph*{#2}}{\paragraph{#2}}%
 }

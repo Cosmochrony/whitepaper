@@ -84,6 +84,50 @@
     rather, it demonstrates that fermionic characteristics can emerge consistently
     from topologically constrained scalar-field excitations.
 
+    \paragraph{Explicit half-angle map and sign inversion.}
+      To make the spin-$\tfrac12$ correspondence explicit, let $\alpha\in[0,2\pi]$ denote an
+      \emph{effective} rotation parameter acting on the localized configuration in the projectable regime.
+      The defining topological feature is that the relevant loop in configuration space is
+      non-contractible at $2\pi$ but becomes contractible at $4\pi$.
+
+      A minimal way to encode this double-cover behavior is to introduce an effective
+      spinorial descriptor $\psi(\alpha)$ whose phase advances by a \emph{half-angle}:
+    \begin{equation}
+      \psi(\alpha) \;\equiv\; \psi_0\,e^{i\alpha/2}.
+      \label{eq:B4-half-angle-map}
+      \end{equation}
+      Then a $2\pi$ cycle produces a sign inversion,
+    \begin{equation}
+      \psi(\alpha+2\pi)=\psi_0\,e^{i(\alpha+2\pi)/2} = -\,\psi_0\,e^{i\alpha/2} = -\psi(\alpha),
+      \label{eq:B4-2pi-sign}
+      \end{equation}
+      while a $4\pi$ cycle restores the original state,
+    \begin{equation}
+      \psi(\alpha+4\pi)=\psi(\alpha).
+      \label{eq:B4-4pi-identity}
+      \end{equation}
+
+    \begin{equation}
+      \begin{array}{c}
+        \text{effective rotations } \alpha: 0 \to 2\pi \quad\Rightarrow\quad
+        \text{nontrivial loop in } \mathcal{C}_{\mathrm{eff}} \ (\mathbb{Z}_2) \quad\Rightarrow\quad \psi \mapsto -\psi,
+        \\[4pt]
+        \text{effective rotations } \alpha: 0 \to 4\pi \quad\Rightarrow\quad
+        \text{trivial loop (homotopic to identity)} \quad\Rightarrow\quad \psi \mapsto \psi.
+      \end{array}
+      \label{eq:B4-schematic-doublecover}
+      \end{equation}
+
+      In this construction, $\psi$ is not a fundamental field: it is a compact
+      \emph{collective label} for the topological class of the solitonic configuration in the space of
+      admissible projected descriptions. The sign change at $2\pi$ is therefore not imposed as a quantum
+      postulate; it is an effective encoding of the $\mathbb{Z}_2$ obstruction associated with the
+      $4\pi$ periodicity of the configuration.
+
+      (See Sec.~\ref{subsec:status-formulation} for the configuration-space statement
+      $\pi_1(\mathcal{C}_{\mathrm{eff}})=\mathbb{Z}_2$
+      and its effective implication $\psi\mapsto-\psi$ under a $2\pi$ loop.)
+
   \subsubsection*{Conceptual Scope and Limitations}
 
     The purpose of this example is conceptual.

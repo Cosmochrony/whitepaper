@@ -256,18 +256,123 @@
       They simply emphasize that the required spectral hierarchy corresponds to a modest
       geometric amplification, not to an extreme or finely tuned parameter choice.
 
-  \subsubsection*{Role of \(V(\chi)\) and Fine Structure}
+  \subsubsection*{An Explicit Working Ansatz for \(V(\chi)\)}
+    \label{subsec:explicit_Vchi_ansatz}
 
-    The effective potential \(V(\chi)\) is expected to play a secondary role in mass generation.
-    Its primary effect is to control fine splittings within a given solitonic sector
-    rather than to set the overall mass scale.
+    In the present appendix, the primary driver of mass hierarchies is the spectral organization
+    of the solitonic stability operator. Nevertheless, turning this program into a falsifiable
+    computational scheme requires an explicit \emph{working} form for the effective potential
+    \(V(\chi)\), not as a fundamental source of masses, but as a controlled perturbation that:
+    (i) stabilizes localized sectors, (ii) selects admissible core amplitudes, and (iii) produces
+    fine splittings within a given topological class.
 
-    Small differences, such as the neutron--proton mass splitting, may arise from
-    subleading corrections to the effective potential or from topological asymmetries.
-    No quantitative prediction is attempted in the absence of an explicit form for \(V(\chi)\).
+    A minimal two-scale ansatz compatible with these roles is a \emph{multi-well} (or weakly periodic)
+    potential with a characteristic amplitude scale \(\eta\) and stiffness scale \(\lambda\):
+    \begin{equation}
+      V(\chi)
+      \;=\;
+      \frac{\lambda}{4}\,\big(\chi^2-\eta^2\big)^2
+      \;+\;
+      \varepsilon\,\eta^4\Big[1-\cos\!\Big(\frac{\chi}{\eta}\Big)\Big],
+      \label{eq:Vchi_multiwell_periodic}
+    \end{equation}
+    where \(\varepsilon \ll 1\) is a dimensionless modulation parameter.
+    The first term provides a robust double-well localization mechanism; the second term introduces
+    a gentle quasi-periodic micro-structure capable of generating controlled intra-sector splittings
+    without reparameterizing the global mass scale.
 
-    Although introduced here in the context of particle mass hierarchies,
-    the spectral packing fraction $\alpha$ is expected to be a universal
-    property of non-injective projection.
-    In later sections, we argue that the same quantity governs the spectral
-    granularity of horizon-associated reprojection phenomena.
+    The interpretation in Cosmochrony is strictly \emph{effective}: the coefficients in
+    Eq.~\eqref{eq:Vchi_multiwell_periodic} are not fundamental constants, but phenomenological
+    descriptors of how coarse-grained projectability constraints reshape the admissible configurations
+    of \(\chi_{\mathrm{eff}}\).
+
+
+  \subsubsection*{Linking \((\lambda,\eta)\) to Observables Without Making Mass Fundamental}
+    \label{subsec:lambda_eta_to_observables}
+
+    The parameters \(\eta\) and \(\lambda\) are introduced only to control the \emph{shape} and
+    \emph{stiffness} of admissible localized sectors in the projected description. Their observable
+    imprint is therefore indirect: they enter through how they shift the stability spectrum
+    \(\{\lambda_n\}\) of \(\mathcal{L}_{\mathrm{sol}}\), and how robustly a given topological sector
+    remains projectable under perturbations.
+
+    \paragraph{Dimensionless control combinations.}
+      For a localized profile with characteristic extension \(\chi_c\), the potential introduces
+      two natural dimensionless combinations,
+    \begin{equation}
+      g \;\equiv\; \lambda\,\chi_c^2\,\eta^2,
+      \qquad
+      u \;\equiv\; \varepsilon\,,
+      \label{eq:dimensionless_controls}
+      \end{equation}
+      which govern (i) the curvature scale of \(V(\chi)\) near admissible minima, and (ii) the magnitude
+      of sub-structure corrections. The spectral hierarchy derived above is then phrased as the statement
+      that the \emph{ratio} \(m_p/m_e\) is predominantly controlled by topological/composite spectral packing,
+      while \((g,u)\) control the \emph{stability} and \emph{splittings} of the low-lying spectrum.
+
+    \paragraph{Matching strategy using the proton-to-electron ratio.}
+      Denote by \(\lambda_e(g,u)\) the fundamental stability eigenvalue of the \(Q=1\) sector, and by
+      \(\lambda_{\mathrm{bind}}(Q=3;g,u)\) the characteristic binding-band scale of the composite sector.
+      The empirical constraint
+      \(\lambda_{\mathrm{bind}}/\lambda_e \sim 3.4\times 10^6\)
+      derived in Eq.~(the spectral constraint above) is then reinterpreted as a \emph{feasibility condition}:
+    \begin{equation}
+      \exists\,(g,u)\ \text{s.t.}\quad
+      \frac{\lambda_{\mathrm{bind}}(Q=3;g,u)}{\lambda_e(g,u)}
+      \;\approx\; 3.4\times 10^6,
+      \label{eq:feasibility_condition_lambda_eta}
+      \end{equation}
+      while remaining stable under small variations of \((g,u)\).
+      In other words, \((\lambda,\eta)\) are not tuned to \emph{set} the mass ratio, but to ensure that the
+      \emph{topological spectral mechanism} can realize the required hierarchy in a broad basin of effective
+      parameters.
+
+    \paragraph{Secondary observables: fine splittings as diagnostics.}
+      Once a viable region in \((g,u)\) exists, the same potential ansatz predicts that small
+      intra-sector differences (e.g. neutron--proton splitting, excited baryonic resonances, or
+      generational splittings) arise from:
+    \begin{itemize}
+      \item perturbative eigenvalue shifts \(\delta\lambda_n(g,u)\) induced by local curvature variations of \(V\),
+      \item weak breaking of idealized symmetries in composite sectors,
+      \item environment-dependent dressing of the effective coefficients through projectability constraints.
+      \end{itemize}
+      These effects are conceptually aligned with the claim that \(V(\chi)\) controls fine structure rather
+      than the global mass scale.
+
+
+  \subsubsection*{Numerical Program: From \(V(\chi)\) to Spectral Hierarchies}
+    \label{subsec:numerical_program_mass_ratio}
+
+    The numerical goal is not to simulate QCD, but to test a \emph{structural} claim:
+    whether bounded relaxation dynamics plus a controlled effective potential admits stable localized
+    sectors whose stability spectra exhibit (i) a robust elementary mode \(\lambda_e\), and
+    (ii) a dense binding band \(\lambda_{\mathrm{bind}}\) in a composite \(Q=3\) sector, separated by a large gap.
+
+    A minimal computational pipeline is:
+    \begin{enumerate}
+      \item \textbf{Dynamics and formation.} Implement the bounded relaxation update rule for \(\chi\)
+      in a discretized representation (spectral/finite-element basis or lattice proxy), including
+      the effective potential term Eq.~\eqref{eq:Vchi_multiwell_periodic} as a controlled perturbation.
+      \item \textbf{Soliton harvesting.} Identify long-lived localized configurations and classify them
+      by topological diagnostics (winding/charge proxies, knot-like invariants when available, or
+      stability under deprojection/reprojection cycles).
+      \item \textbf{Stability operator extraction.} For each harvested configuration, compute the
+      linearized stability operator \(\mathcal{L}_{\mathrm{sol}}\) (second variation of the effective
+      localization functional) and extract its low-lying eigen-spectrum.
+      \item \textbf{Spectral ratio test.} Evaluate whether the emergent spectra support a regime where
+      \(\lambda_{\mathrm{bind}}/\lambda_e \sim 10^6\) arises \emph{without fine tuning}, and whether the
+      ratio remains stable under moderate variation of \((g,u)\).
+      \item \textbf{Fine-structure diagnostics.} Measure the sensitivity of subleading splittings
+      \(\delta\lambda_n\) to \((g,u)\), providing a concrete handle for how \(V(\chi)\) affects
+      intra-sector structure while leaving the leading hierarchy topologically controlled.
+    \end{enumerate}
+
+    This numerical program connects directly to the broader simulation framework described in the
+    technical appendix on simulation algorithms and spectral extraction, and provides a clear set of
+    falsifiable diagnostics: either large, robust spectral gaps appear generically in composite sectors,
+    or the proposed topological-spectral mechanism fails to reproduce the required hierarchy.
+
+  \subsubsection*{Transition}
+    The role of \(V(\chi)\) is therefore operational: it stabilizes and perturbs admissible projected sectors
+    while the \emph{origin} of the mass hierarchy remains spectral and topological. This separation is
+    developed further in the subsequent appendices on spectral ontology and on the secondary role of \(V(\chi)\).

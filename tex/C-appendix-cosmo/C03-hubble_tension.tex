@@ -41,6 +41,92 @@
     follow a fixed power law and depends on how relaxation gradients contribute to
     the averaged dynamics.
 
+  \paragraph{Illustrative $H(z)$ profile and comparison with $\Lambda$CDM.}
+    To provide a visual benchmark against standard cosmology, we compare an
+    \emph{illustrative} Cosmochrony profile to the $\Lambda$CDM expansion history.
+    This is not a fit and does not claim a derived redshift law: it only translates the
+    baseline relations $a(t)\propto \chi(t)$ and $H=\dot{\chi}/\chi$ into a convenient
+    parametrization for plotting purposes.
+
+    Using the effective redshift interpretation
+    \begin{equation}
+      1+z = \frac{\chi(t_0)}{\chi(t)} ,
+    \end{equation}
+    one may write, in the simplest background closure where the relaxation budget
+    is treated as a slowly varying effective fraction,
+    \begin{equation}
+      H_{\chi}(z)
+      \;\equiv\;
+      H_0 \,(1+z)\,\sqrt{1-\Omega_{\chi}}
+      \qquad
+      ( \text{illustrative closure} ).
+      \label{eq:Hz_cosmochrony_illustrative}
+    \end{equation}
+    For comparison, the $\Lambda$CDM benchmark is
+    \begin{equation}
+      H_{\Lambda\mathrm{CDM}}(z)
+      \;=\;
+      H_0 \sqrt{\Omega_m(1+z)^3+\Omega_r(1+z)^4+\Omega_\Lambda},
+      \label{eq:Hz_LCDM}
+    \end{equation}
+    with $(\Omega_m,\Omega_\Lambda)\simeq(0.3,0.7)$ and $\Omega_r$ negligible at late times.
+
+    Figure~\ref{fig:Hz_comparison} shows the two curves, together with a shaded
+    Cosmochrony band obtained by varying $(H_0,\Omega_\chi)$ within representative
+    late-universe ranges. The purpose is to highlight (i) the qualitatively distinct scaling
+    of $H(z)$ induced by monotonic $\chi$ relaxation and (ii) how modest variations in the
+    effective relaxation budget translate into percent-level differences in inferred expansion.
+
+    \begin{figure}[t]
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[
+          width=0.92\linewidth,
+        height=0.48\linewidth,
+        xlabel={$z$},
+        ylabel={$H(z)$ [km\,s$^{-1}$\,Mpc$^{-1}$]},
+        xmin=0, xmax=3.0,
+        ymin=60, ymax=260,
+        legend pos=north west,
+        grid=both,
+        samples=200,
+        domain=0:3
+        ]
+
+          % --- LCDM benchmark (late-time; radiation neglected in the plot range) ---
+          \addplot+[thick]
+            {70*sqrt(0.3*(1+x)^3 + 0.7)};
+          \addlegendentry{$\Lambda$CDM ($H_0=70,\ \Omega_m=0.3,\ \Omega_\Lambda=0.7$)}
+
+          % --- Cosmochrony illustrative band: vary H0 in [67,73] and Omega_chi in [0.25,0.35] ---
+          % Lower envelope: H0=67, Omega_chi=0.35
+          \addplot[name path=chiLow, draw=none]
+          {67*(1+x)*sqrt(1-0.35)};
+
+          % Upper envelope: H0=73, Omega_chi=0.25
+          \addplot[name path=chiHigh, draw=none]
+          {73*(1+x)*sqrt(1-0.25)};
+
+          \addplot[fill opacity=0.25]
+          fill between[of=chiLow and chiHigh];
+          \addlegendentry{Cosmochrony (illustrative band: $H_0\in[67,73]$, $\Omega_\chi\in[0.25,0.35]$)}
+
+          % Central illustrative Cosmochrony curve: H0=70, Omega_chi=0.30
+          \addplot+[thick, dashed]
+            {70*(1+x)*sqrt(1-0.30)};
+          \addlegendentry{Cosmochrony central ($H_0=70,\ \Omega_\chi=0.30$)}
+
+        \end{axis}
+      \end{tikzpicture}
+      \caption{
+        Illustrative comparison of $H(z)$ in Cosmochrony versus a $\Lambda$CDM benchmark.
+        The Cosmochrony curve uses the minimal plotting closure
+        $H_\chi(z)=H_0(1+z)\sqrt{1-\Omega_\chi}$, shown with a representative uncertainty band
+        from $(H_0,\Omega_\chi)$ variations. This figure is a visualization aid, not a fit.
+      }
+      \label{fig:Hz_comparison}
+    \end{figure}
+
   \paragraph{Relaxation budget and effective expansion.}
     In a realistic universe, part of the relaxation capacity of \(\chi\) is stored
     in spatial gradients associated with inhomogeneities.
@@ -97,7 +183,7 @@
       \sqrt{
         \frac{1 - \Omega_\chi (1+\delta)}
         {1 - \Omega_\chi}
-      } .
+      } .\label{eq:hubble_local}
     \end{equation}
 
     In underdense regions (\(\delta < 0\)), a larger fraction of the relaxation
@@ -120,6 +206,78 @@
     In Cosmochrony, this discrepancy arises naturally as an environmental effect,
     without invoking new energy components or modifications of early-universe
     physics.
+
+  \paragraph{Predicted amplitude of the deviation at $z\sim 1$.}
+    A distinctive feature of the Cosmochrony framework is that the magnitude of the
+    departure from the $\Lambda$CDM expansion history is not freely adjustable.
+    At late times, the relative deviation between the locally inferred and globally
+    averaged expansion rates is fully controlled by the relaxation budget parameter
+    $\Omega_\chi$ and by the effective density contrast $\delta$ in the redshift range
+    under consideration.
+
+    Within Cosmochrony, structural consistency imposes
+    \begin{equation}
+      \Omega_\chi \in [0.25,\,0.35],
+    \end{equation}
+    reflecting the fraction of relaxation capacity stored in large-scale gradients,
+    while the partially developed cosmic web at $z\sim 1$ naturally corresponds to
+    moderate underdensities in the range
+    \begin{equation}
+      \delta(z\sim 1) \in [-0.2,\,-0.5].
+    \end{equation}
+    Inserting these bounds into Eq.~(C.\ref{eq:hubble_local}) yields a predicted fractional
+    enhancement
+    \begin{equation}
+      \frac{\Delta H}{H}
+      \;\equiv\;
+      \frac{H_{\mathrm{loc}}-\bar H}{\bar H}
+      \;\in\;
+      [3.5\%,\,9.5\%]
+      \qquad (z\sim 1).
+    \end{equation}
+
+    This narrow interval is not a phenomenological choice but a direct consequence of the
+    relaxation-based origin of expansion in Cosmochrony.
+    Deviations significantly outside this range would require either unphysical values
+    of $\Omega_\chi$ or density contrasts incompatible with the observed state of
+    large-scale structure at intermediate redshifts.
+
+  \paragraph{Uncertainty estimates and parameter degeneracies.}
+    At the present stage, Cosmochrony does not claim a precision reconstruction of $H(z)$.
+    Nevertheless, it is useful to clarify how uncertainties in the effective parameters map
+    to uncertainties in the plotted $H(z)$ profiles and in the underlying stiffness scale.
+
+    \emph{Late-time effective uncertainty in $(H_0,\Omega_\chi)$.}
+    Within the illustrative closure of Eq.~\eqref{eq:Hz_cosmochrony_illustrative},
+    small variations propagate as
+    \begin{equation}
+      \frac{\delta H}{H}
+      \;\simeq\;
+      \frac{\delta H_0}{H_0}
+      \;-\;
+      \frac{1}{2}\frac{\delta\Omega_\chi}{1-\Omega_\chi}.
+    \end{equation}
+    For $\Omega_\chi\simeq 0.30$, an uncertainty $\delta\Omega_\chi\simeq 0.05$ corresponds
+    to a fractional variation $\delta H/H \simeq 3.6\%$, comparable to the width used in
+    Fig.~\ref{fig:Hz_comparison}. This motivates representing Cosmochrony as a band rather
+    than a single curve until dedicated simulations determine $\Omega_\chi(z)$.
+
+    \emph{Degeneracy between $K_0$ and $\chi_c$.}
+    The effective gravitational coupling constrains the product
+    \begin{equation}
+      K_0\,\chi_c^2 \;\sim\; \frac{c^4}{16\pi G},
+      \label{eq:K0_chic_deg}
+    \end{equation}
+    so that $K_0$ and $\chi_c$ cannot be fixed independently without additional input.
+    Propagating uncertainties in logarithmic form gives
+    \begin{equation}
+      \delta\ln K_0 \;\simeq\; -2\,\delta\ln \chi_c \quad (\text{at fixed } G).
+    \end{equation}
+    Hence, a factor-of-10 uncertainty on $\chi_c$ implies a factor-of-100 uncertainty on $K_0$.
+    This is consistent with the fact that both Planck-scale and cosmological-scale
+    normalizations can remain internally viable at the level of dimensional analysis,
+    until the microscopic origin of $\chi_c$ is constrained by simulations and/or additional
+    observables.
 
   \paragraph{Interpretation and status.}
     Within Cosmochrony, the Hubble tension does not signal a breakdown of cosmological

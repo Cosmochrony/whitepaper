@@ -134,6 +134,24 @@
     They are not intended to provide quantitative predictions for particle physics or
     precision cosmology.
 
+  \paragraph{The Projectability Threshold $\Theta_p$.}
+    A critical diagnostic in our simulations is the \textbf{projectability threshold} $\Theta_p$, which defines when a
+    relational configuration becomes admissible for a smooth spacetime projection $\Pi$.
+    This threshold is monitored through two spectral conditions:
+    \begin{itemize}
+      \item \textbf{Spectral Gap Stability:}
+      The projection is only valid if a clear separation exists in the relaxation spectrum, typically when
+      $\frac{\lambda_2 - \lambda_1}{\text{Tr}(L)} > \epsilon_p$
+      . Below this, the substrate is in a ``pre-geometric'' state where distance metrics are ill-defined.
+      \item \textbf{Topological Coherence:}
+      The Dirichlet energy of the mapped configuration must remain below a saturation bound,
+      $\mathcal{E}_{proj} < \mathcal{E}_{max}$
+      , ensuring that the emergent manifold is structurally stable and non-singular.
+    \end{itemize}
+    Crossing $\Theta_p$
+        marks the transition from ontological ``poverty'' (where only global, low-frequency modes are supported) to the
+        emergence of complex, localized solitonic structures.
+
   \paragraph{Conclusion.}
     This subsection demonstrates that the bounded relaxation dynamics of the \(\chi\)
     field can be implemented numerically in a stable and controlled manner using

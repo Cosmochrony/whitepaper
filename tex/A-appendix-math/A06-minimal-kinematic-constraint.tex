@@ -1,48 +1,104 @@
 \subsection{Minimal Kinematic Constraint}
   \label{subsec:minimal-kinematic-constraint}
 
-  A foundational assumption of Cosmochrony is the existence of a universal upper bound
-  on the local relaxation rate of the $\chi$ field:
+  A central postulate of Cosmochrony is the existence of a \emph{universal kinematic bound}
+  on admissible configurations of the $\chi$ substrate.
+  This bound is not derived from an action, a metric structure, or a variational principle,
+  but is imposed \emph{ab initio} at the pre-geometric level as a constraint on admissible
+  relaxation patterns.
+
+  In effective descriptions admitting a scalar representation $\chi_{\mathrm{eff}}$,
+  this postulate may be written in the compact form
   \begin{equation}
-    0 \;\leq\; \partial_t \chi \;\leq\; c ,
+    (\partial_t \chi)^2 + |\nabla \chi|^2 = c^2 ,
+    \label{eq:minimal-kinematic-constraint}
   \end{equation}
-  where $c$ denotes the maximal admissible rate of relaxation.
-  This constant is identified, at the level of effective descriptions, with the
-  invariant speed that characterizes relativistic kinematics.
+  where the symbols $\partial_t$ and $\nabla$ denote \emph{effective} temporal and relational
+  variations introduced only once a projectable geometric regime is established.
 
-  This bound is not introduced as a dynamical equation, a force law, or a cosmological
-  driving term.
-  It constitutes a purely kinematic constraint on admissible $\chi$ configurations,
-  specifying the maximal rate at which the relational structure of the field may
-  unfold.
-  In particular, it does not prescribe how $\chi$ evolves, but only restricts which
-  evolutions are physically admissible.
+  \paragraph{Pre-geometric status.}
+    Equation~\eqref{eq:minimal-kinematic-constraint} does \emph{not} presuppose the existence
+    of a spacetime metric, light cones, or a Lorentzian structure.
+    It is not the norm of a four-gradient taken with respect to an underlying Minkowski metric,
+    nor does it encode any invariant interval.
+    Rather, it expresses a purely kinematic saturation condition: admissible projected
+    descriptions must lie on the boundary of a fixed relaxation budget.
 
-  The presence of a maximal relaxation rate serves two closely related purposes.
-  First, it ensures that the local progression of effective physical time remains
-  finite and well-defined, preventing pathological behavior such as instantaneous
-  global reconfiguration.
-  Second, it enforces causal consistency by guaranteeing that no influence associated
-  with $\chi$ relaxation can propagate arbitrarily fast across the relational
-  structure.
+    At the level of the fundamental $\chi$ substrate, no notions of time, space, distance,
+    or orthogonality are defined.
+    The constant $c$ appearing in~\eqref{eq:minimal-kinematic-constraint} is therefore not
+    a velocity in spacetime, but the effective manifestation of the invariant structural bound
+    $c_\chi$ introduced in Section~\ref{subsec:role-of-cchi}.
+    Only after projection does this bound acquire an operational interpretation as a maximal
+    local ordering rate.
 
-  Importantly, this constraint precedes any notion of spacetime geometry.
-  It is imposed directly on the pre-geometric dynamics of $\chi$ and does not rely on
-  light cones, metrics, or Lorentz symmetry as fundamental ingredients.
-  Rather, the familiar relativistic causal structure emerges \emph{a posteriori} as
-  an effective description of systems whose dynamics saturate, but do not exceed,
-  this universal bound.
+  \paragraph{Interpretation as a kinematic postulate.}
+    The constraint~\eqref{eq:minimal-kinematic-constraint} should be read as a statement of
+    \emph{admissibility}, not of dynamics.
+    It does not determine how $\chi$ evolves, propagates, or responds to sources.
+    Instead, it restricts the class of effective descriptions that can consistently represent
+    underlying $\chi$ configurations.
+    In particular, it forbids arbitrarily rapid local ordering or instantaneous global
+    reconfiguration, thereby enforcing causal consistency without postulating causality as
+    a primitive notion.
 
-  At cosmological scales, the same constraint acquires a global interpretation.
-  When applied to a nearly homogeneous configuration of $\chi$, the bound
-  $\partial_t \chi \leq c$ implies a monotonic and approximately uniform increase of
-  $\chi$, which underlies the effective expansion of space discussed in
-  Section~\ref{subsec:expansion-as-relaxation}.
-  In this sense, large-scale cosmic expansion is not driven by an external impulse or
-  a vacuum energy term, but reflects the cumulative consequence of a local kinematic
-  limitation applied consistently across the field.
+  \paragraph{Emergent relativistic structure.}
+    Only in regimes where projected configurations admit a locally injective and smooth
+    representation does~\eqref{eq:minimal-kinematic-constraint} take on a familiar relativistic
+    form.
+    In such cases, the bound $c$ coincides numerically with the invariant speed appearing
+    in special relativity, and the constraint can be rewritten in a form suggestive of a
+    light-cone structure.
+    This resemblance is emergent and descriptive, not ontological: Lorentz symmetry
+    arises \emph{a posteriori} as a property of saturated relaxation, rather than as a
+    fundamental symmetry imposed on spacetime.
 
-  The minimal kinematic constraint therefore plays a unifying role in Cosmochrony.
-  It anchors causal consistency, bounds temporal unfolding, and provides the
-  structural basis from which relativistic spacetime behavior emerges, all without
-  introducing additional dynamical postulates or background geometric structures.
+  \paragraph{Cosmological and gravitational implications.}
+    In homogeneous regimes, the constraint enforces uniform saturation of relaxation,
+    leading directly to linear growth of $\chi_{\mathrm{eff}}$ and, consequently, to effective
+    cosmic expansion.
+    In inhomogeneous regimes, partial saturation manifests as local slowdown of relaxation,
+    which underlies gravitational time dilation and curvature effects discussed in later
+    sections.
+    In all cases, the same minimal kinematic postulate governs admissibility, without the
+    introduction of additional geometric or dynamical assumptions.
+
+    The minimal kinematic constraint therefore constitutes one of the foundational pillars
+    of Cosmochrony.
+    It precedes spacetime, metric structure, and relativistic symmetry, and provides the
+    structural origin from which effective causality and relativistic kinematics emerge.
+
+  \paragraph{Limits of the continuum description.}
+    The formulation of the minimal kinematic constraint in terms of continuous derivatives
+    implicitly assumes a regime in which projected $\chi$ configurations admit a smooth
+    effective description.
+    At scales comparable to the fundamental relational spacing---for instance near the
+    Planck scale---this continuum approximation is expected to break down.
+
+    In such regimes, the gradient operator $\nabla \chi$ should be replaced by finite
+    difference expressions defined on the underlying relational graph, and the constraint
+    \eqref{eq:minimal-kinematic-constraint} must be rederived from purely discrete
+    considerations.
+    While the existence of a universal saturation bound is expected to persist, its precise
+    mathematical expression may differ from the continuum form used here.
+
+    A fully discrete formulation of the kinematic constraint and its implications for
+    early-universe dynamics is deferred to future work.
+
+  \begin{tcolorbox}[colback=white, colframe=green!75!black, title=Example: Homogeneous Relaxation]
+      Consider a spatially homogeneous configuration where $|\nabla \chi| = 0$.
+      The minimal kinematic constraint reduces to
+      \[
+        (\partial_t \chi)^2 \leq c^2 .
+      \]
+      In regimes where the bound is locally saturated, this implies
+      \[
+        \partial_t \chi = c ,
+      \]
+      leading to a linear effective evolution
+      \[
+        \chi(t) = \chi_0 + ct .
+      \]
+      When the effective scale factor satisfies $a(t) \propto \chi(t)$, this directly yields
+      the Hubble law discussed in Section~\ref{subsec:homogeneous-cosmological-limit}.
+    \end{tcolorbox}
