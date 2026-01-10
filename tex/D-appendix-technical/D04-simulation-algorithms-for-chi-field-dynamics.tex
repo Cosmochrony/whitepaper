@@ -2,10 +2,8 @@
   \label{subsec:simulation-algorithms}
 
   The numerical simulations presented in this subsection implement finite-dimensional
-  approximations of the fundamentally continuous relaxation dynamics of the
-  \(\chi\) field.
-  They do not assume an underlying network, lattice, or discretized spacetime
-  structure.
+  approximations of the fundamentally continuous relaxation dynamics of the \(\chi\) field.
+  They do not assume an underlying network, lattice, or discretized spacetime structure.
   Instead, they rely on auxiliary basis representations introduced solely for
   numerical stability, convergence control, and diagnostic clarity, in close analogy
   with spectral, finite-element, or wavelet-based methods used in continuum field
@@ -29,8 +27,8 @@
     \end{enumerate}
 
     These goals are exploratory rather than predictive.
-    The simulations are designed to probe qualitative mechanisms of the theory in
-    regimes where analytic treatment is impractical.
+    The simulations are designed to probe qualitative mechanisms of the theory in regimes where analytic treatment is
+    impractical.
 
   \paragraph{Numerical representation and computational substrate.}
     For computational purposes, the \(\chi\) field is represented by a finite set of
@@ -39,17 +37,14 @@
     introduced in Section~\ref{subsec:parameter-independent-relaxation}.
 
     Interactions between these degrees of freedom are encoded through a coupling
-    operator \(K_{ij}\), which represents a finite-dimensional projection of the
-    effective relaxation response kernel.
+    operator \(K_{ij}\), which represents a finite-dimensional projection of the effective relaxation response kernel.
     The indices \(i\) and \(j\) do not label spatial sites or causal nodes.
     They index basis functions in the chosen representation.
 
     Different numerical bases and sampling strategies—including regular grids,
-    irregular samplings, or weighted connectivity graphs—lead to qualitatively similar
-    behavior.
+    irregular samplings, or weighted connectivity graphs—lead to qualitatively similar behavior.
     This robustness indicates that the observed phenomena are intrinsic features of
-    the bounded relaxation dynamics rather than artifacts of a particular numerical
-    scheme.
+    the bounded relaxation dynamics rather than artifacts of a particular numerical scheme.
 
   \paragraph{Relaxation update rule.}
     The numerical evolution follows a bounded relaxation rule inspired by the minimal
@@ -74,55 +69,43 @@
       \item suppression of gradient-driven instabilities.
     \end{itemize}
 
-    Time integration is performed using adaptive stepping schemes with explicit
-    stability control.
+    Time integration is performed using adaptive stepping schemes with explicit stability control.
     Alternative numerical implementations respecting the same kinematic bound produce
-    equivalent qualitative behavior, confirming that the results do not depend
-    sensitively on algorithmic details.
+    equivalent qualitative behavior, confirming that the results do not depend sensitively on algorithmic details.
 
   \paragraph{Emergence and persistence of localized configurations.}
     Starting from generic initial conditions, the simulations robustly exhibit the
     spontaneous emergence of localized configurations in which structural variations of
     \(\chi\) remain persistently large.
-    These configurations locally resist the global relaxation flow and remain stable
-    over many relaxation intervals.
+    These configurations locally resist the global relaxation flow and remain stable over many relaxation intervals.
 
     Such structures are interpreted as numerical counterparts of the solitonic
-    excitations discussed in
-    Section~\ref{sec:particles-as-localized-excitations-of-the-chi-field}.
-    They arise dynamically without being imposed by hand and do not require fine-tuned
-    initial conditions.
+    excitations discussed in Section~\ref{sec:particles-as-localized-excitations-of-the-chi-field}.
+    They arise dynamically without being imposed by hand and do not require fine-tuned initial conditions.
 
     Perturbative tests indicate that small disturbances around these configurations
-    decay rather than grow, confirming their dynamical stability within the bounded
-    relaxation framework.
+    decay rather than grow, confirming their dynamical stability within the bounded relaxation framework.
 
   \paragraph{Spectral analysis and response modes.}
     To probe the internal organization of stable configurations, the effective
     relaxation operator is linearized around a stationary background configuration.
     The resulting eigenvalue problem defines a discrete set of response modes
-    characterizing how the configuration reacts to small perturbations within the
-    chosen numerical representation.
+    characterizing how the configuration reacts to small perturbations within the chosen numerical representation.
 
     A systematic spectral analysis reveals a robust separation between:
     \begin{itemize}
-      \item a small number of low-lying modes associated with coherent, collective
-      deformations of the configuration,
-      \item a dense set of higher modes that are rapidly damped by the relaxation
-      dynamics.
+      \item a small number of low-lying modes associated with coherent, collective deformations of the configuration,
+      \item a dense set of higher modes that are rapidly damped by the relaxation dynamics.
     \end{itemize}
 
-    This separation is observed across different bases, resolutions, and boundary
-    conditions.
+    This separation is observed across different bases, resolutions, and boundary conditions.
     It provides a structural fingerprint of the degree of internal organization and
     resistance to deformation of each stable excitation.
 
-    At this stage, these response modes are not identified with observed particle
-    masses.
+    At this stage, these response modes are not identified with observed particle masses.
     They are interpreted as intrinsic stability scales of localized configurations.
     Possible connections between spectral hierarchies and physical mass spectra are
-    discussed conceptually in Appendix~\ref{subsec:spectral_mass}, without invoking
-    numerical matching.
+    discussed conceptually in Appendix~\ref{subsec:spectral_mass}, without invoking numerical matching.
 
   \paragraph{Interpretation, scope, and limitations.}
     The appearance of discrete spectral hierarchies and long-lived localized
@@ -131,8 +114,7 @@
 
     The simulations do not include quantum fluctuations, fully relativistic covariance,
     or higher-order backreaction effects.
-    They are not intended to provide quantitative predictions for particle physics or
-    precision cosmology.
+    They are not intended to provide quantitative predictions for particle physics or precision cosmology.
 
   \paragraph{The Projectability Threshold $\Theta_p$.}
     A critical diagnostic in our simulations is the \textbf{projectability threshold} $\Theta_p$, which defines when a
@@ -142,16 +124,15 @@
     \begin{itemize}
       \item \textbf{Spectral Gap Stability:}
       The projection is only valid if a clear separation exists in the relaxation spectrum, typically when
-      $\frac{\lambda_2 - \lambda_1}{\text{Tr}(L)} > \epsilon_p$
-      . Below this, the substrate is in a ``pre-geometric'' state where distance metrics are ill-defined.
+      $\frac{\lambda_2 - \lambda_1}{\text{Tr}(L)} > \epsilon_p$.
+      Below this, the substrate is in a ``pre-geometric'' state where distance metrics are ill-defined.
       \item \textbf{Topological Coherence:}
       The Dirichlet energy of the mapped configuration must remain below a saturation bound,
-      $\mathcal{E}_{proj} < \mathcal{E}_{max}$
-      , ensuring that the emergent manifold is structurally stable and non-singular.
+      $\mathcal{E}_{proj} < \mathcal{E}_{max}$, ensuring that the emergent manifold is structurally stable and
+      non-singular.
     \end{itemize}
-    Crossing $\Theta_p$
-        marks the transition from ontological ``poverty'' (where only global, low-frequency modes are supported) to the
-        emergence of complex, localized solitonic structures.
+    Crossing $\Theta_p$ marks the transition from ontological ``poverty'' (where only global, low-frequency modes are
+    supported) to the emergence of complex, localized solitonic structures.
 
     \medskip
     \noindent
@@ -182,5 +163,4 @@
 
     The spontaneous emergence of localized configurations and the associated hierarchy
     of response modes provide strong numerical support for the conceptual foundations
-    of Cosmochrony and establish a solid basis for future, more quantitative
-    computational investigations.
+    of Cosmochrony and establish a solid basis for future, more quantitative computational investigations.
