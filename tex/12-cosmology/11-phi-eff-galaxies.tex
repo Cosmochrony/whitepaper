@@ -23,13 +23,20 @@
     \end{equation}
     so that $a_0$ is not postulated as a fundamental constant but is weakly time-dependent.
 
+    Operationally, the galactic manifestation of this cosmological scale is expected
+    to be reduced by a dimensionless projection efficiency factor $\eta=O(0.1)$,
+    reflecting the partial coupling between global $\chi$-relaxation and local
+    projectable galactic configurations.
+    Accordingly, the effective scale entering galactic dynamics is
+    $a_0(t) = \eta\,cH(t)$.
+
   \paragraph{Asymptotic regimes and flat rotation curves.}
     Let $g_N(r)=GM_b(r)/r^2$ denote the Newtonian baryonic acceleration inferred from the
     enclosed baryonic mass $M_b(r)$.
     In the high-acceleration regime $g_N\gg a_0$, projective relaxation remains unsaturated
     and one recovers $g_{\mathrm{eff}}\simeq g_N$, hence $\Phi_{\mathrm{eff}}(r)\simeq -GM_b/r$.
     In the low-acceleration regime $g_N\ll a_0$, saturation of the effective relaxation
-    constraint yields the deep-MOND scaling
+    constraint yields the deep-saturation scaling
     \begin{equation}
       g_{\mathrm{eff}}(r)\simeq \sqrt{g_N(r)\,a_0(t)}.
     \end{equation}
@@ -131,3 +138,64 @@
       projectable regimes, not a fundamental gravitational field.}
       \label{tab:dm-mond-cosmochrony}
     \end{table}
+
+\subsubsection*{Observed rotation curves: multi-galaxy test}
+
+  To assess the phenomenological viability of the effective saturation picture,
+  we confront the Cosmochrony prediction with observed rotation curves of three
+  representative spiral galaxies, spanning the main empirical classes, thereby probing the flexibility of the saturation
+  mechanism beyond asymptotically flat profiles:
+  (i) a nearly flat rotation curve (NGC~3198),
+  (ii) a rising curve (NGC~2403),
+  and (iii) a mildly declining curve (NGC~5055).
+
+  These systems are chosen because they are extensively studied, have well-constrained
+  baryonic decompositions, and are commonly used as benchmarks in both
+  $\Lambda$CDM and MOND analyses.
+  No dark matter halo is introduced at any stage.
+
+  The comparison follows a minimal-parameter philosophy.
+  Geometric quantities such as distance, inclination, and position angle are fixed
+  to their observationally inferred values.
+  The baryonic contributions from gas and stars are taken directly from the literature.
+
+  The only fitted parameter is the stellar mass-to-light ratio $\Upsilon_\star$,
+  assumed constant within each galaxy.
+  The acceleration scale $a_0(t_0)$ is \emph{not} fitted but fixed by the cosmological
+  relation $a_0(t)\sim cH(t)$ evaluated at the present epoch.
+
+  The resulting rotation curves are shown in Fig.~\ref{fig:rotation-curves-comparison}.
+  The effective saturation model reproduces:
+  (i) flat asymptotic velocities where observed,
+  (ii) rising profiles in baryon-dominated outer regions,
+  and (iii) mild declines without overshooting.
+
+  This behavior arises naturally from the interplay between baryonic distribution
+  and saturation of the $\chi$-relaxation constraint, without invoking
+  galaxy-specific tuning or additional degrees of freedom.
+
+  \begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{12-cosmology/galaxy_rotcurves_3panel}
+    \caption{Observed rotation curves compared with the Cosmochrony saturation
+    prediction.
+    Left: NGC~3198 (flat).
+    Center: NGC~2403 (rising).
+    Right: NGC~5055 (mildly declining).
+    Points show observational data; solid lines show the Cosmochrony prediction.
+    The only fitted parameter is the stellar mass-to-light ratio $\Upsilon_\star$.
+    See Appendix~\ref{subsec:rotation-curve-fits} for data sources and fitting protocol.}
+    \label{fig:rotation-curves-comparison}
+  \end{figure}
+
+  \paragraph{Limitations and scope of the comparison.}
+    The reduced $\chi^2$ values associated with the fits should not be interpreted
+    as strict goodness-of-fit estimators.
+    Rotation-curve data points are affected by correlated uncertainties
+    (inclination, non-circular motions, disk thickness, asymmetric drift)
+    that are not fully captured by the quoted statistical errors.
+    The aim of the present comparison is therefore not to achieve an optimal
+    statistical fit, but to test whether the \emph{global radial trends} observed
+    across different morphological classes can be reproduced within a single
+    saturation-based framework, without introducing dark matter halos or
+    galaxy-dependent acceleration scales.
