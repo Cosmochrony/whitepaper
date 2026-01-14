@@ -39,17 +39,28 @@
       \node[box] (chi) {$\chi$\\[-2pt]\footnotesize relational configuration};
 
 % Projection
-      \node[box, below=1.6cm of chi] (proj) {$\Pi(\chi)$\\[-2pt]\footnotesize non-injective\\[-2pt]\footnotesize projected description};
+      \node[box, below=1.6cm of chi] (proj)
+      {$\Pi(\chi)$\\[-2pt]\footnotesize non-injective\\[-2pt]\footnotesize projected description};
 
 % Branches
-      \node[box, below left=2.2cm and 2.4cm of proj] (ent) {Intrication\\[-2pt]\footnotesize non-factorizable\\[-2pt]\footnotesize stable};
-      \node[box, below=2.2cm of proj] (meas) {Mesure / décohérence\\[-2pt]\footnotesize selection\\[-2pt]\footnotesize without fragmentation};
-      \node[box, below right=2.2cm and 2.4cm of proj] (dec) {Désintégration\\[-2pt]\footnotesize factorization\\[-2pt]\footnotesize required};
+      \node[box, below left=2.2cm and 2.4cm of proj] (ent)
+      {Entanglement\\[-2pt]\footnotesize non-factorizable\\[-2pt]\footnotesize stable};
+
+      \node[box, below=2.2cm of proj] (meas)
+      {Measurement / decoherence\\[-2pt]\footnotesize selection\\[-2pt]\footnotesize without fragmentation};
+
+      \node[box, below right=2.2cm and 2.4cm of proj] (dec)
+      {Decay\\[-2pt]\footnotesize factorization\\[-2pt]\footnotesize required};
 
 % Decay products
-      \node[box, below=1.8cm of dec, xshift=-2.0cm] (p) {Particule\\[-2pt]\footnotesize $+Q$};
-      \node[box, below=1.8cm of dec, xshift=0.0cm] (ap) {Antiparticule\\[-2pt]\footnotesize $-Q$};
-      \node[box, below=1.8cm of dec, xshift=2.0cm] (rad) {Modes légers\\[-2pt]\footnotesize évacuation};
+      \node[box, below=1.8cm of dec, xshift=-2.0cm] (p)
+      {Particle\\[-2pt]\footnotesize $+Q$};
+
+      \node[box, below=1.8cm of dec, xshift=0.0cm] (ap)
+      {Antiparticle\\[-2pt]\footnotesize $-Q$};
+
+      \node[box, below=1.8cm of dec, xshift=2.0cm] (rad)
+      {Light modes\\[-2pt]\footnotesize dissipation};
 
 % Arrows
       \draw[arr] (chi) -- node[lab, right] {projection} (proj);
@@ -63,14 +74,14 @@
       \draw[arr] (dec) -- (rad);
 
 % Notes
-      \node[lab, below=0.4cm of ent] {unité conservée};
-      \node[lab, below=0.4cm of meas] {stabilisation};
-      \node[lab, below=0.4cm of dec] {invariants redistribués};
+      \node[lab, below=0.4cm of ent] {unity preserved};
+      \node[lab, below=0.4cm of meas] {stabilization};
+      \node[lab, below=0.4cm of dec] {invariants redistributed};
 
     \end{tikzpicture}
     \caption{Unified structural interpretation of quantum entanglement, measurement, and
     particle decay in Cosmochrony.
-    All phenomena originate from non-injective projection of a single relational
+    All phenomena originate from the non-injective projection of a single relational
     configuration of \(\chi\).
     Antiparticles emerge when admissible factorization requires the redistribution of
     signed structural invariants.}
