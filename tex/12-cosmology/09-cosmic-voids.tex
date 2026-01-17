@@ -3,9 +3,10 @@
 
   Within the Cosmochrony framework, cosmic voids constitute regions where the
   relaxation of the $\chi$ substrate is least frustrated by localized excitations.
-  As a result, the effective Born--Infeld metric predicts an enhanced geodesic
-  defocusing, leading to a negative gravitational lensing signal and to
-  non-linear peculiar velocity outflows at void boundaries.
+  As a result, within the admissible effective description defined in
+  Sec.~\ref{subsec:variational-formulation}, regions of near-maximal substrate relaxation
+  exhibit enhanced geodesic defocusing, leading to a negative gravitational lensing
+  signal and to non-linear peculiar velocity outflows at void boundaries.
 
   These effects are absent or strongly suppressed in $\Lambda$CDM, making cosmic
   voids a clean discriminant between the two frameworks.
@@ -23,10 +24,12 @@
     profiles and (ii) locally inferred $H_0$ maps: regions with higher $H_0$
     should statistically coincide with stronger void defocusing signatures.
 
-  \paragraph{Phenomenological Born--Infeld void parametrization.}
-    We model the observable void signals as a $\Lambda$CDM baseline plus a
-    Born--Infeld-like saturating correction controlled by a single amplitude
-    parameter $\beta_{\textrm void}$:
+  \paragraph{Phenomenological void parametrization within the saturation-constrained regime.}
+    We model the observable void signals as a $\Lambda$CDM baseline plus a phenomenological
+    saturating correction, controlled by a single dimensionless amplitude parameter
+    $\beta_{\textrm{void}}$, designed to capture the effects expected within the
+    saturation-constrained effective regime defined in
+    Sec.~\ref{subsec:variational-formulation}:
     \begin{align}
       \kappa_{\textrm obs}(R) &= \kappa_{\Lambda{\textrm CDM}}(R)
       \left[1+\beta_{\textrm void}\, \mathcal{S}\!\big(\mathcal{A}(R)\big)\right],\\
@@ -48,3 +51,8 @@
     $
     (or $|\delta(r)|/s_\star$), where $s_\star,g_\star$ set the Born--Infeld
     saturation thresholds.
+
+    The specific functional form of $\mathcal{S}(x)$ is chosen for convenience as a smooth
+    interpolant between linear and saturated regimes, and does not introduce additional
+    dynamical assumptions beyond those already encoded in the effective variational
+    formulation of Sec.~\ref{subsec:variational-formulation}.
