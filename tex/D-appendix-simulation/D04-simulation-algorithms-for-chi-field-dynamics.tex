@@ -190,21 +190,22 @@
     Possible connections between spectral hierarchies and physical mass spectra are
     discussed conceptually in Appendix~\ref{subsec:spectral_mass}, without invoking numerical matching.
 
-
   \paragraph{Effective entanglement as a constrained observable.}
+    Numerical investigations reveal that non-factorizable correlations do not emerge
+    as a smooth or monotonic function of compression.
+    Instead, they appear intermittently, during specific spectral reorganization events of the relaxation operator.
+    This behavior indicates that entanglement is not a generic consequence of moderate
+    compression, but a critically activated phenomenon tied to the internal restructuring of admissible modes.
+
     While spectral diagnostics such as mode crowding or near-degeneracy provide a
     quantitative measure of the non-injectivity of the projection, they do not by
-    themselves characterize the ability of a configuration to sustain observable
-    quantum correlations.
+    themselves characterize the ability of a configuration to sustain observable quantum correlations.
 
     In particular, strong Born--Infeld saturation of the relaxation flux suppresses
-    the dynamical mobility required for correlations to remain operationally
-    exploitable.
-    Spectral non-factorization is therefore a necessary but not sufficient condition
-    for effective entanglement.
+    the dynamical mobility required for correlations to remain operationally exploitable.
+    Spectral non-factorization is therefore a necessary but not sufficient condition for effective entanglement.
 
-    To account for this competition of constraints, we define an \emph{effective
-entanglement observable} as
+    To account for this competition of constraints, we define an \emph{effective entanglement observable} as
     \begin{equation}
       \label{eq:effective-entanglement}
       E_{\mathrm{eff}}(\mathcal{C})
@@ -217,6 +218,34 @@ entanglement observable} as
     with the projection, and the factor $(1-\mathcal{C}^{\nu})$ encodes the loss of
     projective mobility as the Born--Infeld saturation bound is approached.
 
+    The functional form of $E_{\mathrm{eff}}$ is not postulated as a universal law,
+    nor intended as a quantitative entanglement measure.
+    It provides a minimal structural diagnostic encoding the competition between
+    two independent constraints:
+    (i) the degree of spectral non-injectivity of the projection,
+    and (ii) the remaining dynamical mobility of the relaxation flux prior to Born--Infeld saturation.
+
+    In particular, peaks of $E_{\mathrm{eff}}$ need not form a smooth envelope.
+    They may occur as isolated maxima associated with discrete spectral rearrangements,
+    reflecting the intermittent activation of non-factorizable correlations.
+
+    \begin{figure}[t]
+      \centering
+      \includegraphics[width=0.95\linewidth]{D-appendix-simulation/D04_entanglement_intermittence_b}
+      \caption{Numerical diagnostics of effective entanglement and chiral bias as a function
+      of the compression parameter $\mathcal{C}$.
+      \textbf{Top:} spectral non-injectivity proxy $\Delta_{\Pi}$ exhibiting discrete peaks
+      associated with spectral reorganization events.
+      \textbf{Middle:} effective entanglement observable $E_{\mathrm{eff}}$, showing
+      intermittent activation in narrow compression windows and suppression at high
+      saturation.
+      \textbf{Bottom:} chiral (CP) bias, displaying a monotonic and robust dependence on
+      compression.
+      This contrast highlights the distinct ontological status of entanglement as a
+      critical phenomenon, versus charge as a stable topological invariant.}
+      \label{fig:D4-entanglement-intermittence}
+    \end{figure}
+
     This definition does not introduce a new dynamical assumption.
     It expresses the fact that effective quantum correlations arise only in regimes
     where relational non-factorization coexists with sufficient dynamical freedom.
@@ -228,6 +257,9 @@ entanglement observable} as
     the compression parameter $\mathcal{C}$, identifying a critical projection regime
     in which quantum entanglement emerges as a compromise between resolution and
     saturation constraints.
+
+    \textit{The absence of a smooth ‘entanglement bell curve’ is not a numerical artifact but a structural prediction of
+    Cosmochrony: entanglement emerges only during discrete spectral reorganization events of the projection fiber.”}
 
   \paragraph{Interpretation, scope, and limitations.}
     The appearance of discrete spectral hierarchies and long-lived localized
@@ -283,6 +315,9 @@ entanglement observable} as
     finite-dimensional representations, without invoking a background geometry or
     additional fundamental degrees of freedom.
 
-    The spontaneous emergence of localized configurations and the associated hierarchy
-    of response modes provide strong numerical support for the conceptual foundations
-    of Cosmochrony and establish a solid basis for future, more quantitative computational investigations.
+    In particular, the simulations reveal that quantum entanglement, understood as
+    non-factorizable projective correlation, is a critically intermittent phenomenon.
+    It emerges only during specific spectral reorganization events of the $\chi$
+    substrate and is suppressed both in under-constrained and strongly saturated regimes.
+    This behavior provides numerical support for the interpretation of entanglement
+    developed in Section~\ref{subsec:entanglement-critical-compression}.
